@@ -159,8 +159,7 @@ export default function Home() {
           </section> */}
           <Swiper {...swiperOptions}>
             <SwiperSlide>
-              <section className="relative bg-cover bg-center w-full  h-screen bg-no-repeat  bg-[url('/images/slider-1.png')]">
-                {/* <div className=" w-full h-screen absolute bg-black/40 inset-0 lg:hidden "></div> */}
+              <section className="relative bg-cover bg-center w-full h-[700px] lg:h-[950px] bg-no-repeat  bg-[url('/images/slider-1.png')]">
                 <div className="flex items-center justify-between px-4 lg:px-20 pt-4">
                   <Image
                     src="/images/logo-white.svg"
@@ -185,7 +184,7 @@ export default function Home() {
                   <h2 className=" font-semibold text-5xl text-center pt-14 lg:pt-0 lg:text-5xl text-white ">
                     Send. Shop. Spend
                   </h2>
-                  <div className=" px-4 pt-2  absolute bottom-64">
+                  <div className=" px-4 pt-2  absolute bottom-60">
                     <p className="text-sm font-medium text-white">
                       Seamlessly bridge distances with our effortless remittance
                       service. Send support, and financial care to your loved
@@ -222,7 +221,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className=" absolute bottom-10  w-full px-4 lg:px-20">
+                <div className=" absolute bottom-6 lg:bottom-10  w-full px-4 lg:px-20">
                   <div className=" flex items-center justify-between">
                     <div className="max-w-[250px] hidden lg:block">
                       <p className="text-sm font-medium text-white">
@@ -232,7 +231,7 @@ export default function Home() {
                       </p>
                     </div>
                     <div>
-                      <p className="pb-6 text-sm text-white/50">
+                      <p className=" pb-3 lg:pb-6 text-sm text-white/50">
                         Get Revve on your phone
                       </p>
 
@@ -249,7 +248,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute bottom-32 lg:bottom-0 left-1/2 transform -translate-x-1/2 mb-8 w-full max-w-[380px] px-2 ">
+                <div className="absolute bottom-28 lg:bottom-0 left-1/2 transform -translate-x-1/2 mb-8 w-full max-w-[380px] px-2 ">
                   <div className=" bg-white/10 backdrop-blur-md rounded-2xl p-4 lg:p-5 w-full ">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
@@ -293,8 +292,7 @@ export default function Home() {
               </section>
             </SwiperSlide>
             <SwiperSlide>
-              <section className="relative bg-cover bg-center w-full  h-screen bg-no-repeat  bg-[url('/images/slider-2.png')]">
-                {/* <div className=" w-full h-screen absolute bg-black/40 inset-0 lg:hidden "></div> */}
+              <section className="relative bg-cover bg-center w-full h-[700px] lg:h-[950px] bg-no-repeat  bg-[url('/images/slider-2.png')]">
                 <div className="flex items-center justify-between px-4 lg:px-20 pt-4">
                   <Image
                     src="/images/logo-white.svg"
@@ -319,7 +317,7 @@ export default function Home() {
                   <h2 className=" font-semibold text-5xl text-center pt-14 lg:pt-0 lg:text-5xl text-white ">
                     Send. Shop. Spend
                   </h2>
-                  <div className=" px-4 pt-2  absolute bottom-64">
+                  <div className=" px-4 pt-2  absolute bottom-60">
                     <p className="text-sm font-medium text-white">
                       Seamlessly bridge distances with our effortless remittance
                       service. Send support, and financial care to your loved
@@ -356,7 +354,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className=" absolute bottom-10  w-full px-4 lg:px-20">
+                <div className=" absolute bottom-6 lg:bottom-10  w-full px-4 lg:px-20">
                   <div className=" flex items-center justify-between">
                     <div className="max-w-[250px] hidden lg:block">
                       <p className="text-sm font-medium text-white">
@@ -366,7 +364,7 @@ export default function Home() {
                       </p>
                     </div>
                     <div>
-                      <p className="pb-6 text-sm text-white/50">
+                      <p className=" pb-3 lg:pb-6 text-sm text-white/50">
                         Get Revve on your phone
                       </p>
 
@@ -383,7 +381,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute bottom-32 lg:bottom-0 left-1/2 transform -translate-x-1/2 mb-8 w-full max-w-[380px] px-2 ">
+                <div className="absolute bottom-28 lg:bottom-0 left-1/2 transform -translate-x-1/2 mb-8 w-full max-w-[380px] px-2 ">
                   <div className=" bg-white/10 backdrop-blur-md rounded-2xl p-4 lg:p-5 w-full ">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
@@ -427,8 +425,7 @@ export default function Home() {
               </section>
             </SwiperSlide>
             <SwiperSlide>
-              <section className="relative bg-cover bg-center w-full  h-screen bg-no-repeat  bg-[url('/images/slider-3.png')]">
-                {/* <div className=" w-full h-screen absolute bg-black/40 inset-0 lg:hidden "></div> */}
+              <section className="relative bg-cover bg-center w-full h-[700px] lg:h-[950px] bg-no-repeat  bg-[url('/images/slider-3.png')]">
                 <div className="flex items-center justify-between px-4 lg:px-20 pt-4">
                   <Image
                     src="/images/logo-white.svg"
@@ -453,7 +450,7 @@ export default function Home() {
                   <h2 className=" font-semibold text-5xl text-center pt-14 lg:pt-0 lg:text-5xl text-white ">
                     Send. Shop. Spend
                   </h2>
-                  <div className=" px-4 pt-2  absolute bottom-64">
+                  <div className=" px-4 pt-2  absolute bottom-60">
                     <p className="text-sm font-medium text-white">
                       Seamlessly bridge distances with our effortless remittance
                       service. Send support, and financial care to your loved
@@ -490,7 +487,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className=" absolute bottom-10  w-full px-4 lg:px-20">
+                <div className=" absolute bottom-6 lg:bottom-10  w-full px-4 lg:px-20">
                   <div className=" flex items-center justify-between">
                     <div className="max-w-[250px] hidden lg:block">
                       <p className="text-sm font-medium text-white">
@@ -500,7 +497,7 @@ export default function Home() {
                       </p>
                     </div>
                     <div>
-                      <p className="pb-6 text-sm text-white/50">
+                      <p className=" pb-3 lg:pb-6 text-sm text-white/50">
                         Get Revve on your phone
                       </p>
 
@@ -517,7 +514,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute bottom-32 lg:bottom-0 left-1/2 transform -translate-x-1/2 mb-8 w-full max-w-[380px] px-2 ">
+                <div className="absolute bottom-28 lg:bottom-0 left-1/2 transform -translate-x-1/2 mb-8 w-full max-w-[380px] px-2 ">
                   <div className=" bg-white/10 backdrop-blur-md rounded-2xl p-4 lg:p-5 w-full ">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
@@ -561,8 +558,7 @@ export default function Home() {
               </section>
             </SwiperSlide>
             <SwiperSlide>
-              <section className="relative bg-cover bg-center w-full  h-screen bg-no-repeat  bg-[url('/images/slider-4.png')]">
-                {/* <div className=" w-full h-screen absolute bg-black/40 inset-0 lg:hidden "></div> */}
+              <section className="relative bg-cover bg-center w-full h-[700px] lg:h-[950px] bg-no-repeat  bg-[url('/images/slider-4.png')]">
                 <div className="flex items-center justify-between px-4 lg:px-20 pt-4">
                   <Image
                     src="/images/logo-white.svg"
@@ -587,7 +583,7 @@ export default function Home() {
                   <h2 className=" font-semibold text-5xl text-center pt-14 lg:pt-0 lg:text-5xl text-white ">
                     Send. Shop. Spend
                   </h2>
-                  <div className=" px-4 pt-2  absolute bottom-64">
+                  <div className=" px-4 pt-2  absolute bottom-60">
                     <p className="text-sm font-medium text-white">
                       Seamlessly bridge distances with our effortless remittance
                       service. Send support, and financial care to your loved
@@ -624,7 +620,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className=" absolute bottom-10  w-full px-4 lg:px-20">
+                <div className=" absolute bottom-6 lg:bottom-10  w-full px-4 lg:px-20">
                   <div className=" flex items-center justify-between">
                     <div className="max-w-[250px] hidden lg:block">
                       <p className="text-sm font-medium text-white">
@@ -634,7 +630,7 @@ export default function Home() {
                       </p>
                     </div>
                     <div>
-                      <p className="pb-6 text-sm text-white/50">
+                      <p className=" pb-3 lg:pb-6 text-sm text-white/50">
                         Get Revve on your phone
                       </p>
 
@@ -651,7 +647,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute bottom-32 lg:bottom-0 left-1/2 transform -translate-x-1/2 mb-8 w-full max-w-[380px] px-2 ">
+                <div className="absolute bottom-28 lg:bottom-0 left-1/2 transform -translate-x-1/2 mb-8 w-full max-w-[380px] px-2 ">
                   <div className=" bg-white/10 backdrop-blur-md rounded-2xl p-4 lg:p-5 w-full ">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
@@ -697,7 +693,7 @@ export default function Home() {
           </Swiper>
           {/* bg-[url('/images/test-bg.png')]  */}
           {/* SECTION TWO */}
-          <section className="relative bg-cover bg-center w-full h-screen bg-no-repeat bg-gray-300 overflow-hidden px-4">
+          <section className="relative bg-cover bg-center w-full h-[850px] lg:h-[900px] bg-no-repeat bg-gray-300 overflow-hidden px-4">
             <div className="relative bg-cover bg-center w-[350px] h-[410px] lg:w-[424px] top-48 lg:top-56 lg:h-[493px] left-1/2 transform -translate-x-1/2 bg-no-repeat bg-[url('/images/slide-4.png')]">
               <div className=" flex items-center justify-center">
                 <p className=" text-white max-w-[360px] font-medium  absolute bottom-6 leading-[1.3] px-4 lg:px-0">
@@ -976,7 +972,7 @@ export default function Home() {
 
           {/* SECTION FIVE */}
 
-          <section className="relative bg-cover bg-center w-full h-screen bg-no-repeat bg-[url('/images/pay-bills.png')] overflow-hidden">
+          <section className="relative bg-cover bg-center w-full h-[850px] lg:h-[950px] bg-no-repeat bg-[url('/images/pay-bills.png')] overflow-hidden">
             <div className=" absolute  top-[60%] transform -translate-y-1/2 w-full">
               <div className=" flex justify-between flex-wrap gap-8 px-4 lg:pt-0 lg:px-20">
                 <div className=" flex-1  ">
