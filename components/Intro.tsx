@@ -1,16 +1,39 @@
+import { useGSAP } from "@gsap/react";
+import { SplitText } from "gsap/all";
+import gsap from "gsap";
 import Image from "next/image";
 import React from "react";
 
 const Intro = () => {
+  useGSAP(() => {
+    const paragraphSplit2 = new SplitText(".subtitle2", { type: "lines" });
+
+    gsap.from(paragraphSplit2.lines, {
+      opacity: 0,
+      yPercent: 100,
+      duration: 1.8,
+      ease: "expo.inOut",
+      stagger: 0.06,
+      scrollTrigger: {
+        trigger: "#aboutIntro",
+        start: "top 70%", // when top of #aboutIntro hits 70% of the viewport
+        // toggleActions: "play none none none",
+        end: "bottom 30%",
+        toggleActions: "play reverse play reverse",
+        markers: false, // set to true for debugging
+      },
+    });
+  }, []);
   return (
     <section
+      id="aboutIntro"
       className="relative bg-cover bg-center w-full h-[850px] lg:h-[900px] bg-no-repeat bg-gray-300 overflow-hidden px-4"
       //   id="clip"
     >
       {/* <div className="mask-clip-path about-image"> */}
       <div className="relative bg-cover bg-center w-[350px] h-[410px] lg:w-[424px] top-48 lg:top-56 lg:h-[493px] left-1/2 transform -translate-x-1/2 bg-no-repeat bg-[url('/images/slide-4.png')]">
         <div className=" flex items-center justify-center">
-          <p className=" text-white max-w-[360px] font-medium  absolute bottom-6 leading-[1.3] px-4 lg:px-0">
+          <p className=" text-white max-w-[360px] font-medium  absolute bottom-6 leading-[1.3] px-4 lg:px-0 subtitle2">
             Seamlessly bridge distances with our effortless remittance service.
             Send support, and financial care to your loved ones back home.
           </p>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import DownloadModal from "@/components/DownloadModal";
 import { useState } from "react";
@@ -19,24 +20,24 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   const [openModal, setOpenModal] = useState(false);
 
-  useGSAP(() => {
-    const clipAnimation = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#clip",
-        start: "center center",
-        end: "+=800 center",
-        scrub: 0.5,
-        pin: true,
-        pinSpacing: true,
-      },
-    });
+  // useGSAP(() => {
+  //   const clipAnimation = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: "#clip",
+  //       start: "center center",
+  //       end: "+=800 center",
+  //       scrub: 0.5,
+  //       pin: true,
+  //       pinSpacing: true,
+  //     },
+  //   });
 
-    clipAnimation.to(".mask-clip-path", {
-      width: "100vw",
-      height: "100vh",
-      borderRadius: 0,
-    });
-  });
+  //   clipAnimation.to(".mask-clip-path", {
+  //     width: "100vw",
+  //     height: "100vh",
+  //     borderRadius: 0,
+  //   });
+  // });
   return (
     <>
       <section>

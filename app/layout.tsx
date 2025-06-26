@@ -3,6 +3,11 @@ import { Paytone_One, DM_Sans } from "next/font/google";
 import "./globals.css";
 import "./swiper-bundle.css";
 
+import gsap from "gsap";
+import { ScrollTrigger, SplitText } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
+
 const paytone_One = Paytone_One({
   variable: "--font-paytone-One",
   subsets: ["latin"],
