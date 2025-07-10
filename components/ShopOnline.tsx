@@ -1,15 +1,66 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import Image from "next/image";
 import React from "react";
 
 const ShopOnline = ({ setOpenModal }: any) => {
+  useGSAP(() => {
+    gsap.to("#product-1", {
+      y: -350,
+      // rotation: 360,
+      // borderRadius: "100%",
+      duration: 1,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: "#onlineShop-section",
+        start: "top 50%",
+        end: "bottom 30%",
+        scrub: 1,
+        markers: false, // set to true for debugging
+      },
+    });
+
+    gsap.to("#product-2", {
+      y: -300,
+      // rotation: 360,
+      // borderRadius: "100%",
+      duration: 1,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: "#onlineShop-section",
+        start: "top 50%",
+        end: "bottom 30%",
+        scrub: 1,
+        markers: false, // set to true for debugging
+      },
+    });
+    gsap.to("#text-bodey", {
+      y: -100,
+      // rotation: 360,
+      // borderRadius: "100%",
+      duration: 1,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: "#onlineShop-section",
+        start: "top 50%",
+        end: "bottom 30%",
+        scrub: 1,
+        markers: false, // set to true for debugging
+      },
+    });
+  });
+
   return (
-    <section className=" bg-[#f2f2f2] pb-10 lg:pb-40 overflow-hidden">
+    <section
+      id="onlineShop-section"
+      className=" bg-[#f2f2f2] pb-10 lg:pb-40 w-full"
+    >
       <div className="relative bg-cover bg-center w-full h-[900px] bg-no-repeat hidden lg:block">
         <div className="absolute bg-cover bg-center  w-[402px] lg:w-[432px] top-14 lg:bottom-0 h-[708px] left-1/2 transform -translate-x-1/2 bg-no-repeat bg-[url('/images/iPhone-frame-2.png')]"></div>
 
         <div className="absolute -bottom-32 right-8 hidden lg:block">
           <div className="flex items-center  gap-2">
-            <div className="pt-80">
+            <div className="pt-80" id="product-1">
               <Image
                 src="/images/prod-1.png"
                 alt="prod icon - 1"
@@ -18,7 +69,7 @@ const ShopOnline = ({ setOpenModal }: any) => {
                 className="prod-icon"
               />
             </div>
-            <div className="pb-56">
+            <div className="pb-56 ">
               <Image
                 src="/images/prod-2.png"
                 alt="prod icon - 2"
@@ -27,7 +78,7 @@ const ShopOnline = ({ setOpenModal }: any) => {
                 className="prod-icon"
               />
             </div>
-            <div className="pt-12">
+            <div className="pt-12" id="product-2">
               <Image
                 src="/images/prod-3.png"
                 alt="prod icon - 1"
@@ -38,7 +89,7 @@ const ShopOnline = ({ setOpenModal }: any) => {
             </div>
           </div>
         </div>
-        <div className="  absolute bottom-32 left-10  ">
+        <div className="  absolute bottom-48 left-10  " id="text-bodey">
           <div className=" px-4  hidden lg:block">
             <h2 className="font-semibold text-2xl lg:text-5xl text-black max-w-lg tracking-wide">
               Shop Online

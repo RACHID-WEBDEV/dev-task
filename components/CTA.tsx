@@ -33,7 +33,7 @@ const CTA = ({ setOpenModal }: any) => {
             </div>
           </div>
 
-          <div className="lg:pt-20 mb-10">
+          <div className="lg:pt-0 mb-10">
             {/* <Image
               src="/images/pay-bills-Calendar.png"
               alt="send icon"

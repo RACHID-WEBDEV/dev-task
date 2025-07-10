@@ -5,6 +5,7 @@ import "./swiper-bundle.css";
 
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
+import PreLoader from "@/components/PreLoader";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body
         className={`${paytone_One.variable} ${dm_Sans.variable} antialiased`}
       >
+        <PreLoader />
         {children}
       </body>
     </html>
