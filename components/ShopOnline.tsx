@@ -9,12 +9,12 @@ const ShopOnline = ({ setOpenModal }: any) => {
       y: -350,
       // rotation: 360,
       // borderRadius: "100%",
-      duration: 1,
+      duration: 3,
       ease: "power2.inOut",
       scrollTrigger: {
         trigger: "#onlineShop-section",
         start: "top center",
-        end: "bottom 30%",
+        end: "bottom 10%",
         scrub: 1,
         markers: false, // set to true for debugging
       },
@@ -24,12 +24,12 @@ const ShopOnline = ({ setOpenModal }: any) => {
       y: -300,
       // rotation: 360,
       // borderRadius: "100%",
-      duration: 1,
+      duration: 3,
       ease: "power2.inOut",
       scrollTrigger: {
         trigger: "#onlineShop-section",
         start: "top 50%",
-        end: "bottom 30%",
+        end: "bottom 10%",
         scrub: 1,
         markers: false, // set to true for debugging
       },
@@ -38,12 +38,12 @@ const ShopOnline = ({ setOpenModal }: any) => {
       y: -100,
       // rotation: 360,
       // borderRadius: "100%",
-      duration: 1,
+      duration: 3,
       ease: "power2.inOut",
       scrollTrigger: {
         trigger: "#onlineShop-section",
         start: "top 50%",
-        end: "bottom 30%",
+        end: "bottom 10%",
         scrub: 1,
         markers: false, // set to true for debugging
       },
@@ -53,7 +53,7 @@ const ShopOnline = ({ setOpenModal }: any) => {
   return (
     <section
       id="onlineShop-section"
-      className=" bg-[#f2f2f2] pb-10 lg:pb-40 w-full !h-[900px]"
+      className=" bg-[#f2f2f2] pb-10 lg:pb-40 w-full !h-screen"
     >
       <div className="relative bg-cover bg-center w-full h-[900px] bg-no-repeat hidden lg:block">
         <div className="absolute bg-cover bg-center  w-[402px] lg:w-[432px] top-14 lg:bottom-0 h-[708px] left-1/2 transform -translate-x-1/2 bg-no-repeat bg-[url('/images/iPhone-frame-2.png')]"></div>

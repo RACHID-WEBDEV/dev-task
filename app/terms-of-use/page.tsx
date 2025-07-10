@@ -22,7 +22,7 @@ const Page = () => {
               pathname === "/terms-of-use" ? "text-black" : "text-[#999999]"
             }`}
           >
-            <Link href={"/terms-of-use"}>Terms of use</Link>
+            <Link href={"/privacy-policy"}>Terms of use</Link>
           </h1>
         </div>
         <div className="col-span-2">

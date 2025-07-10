@@ -346,12 +346,14 @@ const Contactsection = () => {
                 <Link href="/about"> About Us</Link>
               </li>
               <li className="">
-                <Link href="/">Privacy Policy</Link>
+                <Link href="/privacy-policy">Privacy Policy</Link>
               </li>
               <li className="">
-                <Link href="/">Terms of use</Link>
+                <Link href="/terms-of-use">Terms of use</Link>
               </li>
-              <li className="">©2025 Revve. All rights reserved</li>
+              <li className="">
+                ©{new Date().getFullYear()} Revve. All rights reserved
+              </li>
             </ul>
           </div>
         </div>

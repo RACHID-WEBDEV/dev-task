@@ -97,12 +97,12 @@ const MultiCurrency = () => {
       <section
         id="card-currency-section"
         ref={scrollRef}
-        className="relative bg-cover bg-center w-full h-[900px] lg:h-[1200px] bg-no-repeat bg-gray-100 overflow-hidden"
+        className="relative bg-cover bg-center w-full h-[900px] lg:h-screen bg-no-repeat bg-gray-100 overflow-hidden"
       >
         <div
           id="phone-frame"
           className="absolute bg-cover bg-center w-[330px]
-                      h-[660px] lg:w-[432px] top-[62%] lg:top-[41%] lg:h-[708px] left-1/2 transform -translate-x-1/2 bg-no-repeat bg-[url('/images/iPhone-frame.png')]"
+                      h-[660px] lg:w-[432px] top-[62%] lg:top-[50%] xl:top-[45%] lg:h-[708px] xl:h-[750px] left-1/2 transform -translate-x-1/2 bg-no-repeat bg-[url('/images/iPhone-frame.png')]"
         ></div>
 
         <div

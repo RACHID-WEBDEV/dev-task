@@ -198,7 +198,7 @@ const Intro = ({ saveActiveSlideImage }: any) => {
   return (
     <section
       id="aboutIntro"
-      className="relative bg-cover bg-center w-full h-[850px] lg:h-[900px] bg-no-repeat bg-white overflow-hidden px-4"
+      className="relative bg-cover bg-center w-full h-[850px] lg:h-screen bg-no-repeat bg-white overflow-hidden px-4"
       //   id="clip"
       ref={ref}
     >
