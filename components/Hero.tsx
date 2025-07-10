@@ -16,7 +16,7 @@ import gsap from "gsap";
 
 const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
   // Create a ref to access the Swiper instance
-  const swiperRef = useRef(null);
+  const swiperRef = useRef<{ swiper: any } | null>(null);
 
   useEffect(() => {
     const swiper = swiperRef.current?.swiper;

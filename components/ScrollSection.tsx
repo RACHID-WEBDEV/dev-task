@@ -93,37 +93,9 @@ const ScrollAnimation = ({ setOpenModal }: any) => {
   return (
     <div className="body" ref={containerRef}>
       <main className="main-wrapper">
-        {/* <div className="section">
-          <div className="container-medium">
-            <div className="padding-vertical">
-              <div className="max-width-large">
-                <h1 className="heading">But Vertical Scroll Is Also Cool!</h1>
-              </div>
-            </div>
-          </div>
-        </div> */}
         <div className="scroll-section vertical-section section">
           <div className="wrapper">
             <div role="list" className="list">
-              {/* <div role="listitem" className="item">
-                <div className="item_content">
-                  <h2 className="item_number h2">1</h2>
-                  <h2 className="h2">
-                    Wildlife in Action: A Glimpse into Nature’s Daily Drama
-                  </h2>
-                  <p className="item_p">
-                    Witness the fascinating lives of animals in their natural
-                    habitats, from playful cubs to stealthy predators.
-                  </p>
-                </div>
-                <video
-                  src="https://videos.pexels.com/video-files/4763824/4763824-uhd_2560_1440_24fps.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  className="item_media"
-                />
-              </div> */}
               <div role="listitem" className="item">
                 <MultiCurrency />
               </div>
@@ -134,67 +106,8 @@ const ScrollAnimation = ({ setOpenModal }: any) => {
                 <CTA setOpenModal={setOpenModal} />
               </div>
               <div role="listitem" className="item">
-                <FAQSection />
+                <FAQSection setOpenModal={setOpenModal} />
               </div>
-              {/* <div role="listitem" className="item">
-                <div className="item_content">
-                  <h2 className="item_number h2">2</h2>
-                  <h2 className="h2">
-                    The Changing Seasons: Nature’s Everlasting Cycle
-                  </h2>
-                  <p className="item_p">
-                    Experience the beauty of natures transitions, from blooming
-                    spring flowers to snowy winter landscapes.
-                  </p>
-                </div>
-                <video
-                  src="https://videos.pexels.com/video-files/3214448/3214448-uhd_2560_1440_25fps.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  className="item_media"
-                />
-              </div>
-              <div role="listitem" className="item">
-                <div className="item_content">
-                  <h2 className="item_number h2">3</h2>
-                  <h2 className="h2">
-                    Guardians of Nature: Protecting Our Planet’s Future
-                  </h2>
-                  <p className="item_p">
-                    Learn about the importance of conservation and how we can
-                    work together to preserve the beauty of nature for
-                    generations to come.
-                  </p>
-                </div>
-                <video
-                  src="https://videos.pexels.com/video-files/4328514/4328514-uhd_2560_1440_30fps.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  className="item_media"
-                />
-              </div>
-              <div role="listitem" className="item">
-                <div className="item_content">
-                  <h2 className="item_number h2">4</h2>
-                  <h2 className="h2">
-                    Astral Aesthetics: Portraits from the Infinite
-                  </h2>
-                  <p className="item_p">
-                    Experience the boundless beauty of the cosmos through
-                    striking portraits that capture its infinite aesthetic
-                    appeal.
-                  </p>
-                </div>
-                <video
-                  src="https://videos.pexels.com/video-files/2871916/2871916-hd_1920_1080_30fps.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  className="item_media"
-                />
-              </div> */}
             </div>
           </div>
         </div>

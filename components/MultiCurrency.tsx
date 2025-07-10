@@ -33,7 +33,7 @@ const MultiCurrency = () => {
   //     .to(cards[3], { y: -546, duration: 0.5 }, "-=0.5");
   // }, []);
 
-  const walletCards = useRef<HTMLElement[]>([]);
+  const walletCards = useRef<(HTMLDivElement | null)[]>([]);
   const tl = useRef<gsap.core.Timeline | null>(null);
 
   useEffect(() => {
@@ -49,10 +49,23 @@ const MultiCurrency = () => {
       },
     });
 
-    tl.current
-      .to(cards[1], { y: -182, duration: 0.5, ease: "power2.inOut" })
-      .to(cards[2], { y: -364, duration: 0.5, ease: "power2.inOut" }, "-=0.5")
-      .to(cards[3], { y: -546, duration: 0.5, ease: "power2.inOut" }, "-=0.5");
+    if (cards[1]) {
+      tl.current.to(cards[1], { y: -182, duration: 0.5, ease: "power2.inOut" });
+    }
+    if (cards[2]) {
+      tl.current.to(
+        cards[2],
+        { y: -364, duration: 0.5, ease: "power2.inOut" },
+        "-=0.5"
+      );
+    }
+    if (cards[3]) {
+      tl.current.to(
+        cards[3],
+        { y: -546, duration: 0.5, ease: "power2.inOut" },
+        "-=0.5"
+      );
+    }
 
     return () => {
       if (tl.current) tl.current.kill();
@@ -63,46 +76,20 @@ const MultiCurrency = () => {
 
   useGSAP(() => {
     gsap.to("#phone-frame", {
-      y: -260,
+      y: -500,
       // rotation: 360,
       // borderRadius: "100%",
-      duration: 1,
+      duration: 7,
+      delay: 3,
       ease: "power2.inOut",
       scrollTrigger: {
         trigger: "#card-currency-section",
-        start: "top 20%",
-        end: "bottom 30%",
+        start: "top 50%",
+        end: "bottom 10%",
         scrub: 1,
         markers: false, // set to true for debugging
       },
     });
-
-    // gsap.to("#section-texts", {
-    //   y: -400,
-    //   // opacity: 0,
-    //   duration: 1,
-    //   ease: "power2.inOut",
-    //   scrollTrigger: {
-    //     trigger: "#card-currency-section",
-    //     start: "top 20%",
-    //     end: "bottom 30%",
-    //     scrub: 1,
-    //     markers: true, // set to true for debugging
-    //   },
-    // });
-    // gsap.to("#section-woman", {
-    //   y: -400,
-    //   // opacity: 0,
-    //   duration: 1,
-    //   ease: "power2.inOut",
-    //   scrollTrigger: {
-    //     trigger: "#card-currency-section",
-    //     start: "top 20%",
-    //     end: "bottom 30%",
-    //     scrub: 1,
-    //     markers: true, // set to true for debugging
-    //   },
-    // });
   });
 
   return (
@@ -110,20 +97,22 @@ const MultiCurrency = () => {
       <section
         id="card-currency-section"
         ref={scrollRef}
-        className="relative bg-cover bg-center w-full h-[900px] lg:h-[1000px] bg-no-repeat bg-gray-100 overflow-hidden"
+        className="relative bg-cover bg-center w-full h-[900px] lg:h-[1200px] bg-no-repeat bg-gray-100 overflow-hidden"
       >
         <div
           id="phone-frame"
           className="absolute bg-cover bg-center w-[330px]
-                      h-[660px] lg:w-[432px] top-60 lg:h-[708px] left-1/2 transform -translate-x-1/2 bg-no-repeat bg-[url('/images/iPhone-frame.png')]"
+                      h-[660px] lg:w-[432px] top-[62%] lg:top-[41%] lg:h-[708px] left-1/2 transform -translate-x-1/2 bg-no-repeat bg-[url('/images/iPhone-frame.png')]"
         ></div>
 
         <div
           id="wallet-card-section"
-          className="absolute bottom-0 left-1/2 transform -translate-x-1/2  space-y-5 "
+          className="absolute top-[20%] left-1/2 transform -translate-x-1/2  space-y-5 "
         >
           <div
-            ref={(el) => (walletCards.current[0] = el)}
+            ref={(el) => {
+              walletCards.current[0] = el;
+            }}
             className="wallet-card-1 "
           >
             <Image
@@ -135,7 +124,9 @@ const MultiCurrency = () => {
             />
           </div>
           <div
-            ref={(el) => (walletCards.current[1] = el)}
+            ref={(el) => {
+              walletCards.current[1] = el;
+            }}
             className="wallet-card-2 "
           >
             <Image
@@ -147,7 +138,9 @@ const MultiCurrency = () => {
             />
           </div>
           <div
-            ref={(el) => (walletCards.current[2] = el)}
+            ref={(el) => {
+              walletCards.current[2] = el;
+            }}
             className="wallet-card-3 "
           >
             <Image
@@ -159,7 +152,9 @@ const MultiCurrency = () => {
             />
           </div>
           <div
-            ref={(el) => (walletCards.current[3] = el)}
+            ref={(el) => {
+              walletCards.current[3] = el;
+            }}
             className="wallet-card-4"
           >
             <Image
@@ -174,7 +169,7 @@ const MultiCurrency = () => {
 
         <div
           id="section-woman"
-          className="absolute bottom-48 right-32 hidden lg:block"
+          className="absolute top-[28%] right-32 hidden lg:block"
         >
           <Image
             src="/images/girl-pressing-phone.png"
@@ -184,7 +179,7 @@ const MultiCurrency = () => {
             className="wallet-usd-icon w-auto h-auto"
           />
         </div>
-        <div id="section-texts" className="  absolute top-[40%] left-10  ">
+        <div id="section-texts" className="  absolute top-[30%] left-10  ">
           <div className=" px-4  hidden lg:block">
             <h2 className="font-semibold text-2xl lg:text-5xl text-black max-w-lg tracking-wide">
               Multi-currency Wallets
@@ -203,6 +198,7 @@ const MultiCurrency = () => {
             </div>
           </div>
         </div>
+        {/* <div className="h-screen w-full bg-amber-600 opacity-10 absolute"></div> */}
       </section>
       <div>
         <div className=" px-4 py-10 lg:hidden ">

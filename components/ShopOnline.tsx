@@ -13,7 +13,7 @@ const ShopOnline = ({ setOpenModal }: any) => {
       ease: "power2.inOut",
       scrollTrigger: {
         trigger: "#onlineShop-section",
-        start: "top 50%",
+        start: "top center",
         end: "bottom 30%",
         scrub: 1,
         markers: false, // set to true for debugging
@@ -53,7 +53,7 @@ const ShopOnline = ({ setOpenModal }: any) => {
   return (
     <section
       id="onlineShop-section"
-      className=" bg-[#f2f2f2] pb-10 lg:pb-40 w-full"
+      className=" bg-[#f2f2f2] pb-10 lg:pb-40 w-full !h-[900px]"
     >
       <div className="relative bg-cover bg-center w-full h-[900px] bg-no-repeat hidden lg:block">
         <div className="absolute bg-cover bg-center  w-[402px] lg:w-[432px] top-14 lg:bottom-0 h-[708px] left-1/2 transform -translate-x-1/2 bg-no-repeat bg-[url('/images/iPhone-frame-2.png')]"></div>
@@ -119,7 +119,7 @@ const ShopOnline = ({ setOpenModal }: any) => {
           </div>
         </div>
       </div>
-      <div className=" flex flex-col gap-8 lg:hidden">
+      <div className=" flex flex-col gap-2 lg:hidden">
         <div className=" flex items-center justify-center">
           <Image
             src="/images/iPhone-frame-2.png"
