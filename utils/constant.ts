@@ -4,7 +4,7 @@ export function extractPathFromUrl(url: string) {
     const parsedUrl = new URL(url);
     return parsedUrl.pathname;
   } catch (error) {
-    console.error("Invalid URL:", url);
+    console.log("Invalid URL:", url);
     return null;
   }
 }
