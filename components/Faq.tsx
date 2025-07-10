@@ -252,7 +252,7 @@ const FaqAccordion = () => {
           key={item.id}
           open={openId === item.id}
           icon={<Icon id={item.id} openId={openId} />}
-          className={`accordion-item mb-5 overflow-hidden ${
+          className={`accordion-item mb-5 pb-4 overflow-hidden ${
             item.id === openId ? "pb-3" : ""
           } border-b-[3px] border-[#5D0186] h-auto`}
           placeholder={undefined}
@@ -270,7 +270,7 @@ const FaqAccordion = () => {
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
           >
-            <h4 className="text-[#CA92E3] text-base lg:text-3xl">
+            <h4 className="text-[#CA92E3] text-base lg:text-4xl">
               {item.title}
             </h4>
           </AccordionHeader>

@@ -13,42 +13,33 @@ import ShopOnline from "@/components/ShopOnline";
 import CTA from "@/components/CTA";
 import FAQSection from "@/components/FAQSection";
 import Contactsection from "@/components/Contactsection";
+import ScrollAnimation from "@/components/ScrollSection";
+import MultiCard from "@/components/Currency";
 // Import Swiper styles
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const [openModal, setOpenModal] = useState(false);
+  const [saveActiveSlideImage, setsaveActiveSlideImage] = useState("");
 
-  // useGSAP(() => {
-  //   const clipAnimation = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: "#clip",
-  //       start: "center center",
-  //       end: "+=800 center",
-  //       scrub: 0.5,
-  //       pin: true,
-  //       pinSpacing: true,
-  //     },
-  //   });
-
-  //   clipAnimation.to(".mask-clip-path", {
-  //     width: "100vw",
-  //     height: "100vh",
-  //     borderRadius: 0,
-  //   });
-  // });
   return (
     <>
       <section>
         <main>
           {/* SECTION ONE */}
-          <Hero setOpenModal={setOpenModal} />
-          <Intro />
-          <MultiCurrency />
-          <ShopOnline setOpenModal={setOpenModal} />
+          <Hero
+            setOpenModal={setOpenModal}
+            setsaveActiveSlideImage={setsaveActiveSlideImage}
+          />
+          <Intro saveActiveSlideImage={saveActiveSlideImage} />
+          {/* <MultiCurrency /> */}
+          {/* <MultiCard /> */}
+          {/* <ShopOnline setOpenModal={setOpenModal} />
           <CTA setOpenModal={setOpenModal} />
           <FAQSection />
+          <Contactsection /> */}
+          <ScrollAnimation setOpenModal={setOpenModal} />
           <Contactsection />
         </main>
       </section>

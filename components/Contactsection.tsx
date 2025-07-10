@@ -1,11 +1,60 @@
+import { useGSAP } from "@gsap/react";
+// import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const Contactsection = () => {
+  useGSAP(() => {
+    // gsap.to("#mail-1", {
+    //   y: -350,
+    //   // rotation: 360,
+    //   // borderRadius: "100%",
+    //   duration: 3,
+    //   ease: "power2.inOut",
+    //   scrollTrigger: {
+    //     trigger: "#contact-section",
+    //     start: "top top",
+    //     end: "bottom bottom",
+    //     scrub: 1,
+    //     markers: true, // set to true for debugging
+    //   },
+    // });
+    // gsap.to("#product-2", {
+    //   y: -300,
+    //   // rotation: 360,
+    //   // borderRadius: "100%",
+    //   duration: 1,
+    //   ease: "power2.inOut",
+    //   scrollTrigger: {
+    //     trigger: "#contact-section",
+    //     start: "top 50%",
+    //     end: "bottom 30%",
+    //     scrub: 1,
+    //     markers: false, // set to true for debugging
+    //   },
+    // });
+    // gsap.to("#text-bodey", {
+    //   y: -100,
+    //   // rotation: 360,
+    //   // borderRadius: "100%",
+    //   duration: 1,
+    //   ease: "power2.inOut",
+    //   scrollTrigger: {
+    //     trigger: "#contact-section",
+    //     start: "top 50%",
+    //     end: "bottom 30%",
+    //     scrub: 1,
+    //     markers: false, // set to true for debugging
+    //   },
+    // });
+  });
   return (
-    <section className="relative p-4 lg:p-20 lg:py-24 bg-primary h-[1100px] overflow-hidden">
-      <div className="backdrop-blur transition-colors bg-[#6D1F8F]/40 rounded-2xl p-2 lg:p-10 py-6 lg:py-16 z-20  max-w-xs lg:max-w-7xl left-1/2 transform  -translate-x-1/2  absolute w-full">
+    <section
+      id="contact-section"
+      className="relative p-4 lg:p-20 lg:py-24 bg-primary h-[1100px] overflow-hidden"
+    >
+      <div className="backdrop-blur top-[10%] transition-colors bg-[#6D1F8F]/40 rounded-2xl p-2 lg:p-10 py-6 lg:py-16 z-20  max-w-xs lg:max-w-7xl left-1/2 transform  -translate-x-1/2  absolute w-full">
         <div className="lg:flex items-center">
           <div className="lg:w-1/2 lg:pl-16 ">
             <div className="  ">
@@ -161,7 +210,7 @@ const Contactsection = () => {
         </div>
       </div>
 
-      <div className="absolute lg:bottom-12 bottom-40 left-0 ">
+      <div className="absolute lg:bottom-12 bottom-40 left-0 " id="mail-1">
         <Image
           src="/images/message-vector.svg"
           alt="send icon"
