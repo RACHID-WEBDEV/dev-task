@@ -166,7 +166,7 @@ const Page = () => {
                       className="rounded-full w-[36px] lg:w-[40px]"
                       width={52}
                       height={52}
-                      src="/images/Phone/ghana.svg"
+                      src="/images/Phone/Ghana.svg"
                       alt=""
                     />
                   </div>
@@ -202,7 +202,7 @@ const Page = () => {
                       className="rounded-full w-[36px] lg:w-[40px]"
                       width={52}
                       height={52}
-                      src="/images/Phone/ghana.svg"
+                      src="/images/Phone/Ghana.svg"
                       alt=""
                     />
                   </div>

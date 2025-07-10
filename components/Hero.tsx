@@ -486,7 +486,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
                     className="rounded-full w-[44px] lg:w-[52px]"
                     width={52}
                     height={52}
-                    src="/images/Phone/ghana.svg"
+                    src="/images/Phone/Ghana.svg"
                     alt=""
                   />
                 </div>
