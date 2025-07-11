@@ -4,7 +4,7 @@ import React from "react";
 const CTA = ({ setOpenModal }: any) => {
   return (
     <section className="relative bg-cover bg-center w-full h-[850px] lg:h-[950px] bg-no-repeat bg-[url('/images/pay-bills.png')] overflow-hidden">
-      <div className=" absolute  top-[60%] transform -translate-y-1/2 w-full">
+      <div className=" absolute top-[45%] 1xl:top-[50%] 2xl:top-[60%] transform -translate-y-1/2 w-full">
         <div className=" flex justify-between flex-wrap gap-8 px-4 lg:pt-0 lg:px-20">
           <div className=" flex-1  ">
             <div className=" px-4 ">

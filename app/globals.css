@@ -12,6 +12,9 @@
   --font-paytone: var(--font-paytone-One);
   --font-mono: var(--font-dm-sans);
 }
+@theme {
+  --breakpoint-1xl: 90rem; /* 1440px */
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -66,7 +69,7 @@ input:-webkit-autofill:active {
 .button-main span:first-child {
   position: relative;
   transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 .button-main span:last-child {
@@ -101,6 +104,7 @@ input:-webkit-autofill:active {
 .button-main:hover:after {
   transform-origin: bottom center;
   transform: skewY(9.3deg) scaleY(2);
+  color: #18181a;
 }
 
 .button-main:hover span:last-child {
@@ -304,8 +308,8 @@ input:-webkit-autofill:active {
 }
 
 .wrapper {
-  /* height: 100vh; */
-  height: 1000px;
+  height: 100vh;
+  /* height: 1000px; */
 }
 
 .list {
@@ -319,7 +323,7 @@ input:-webkit-autofill:active {
 
 .item {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   display: flex;
   position: absolute;
   inset: 0%;
@@ -327,7 +331,7 @@ input:-webkit-autofill:active {
   overflow: hidden;
 }
 
-.item_number {
+/* .item_number {
   font-size: 1.5rem;
   height: 3rem;
   width: 3rem;
@@ -369,19 +373,19 @@ input:-webkit-autofill:active {
 
 .padding-vertical {
   padding: 2rem;
-}
+} */
 
 @media (max-width: 575.98px) {
-  .heading {
+  /* .heading {
     font-size: 2.5rem;
-  }
+  } */
 
   .item {
     display: flex;
     flex-direction: column;
   }
 
-  .item_content,
+  /* .item_content,
   .item_media {
     height: 50vh;
     width: 100%;
@@ -392,7 +396,7 @@ input:-webkit-autofill:active {
   .item_number {
     font-size: 0.5rem;
     top: 1.5rem;
-  }
+  } */
 }
 
 /* PRE LOADER CSS START */

@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 //   "/images/Wallet/cad-wallet.svg",
 //   "/images/Wallet/usd-wallet.svg",
 // ];
-const MultiCurrency = () => {
+const MultiCurrency = ({ setOpenModal }: any) => {
   const scrollRef = useRef(null);
 
   // const walletCards = useRef([]);
@@ -101,13 +101,12 @@ const MultiCurrency = () => {
       >
         <div
           id="phone-frame"
-          className="absolute bg-cover bg-center w-[330px]
-                      h-[660px] lg:w-[432px] top-[62%] lg:top-[50%] xl:top-[45%] lg:h-[708px] xl:h-[750px] left-1/2 transform -translate-x-1/2 bg-no-repeat bg-[url('/images/iPhone-frame.png')]"
+          className="absolute bg-cover bg-center w-[330px] h-[660px] lg:h-[608px] xl:w-[365px] 1xl:w-[432px] 1xl:h-[750px] top-[62%] lg:top-[72%] 1xl:top-[60%] 2xl:top-[55%] left-1/2 transform -translate-x-1/2 bg-no-repeat bg-[url('/images/iPhone-frame.png')]"
         ></div>
 
         <div
           id="wallet-card-section"
-          className="absolute top-[20%] left-1/2 transform -translate-x-1/2  space-y-5 "
+          className="absolute top-[20%] xl:top-[30%] 1xl:top-[30%] left-1/2 transform -translate-x-1/2  space-y-5  overflow-hidden"
         >
           <div
             ref={(el) => {
@@ -120,7 +119,7 @@ const MultiCurrency = () => {
               alt="send icon"
               width={320}
               height={182}
-              className="wallet-ngn-icon  min-w-[260px]"
+              className="wallet-ngn-icon  min-w-[260px] lg:w-[290px] 1xl:w-[320px]"
             />
           </div>
           <div
@@ -134,7 +133,7 @@ const MultiCurrency = () => {
               alt="send icon"
               width={320}
               height={182}
-              className="wallet-gha-icon"
+              className="wallet-gha-icon  min-w-[260px] lg:w-[290px] 1xl:w-[320px]"
             />
           </div>
           <div
@@ -148,7 +147,7 @@ const MultiCurrency = () => {
               alt="send icon"
               width={320}
               height={182}
-              className="wallet-cad-icon"
+              className="wallet-cad-icon  min-w-[260px] lg:w-[290px] 1xl:w-[320px]"
             />
           </div>
           <div
@@ -162,14 +161,14 @@ const MultiCurrency = () => {
               alt="send icon"
               width={320}
               height={182}
-              className="wallet-usd-icon"
+              className="wallet-usd-icon  min-w-[260px] lg:w-[290px] 1xl:w-[320px]"
             />
           </div>
         </div>
 
         <div
           id="section-woman"
-          className="absolute top-[28%] right-32 hidden lg:block"
+          className="absolute top-[28%] right-24 1xl:right-32 hidden lg:block"
         >
           <Image
             src="/images/girl-pressing-phone.png"
@@ -179,9 +178,12 @@ const MultiCurrency = () => {
             className="wallet-usd-icon w-auto h-auto"
           />
         </div>
-        <div id="section-texts" className="  absolute top-[30%] left-10  ">
+        <div
+          id="section-texts"
+          className="  absolute top-[30%] left-10 max-w-[400px] 1xl:max-w-lg"
+        >
           <div className=" px-4  hidden lg:block">
-            <h2 className="font-semibold text-2xl lg:text-5xl text-black max-w-lg tracking-wide">
+            <h2 className="font-semibold text-2xl lg:text-4xl 1xl:text-5xl text-black  tracking-wide">
               Multi-currency Wallets
             </h2>
             <div className="mt-8 max-w-[420px] text-gray-800 space-y-4">
@@ -195,6 +197,16 @@ const MultiCurrency = () => {
                 currencies, empowering efficient financial management and
                 flexibility in global transactions
               </p>
+            </div>
+            <div className="pt-6">
+              <button
+                onClick={() => setOpenModal(true)}
+                className="button-main"
+                role="button"
+              >
+                <span className="text">Currency Converter</span>
+                <span className=" whitespace-nowrap">Click to Convert</span>
+              </button>
             </div>
           </div>
         </div>
@@ -216,6 +228,16 @@ const MultiCurrency = () => {
               currencies, empowering efficient financial management and
               flexibility in global transactions
             </p>
+          </div>
+          <div className="pt-6">
+            <button
+              onClick={() => setOpenModal(true)}
+              className="button-main"
+              role="button"
+            >
+              <span className="text">Currency Converter</span>
+              <span className=" whitespace-nowrap">Click to Convert</span>
+            </button>
           </div>
         </div>
       </div>

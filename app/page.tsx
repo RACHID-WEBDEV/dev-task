@@ -15,13 +15,16 @@ import FAQSection from "@/components/FAQSection";
 import Contactsection from "@/components/Contactsection";
 import ScrollAnimation from "@/components/ScrollSection";
 import MultiCard from "@/components/Currency";
+import CurrencyConverterModal from "@/components/CurrencyConverterModal";
 // Import Swiper styles
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const [openModal, setOpenModal] = useState(false);
+  const [openCurrency, setOpenCurrency] = useState(false);
   const [saveActiveSlideImage, setsaveActiveSlideImage] = useState("");
+  const [openDownload, setOpenDownload] = useState(false);
 
   return (
     <>
@@ -39,11 +42,22 @@ export default function Home() {
           <CTA setOpenModal={setOpenModal} />
           <FAQSection />
           <Contactsection /> */}
-          <ScrollAnimation setOpenModal={setOpenModal} />
+          <ScrollAnimation
+            setOpenModal={setOpenModal}
+            setOpenCurrency={setOpenCurrency}
+          />
+          {/* <FAQSection setOpenModal={setOpenModal} /> */}
           <Contactsection />
         </main>
       </section>
       {openModal && <DownloadModal setOpenModal={setOpenModal} />}
+      {openCurrency && (
+        <CurrencyConverterModal
+          setOpenModal={setOpenCurrency}
+          setOpenDownload={setOpenDownload}
+        />
+      )}
+      {openDownload && <DownloadModal setOpenModal={setOpenDownload} />}
     </>
   );
 }

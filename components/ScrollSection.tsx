@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 type Direction = "horizontal" | "vertical" | null;
 
-const ScrollAnimation = ({ setOpenModal }: any) => {
+const ScrollAnimation = ({ setOpenModal, setOpenCurrency }: any) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -97,7 +97,7 @@ const ScrollAnimation = ({ setOpenModal }: any) => {
           <div className="wrapper">
             <div role="list" className="list">
               <div role="listitem" className="item">
-                <MultiCurrency />
+                <MultiCurrency setOpenModal={setOpenCurrency} />
               </div>
               <div role="listitem" className="item">
                 <ShopOnline setOpenModal={setOpenModal} />
@@ -105,22 +105,23 @@ const ScrollAnimation = ({ setOpenModal }: any) => {
               <div role="listitem" className="item">
                 <CTA setOpenModal={setOpenModal} />
               </div>
-              <div role="listitem" className="item">
+              {/* <div role="listitem" className="item">
                 <FAQSection setOpenModal={setOpenModal} />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
-        {/* <div className="section">
-          <div className="container-medium">
+        <div className="sectionn">
+          <FAQSection setOpenModal={setOpenModal} />
+          {/* <div className="container-medium">
             <div className="padding-vertical">
               <div className="max-width-large">
                 <h1 className="heading">Horizontal Scroll Is Cool!</h1>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
-        <div className="scroll-section horizontal-section section">
+        {/*<div className="scroll-section horizontal-section section">
           <div className="wrapper">
             <div role="list" className="list">
               <div role="listitem" className="item">

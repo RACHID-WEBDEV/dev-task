@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import { vision_data } from "../data/vision";
+import { vision_data } from "../../data/vision";
 import DownloadModal from "@/components/DownloadModal";
 import Contactsection from "@/components/Contactsection";
 

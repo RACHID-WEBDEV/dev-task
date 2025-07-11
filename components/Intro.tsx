@@ -205,7 +205,7 @@ const Intro = ({ saveActiveSlideImage }: any) => {
       {/* <div className="mask-clip-path about-image"> */}
       <div
         // ref={imageRef} bg-[url('/images/slide-4.png')]
-        className="relative bg-cover bg-center w-[350px] h-[410px] lg:w-[424px] top-48 lg:top-56 lg:h-[493px] left-1/2 transform -translate-x-1/2 bg-no-repeat "
+        className="relative bg-cover bg-center w-[350px] h-[410px] lg:w-[424px] top-48 lg:top-40 xl:top-12 1xl:top-28 2xl:top-48 lg:h-[493px] left-1/2 transform -translate-x-1/2 bg-no-repeat "
       >
         <Image
           ref={imageRef}
@@ -223,7 +223,7 @@ const Intro = ({ saveActiveSlideImage }: any) => {
         </div>
         {/* </div> */}
       </div>
-      <div className="absolute bottom-28 lg:bottom-16 left-1/2 transform -translate-x-1/2 text-center w-full px-4 z-30">
+      <div className="absolute bottom-28 lg:bottom-10 xl:bottom-10 1xl:bottom-16 2xl:bottom-32 left-1/2 transform -translate-x-1/2 text-center w-full px-4 z-30">
         <h2 className="font-semibold text-4xl lg:text-5xl text-black mx-auto max-w-lg tracking-wide ">
           Send and Receive Money
         </h2>

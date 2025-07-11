@@ -6,7 +6,7 @@ import React from "react";
 const ShopOnline = ({ setOpenModal }: any) => {
   useGSAP(() => {
     gsap.to("#product-1", {
-      y: -350,
+      y: -380,
       // rotation: 360,
       // borderRadius: "100%",
       duration: 3,
@@ -53,12 +53,12 @@ const ShopOnline = ({ setOpenModal }: any) => {
   return (
     <section
       id="onlineShop-section"
-      className=" bg-[#f2f2f2] pb-10 lg:pb-40 w-full !h-screen"
+      className=" bg-[#f2f2f2] pb-10 lg:pb-40 w-full !h-screen  z-50"
     >
-      <div className="relative bg-cover bg-center w-full h-[900px] bg-no-repeat hidden lg:block">
-        <div className="absolute bg-cover bg-center  w-[402px] lg:w-[432px] top-14 lg:bottom-0 h-[708px] left-1/2 transform -translate-x-1/2 bg-no-repeat bg-[url('/images/iPhone-frame-2.png')]"></div>
+      <div className=" bg-cover bg-center w-full h-screen relative bg-no-repeat hidden lg:block">
+        <div className="absolute bg-cover bg-center  w-[332px] 1xl:w-[412px] 2xl:w-[432px] -top-8 1xl:-top-10 2xl:top-2  h-[708px] 1xl:h-[800px] left-1/2 transform -translate-x-1/2 bg-no-repeat bg-[url('/images/iPhone-frame-2.png')]"></div>
 
-        <div className="absolute -bottom-32 right-8 hidden lg:block">
+        <div className="absolute -bottom-72 1xl:-bottom-60 right-8 hidden lg:block">
           <div className="flex items-center  gap-2">
             <div className="pt-80" id="product-1">
               <Image
@@ -66,7 +66,7 @@ const ShopOnline = ({ setOpenModal }: any) => {
                 alt="prod icon - 1"
                 width={120}
                 height={792}
-                className="prod-icon"
+                className="prod-icon w-[100px] 1xl:w-[110px] 2xl:w-[120px] "
               />
             </div>
             <div className="pb-56 ">
@@ -75,7 +75,7 @@ const ShopOnline = ({ setOpenModal }: any) => {
                 alt="prod icon - 2"
                 width={120}
                 height={792}
-                className="prod-icon"
+                className="prod-icon w-[100px] 1xl:w-[110px] 2xl:w-[120px] "
               />
             </div>
             <div className="pt-12" id="product-2">
@@ -84,14 +84,17 @@ const ShopOnline = ({ setOpenModal }: any) => {
                 alt="prod icon - 1"
                 width={200}
                 height={792}
-                className="prod-icon"
+                className="prod-icon  w-[150px] 2xl:w-[200px]"
               />
             </div>
           </div>
         </div>
-        <div className="  absolute bottom-48 left-10  " id="text-bodey">
+        <div
+          className="  absolute bottom-16 1xl:bottom-20 2xl:bottom-48 left-10 max-w-[400px] 1xl:max-w-lg "
+          id="text-bodey"
+        >
           <div className=" px-4  hidden lg:block">
-            <h2 className="font-semibold text-2xl lg:text-5xl text-black max-w-lg tracking-wide">
+            <h2 className="font-semibold text-2xl lg:text-4xl 1xl:text-5xl text-black  tracking-wide">
               Shop Online
             </h2>
             <div className="mt-8 max-w-[420px] text-gray-800 space-y-4">
