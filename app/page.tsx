@@ -16,6 +16,7 @@ import Contactsection from "@/components/Contactsection";
 import ScrollAnimation from "@/components/ScrollSection";
 import MultiCard from "@/components/Currency";
 import CurrencyConverterModal from "@/components/CurrencyConverterModal";
+import Header from "@/components/Header";
 // Import Swiper styles
 
 gsap.registerPlugin(ScrollTrigger);
@@ -28,6 +29,7 @@ export default function Home() {
 
   return (
     <>
+      <Header />
       <section>
         <main>
           {/* SECTION ONE */}

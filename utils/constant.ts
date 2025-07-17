@@ -8,3 +8,7 @@ export function extractPathFromUrl(url: string) {
     return null;
   }
 }
+
+export function formatNumber(num: number): string {
+  return num.toLocaleString("en-CA"); // Force Canadian English locale
+}

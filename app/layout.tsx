@@ -21,8 +21,8 @@ const dm_Sans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Revve - Test",
-  description: "Frontend Developer Test for Revve",
+  title: "Revve ",
+  description: " Revve",
 };
 
 export default function RootLayout({

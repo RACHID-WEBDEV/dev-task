@@ -1,7 +1,9 @@
 import React from "react";
 import FaqAccordion from "./Faq";
-
+import Link from "next/link";
+import { faqContent } from "@/data/faqData";
 const FAQSection = ({ setOpenModal }: any) => {
+  const data = faqContent?.slice(0, 7);
   return (
     <>
       <section className="relative bg-cover bg-center w-full h-full  bg-no-repeat bg-[#4F0072]  pt-[100px]">
@@ -17,12 +19,25 @@ const FAQSection = ({ setOpenModal }: any) => {
                     Here are some basic questions and answers to help you get
                     started.
                   </p>
-
+                  <div>
+                    <Link href="/faqs">
+                      <button
+                        // onClick={() => setOpenModal(true)}
+                        className="button-alt"
+                        role="button"
+                      >
+                        <span className="text">Read More FAQs</span>
+                        <span className=" whitespace-nowrap">
+                          Click & Read More
+                        </span>
+                      </button>
+                    </Link>
+                  </div>
                   <p className="pt-6">Get Revve on your phone</p>
                   <div>
                     <button
                       onClick={() => setOpenModal(true)}
-                      className="button-alt"
+                      className="button-alt-outline"
                       role="button"
                     >
                       <span className="text">Download the app</span>
@@ -46,7 +61,7 @@ const FAQSection = ({ setOpenModal }: any) => {
             </h1> */}
           </div>
           <div className="col-span-2">
-            <FaqAccordion />{" "}
+            <FaqAccordion data={data} />{" "}
           </div>
         </div>
         {/* <div className=" absolute  top-1/2 transform -translate-y-1/2 w-full">

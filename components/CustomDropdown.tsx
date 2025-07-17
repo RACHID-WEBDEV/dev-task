@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+// import Image from "next/image";
 import classNames from "classnames";
 type Provider = {
   name: string;
@@ -101,7 +102,7 @@ const CustomDropdown = ({
               >
                 <div className=" flex items-center gap-2">
                   {item?.avatar && (
-                    <Image
+                    <img
                       src={item?.avatar}
                       alt={`${item.name} provider`}
                       width={64}

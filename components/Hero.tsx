@@ -230,7 +230,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
               alt="Revve Logo"
               width={130}
               height={60}
-              className="w-[90px] lg:w-[130px]"
+              className="w-[90px] lg:w-[130px] opacity-0"
             />
             <h2 className=" font-semibold text-2xl lg:text-5xl text-white hidden lg:flex">
               Send. Shop. Spend
@@ -321,7 +321,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
                       className="w-10 h-10 rounded-full slide-out-move-down"
                       width={32}
                       height={32}
-                      src="/images/Phone/slide-1-gt.svg"
+                      src="/images/Phone/slide-1-uba.svg"
                       alt=""
                     />
                   </div>
@@ -367,7 +367,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
               alt="Revve Logo"
               width={130}
               height={60}
-              className="w-[90px] lg:w-[130px]"
+              className="w-[90px] lg:w-[130px] opacity-0"
             />
             <h2 className=" font-semibold text-2xl lg:text-5xl text-white hidden lg:flex">
               Send. Shop. Spend
@@ -504,7 +504,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
               alt="Revve Logo"
               width={130}
               height={60}
-              className="w-[90px] lg:w-[130px]"
+              className="w-[90px] lg:w-[130px] opacity-0"
             />
             <h2 className=" font-semibold text-2xl lg:text-5xl text-white hidden lg:flex">
               Send. Shop. Spend
@@ -641,7 +641,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
               alt="Revve Logo"
               width={130}
               height={60}
-              className="w-[90px] lg:w-[130px]"
+              className="w-[90px] lg:w-[130px] opacity-0"
             />
             <h2 className=" font-semibold text-2xl lg:text-5xl text-white hidden lg:flex">
               Send. Shop. Spend
@@ -777,7 +777,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
               alt="Revve Logo"
               width={130}
               height={60}
-              className="w-[90px] lg:w-[130px]"
+              className="w-[90px] lg:w-[130px] opacity-0"
             />
             <h2 className=" font-semibold text-2xl lg:text-5xl text-white hidden lg:flex">
               Send. Shop. Spend
@@ -868,7 +868,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
                       className="w-10 h-10 rounded-full slide-out-move-down overflow-hidden"
                       width={32}
                       height={32}
-                      src="/images/Phone/slide-1-gt.svg"
+                      src="/images/Phone/slide-1-uba.svg"
                       alt=""
                     />
                   </div>
@@ -876,7 +876,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
                     <div className="text-sm text-white/50 ">
                       Today, 11:28 AM
                     </div>
-                    <div className="font-bold">Paid at GTB</div>
+                    <div className="font-bold">Paid at UBA</div>
                   </div>
                 </div>
                 <div className="font-bold text-white slide-out-move-right">
@@ -914,7 +914,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
               alt="Revve Logo"
               width={130}
               height={60}
-              className="w-[90px] lg:w-[130px]"
+              className="w-[90px] lg:w-[130px] opacity-0"
             />
             <h2 className=" font-semibold text-2xl lg:text-5xl text-white hidden lg:flex">
               Send. Shop. Spend
