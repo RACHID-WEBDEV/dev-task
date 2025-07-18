@@ -57,7 +57,7 @@ const Header = ({ logoWhite = true }: any) => {
           backgroundColor: backgroundColor,
           height: headerHeight,
         }}
-        className="fixed top-0 w-full z-50 bg-transparent flex items-start md:items-center justify-between px-4 md:px-8 lg:px-20"
+        className="fixed top-0 w-full z-40 bg-transparent flex items-start md:items-center justify-between px-4 md:px-8 lg:px-20"
 
         // className={classNames(
         //   " px-4 py-2 lg:px-20 pt-4 w-full fixed top-0 z-40"
@@ -72,11 +72,6 @@ const Header = ({ logoWhite = true }: any) => {
                 width={130}
                 height={60}
                 className="w-[90px]"
-                // className={classNames(
-                //   "",
-                //   { "w-[90px] lg:w-[90px]": position },
-                //   { "lg:w-[130px]": !position }
-                // )}
               />
             ) : (
               <Image

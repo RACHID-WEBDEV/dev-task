@@ -1,5 +1,6 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 const PreLoader = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,12 +18,22 @@ const PreLoader = () => {
     <AnimatePresence mode="wait">
       {isLoading && (
         <motion.div
-          className="loadbody"
+          className="loadbody  relative"
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.5 } }}
         >
-          <div className="loading-container">
+          <div className=" logo-pulse">
+            <Image
+              src="/images/logo-white.svg"
+              alt="Revve Logo"
+              width={130}
+              height={60}
+              className="w-[320px]"
+            />
+          </div>
+          <div className="  size-80 bg-primary top-0 absolute left-10 z-50"></div>
+          {/* <div className="loading-container">
             <div className="loading-text">
               <span className=" !uppercase">R</span>
               <span>E</span>
@@ -32,7 +43,7 @@ const PreLoader = () => {
               <span>M</span>
               <span>E</span>
             </div>
-          </div>
+          </div> */}
           {/* <p className="text-white mt-2 lg:mt-4 text-2xl lg:text-3xl font-ClashDisplay blinkText tracking-widest ">
             Loading...
           </p> */}

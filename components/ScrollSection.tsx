@@ -8,6 +8,7 @@ import MultiCurrency from "./MultiCurrency";
 import FAQSection from "./FAQSection";
 import ShopOnline from "./ShopOnline";
 import CTA from "./CTA";
+// import MultiCurrencyMobile from "./MultiCurrencyMobile";
 gsap.registerPlugin(ScrollTrigger);
 
 type Direction = "horizontal" | "vertical" | null;
@@ -99,6 +100,9 @@ const ScrollAnimation = ({ setOpenModal, setOpenCurrency }: any) => {
               <div role="listitem" className="item">
                 <MultiCurrency setOpenModal={setOpenCurrency} />
               </div>
+              {/* <div role="listitem" className="item">
+                <MultiCurrencyMobile />
+              </div> */}
               <div role="listitem" className="item">
                 <ShopOnline setOpenModal={setOpenModal} />
               </div>
@@ -112,7 +116,7 @@ const ScrollAnimation = ({ setOpenModal, setOpenCurrency }: any) => {
           </div>
         </div>
         <div className="sectionn">
-          <FAQSection setOpenModal={setOpenModal} />
+          <FAQSection />
           {/* <div className="container-medium">
             <div className="padding-vertical">
               <div className="max-width-large">

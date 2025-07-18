@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 //   "/images/Wallet/cad-wallet.svg",
 //   "/images/Wallet/usd-wallet.svg",
 // ];
-const MultiCurrency = ({ setOpenModal }: any) => {
+const MultiCurrencyMobile = ({ setOpenModal }: any) => {
   const scrollRef = useRef(null);
 
   // const walletCards = useRef([]);
@@ -184,7 +184,7 @@ const MultiCurrency = ({ setOpenModal }: any) => {
         >
           <div className=" px-4  hidden lg:block">
             <h2 className="font-semibold text-2xl lg:text-4xl 1xl:text-5xl text-black  tracking-wide">
-              Multi-currency Wallets
+              Multi-currency Wallets Mo
             </h2>
             <div className="mt-8 max-w-[420px] text-gray-800 space-y-4">
               <p className=" ">
@@ -245,4 +245,4 @@ const MultiCurrency = ({ setOpenModal }: any) => {
   );
 };
 
-export default MultiCurrency;
+export default MultiCurrencyMobile;

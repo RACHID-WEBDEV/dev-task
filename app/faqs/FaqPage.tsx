@@ -1,12 +1,84 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FaqAccordion from "@/components/Faq";
 
-import { faqContent } from "@/data/faqData";
-import { SearchIcon } from "@/public/SvgsIcon";
+// import { faqContent } from "@/data/faqData";
+import { SearchIcon, XIconSmall } from "@/public/SvgsIcon";
+import { getData } from "@/utils/axiosInstance";
+import SmallSpinner from "@/components/SmallSpinner";
+import classNames from "classnames";
 
 const FaqPage = () => {
   // const pathname = usePathname();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [faqsData, setFaqsData] = useState<any>(undefined);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleFetchFaqs = async (
+    url: any,
+    search: any,
+    page: any,
+    search_fields: any
+  ) => {
+    const params = {
+      ...(search && { search: search }),
+      ...(page && { page: page }),
+      ...(search_fields && { search_fields: search_fields }),
+    };
+
+    // Construct the query string dynamically
+    const queryString = Object.entries(params)
+      .map(([key, value]) => `${key}=${encodeURIComponent(String(value))}`) // Encode each key-value pair
+      .join("&"); // Join the pairs with "&"
+
+    // Append the query string to the base URL
+    const fetchUrl = queryString ? `${url}?${queryString}` : url;
+
+    setLoading(true);
+    try {
+      const response = await getData(fetchUrl, "");
+      setFaqsData(response);
+      // console.log("city res", response);
+    } catch (error: any) {
+      setError(error.response.data.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // useEffect(() => {
+  //   handleFetchFaqs("/faqs", "", "", "question,answer");
+  // }, []);
+
+  const fetchFaqSearchData = async (e: any) => {
+    e.preventDefault();
+    if (searchQuery.length >= 2) {
+      handleFetchFaqs("/faqs", searchQuery, "", "question,answer");
+    }
+  };
+
+  const pageData = faqsData?.data?.page_info;
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // useEffect(() => {
+  //   if (pageData?.page !== currentPage) {
+  //     setCurrentPage(pageData?.page);
+  //   }
+  // }, [pageData, currentPage]);
+
+  useEffect(() => {
+    const fetchFaqSearchPagenate = async () => {
+      if (currentPage >= 1) {
+        handleFetchFaqs("/faqs", "", currentPage, "question,answer");
+      }
+    };
+    fetchFaqSearchPagenate();
+  }, [currentPage]);
+
+  // console.log("currentPage", currentPage);
+
   return (
     <>
       <div className="pt-10 lg:pt-20 bg-primary">
@@ -25,7 +97,10 @@ const FaqPage = () => {
                     dolor
                   </p>
                 </div>
-                <form className="flex flex-col lg:flex-row gap-y-3 lg:gap-y-0 items-center max-w-lg mx-auto mb-6">
+                <form
+                  onSubmit={fetchFaqSearchData}
+                  className="flex flex-col lg:flex-row gap-y-3 lg:gap-y-0 items-center max-w-lg mx-auto mb-6"
+                >
                   <label htmlFor="voice-search" className="sr-only">
                     Search
                   </label>
@@ -38,7 +113,20 @@ const FaqPage = () => {
                       id="voice-search"
                       className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg outline-none focus:to-gray-800 focus:border-gray-800 block w-full ps-10 p-2.5 py-3  "
                       placeholder="Search..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
                     />
+                    {searchQuery.length >= 3 && (
+                      <div
+                        onClick={() => {
+                          setSearchQuery("");
+                          handleFetchFaqs("/faqs", "", "", "question,answer");
+                        }}
+                        className="absolute inset-y-0 end-2 flex items-center ps-3 cursor-pointer text-red-600"
+                      >
+                        <XIconSmall />
+                      </div>
+                    )}
                     {/* <button
                   type="button"
                   className="absolute inset-y-0 end-0 flex items-center pe-3"
@@ -62,14 +150,72 @@ const FaqPage = () => {
                   </div>
                   <button
                     type="submit"
+                    // onClick={() => fetchFaqSearchData()}
                     className="cursor-pointer inline-flex items-center w-full justify-center lg:w-fit py-2.5 px-4 ms-2 text-sm font-medium text-gray-100 hover:text-white bg-primary rounded-lg border border-bills-secondary hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-800/30 "
                   >
                     Search
                   </button>
                 </form>
-
                 <div className=" bg-primary  px-4 lg:px-10 py-8 sm:py-10 rounded-xl shadow-md">
-                  <FaqAccordion data={faqContent} />
+                  {loading ? (
+                    <div className=" flex items-center justify-center">
+                      <SmallSpinner />
+                    </div>
+                  ) : (
+                    <div className="">
+                      {faqsData?.data?.faqs?.length === 0 ? (
+                        <p className="text-white  text-xl font-semibold flex items-center justify-center">
+                          No Faqs Found
+                        </p>
+                      ) : (
+                        <>
+                          {error && (
+                            <p className="text-white  text-xl font-semibold flex items-center justify-center">
+                              Failed to fetch Faqs
+                            </p>
+                          )}
+                          <FaqAccordion data={faqsData?.data?.faqs} />
+                        </>
+                      )}
+                    </div>
+                  )}
+                </div>
+                <div className="py-10 px-4">
+                  <div className="flex items-center gap-4 flex-wrap  justify-between w-full">
+                    <button
+                      className={classNames(
+                        " border-gray-400 p-0.5 px-2  bg-white border text-primary",
+                        {
+                          "cursor-not-allowed opacity-40": currentPage === 1,
+                        }
+                      )}
+                      disabled={currentPage === 1}
+                      onClick={() => setCurrentPage((prev: any) => prev - 1)}
+                    >
+                      &laquo; Prev
+                    </button>
+                    <div className="flex text-sm whitespace-nowrap text-muted-foreground">
+                      <div className="text-gray-200">
+                        Showing Page {pageData?.page} out of{" "}
+                        {pageData?.total_pages}{" "}
+                        {pageData?.page <= 1 ? "Page" : "Pages"}
+                      </div>
+                    </div>
+
+                    <button
+                      className={classNames(
+                        " border-gray-400 p-0.5 px-2 bg-white border text-primary",
+                        {
+                          "cursor-not-allowed opacity-40":
+                            currentPage === pageData?.total_pages,
+                        }
+                      )}
+                      disabled={currentPage === pageData?.total_pages}
+                      onClick={() => setCurrentPage((prev: any) => prev + 1)}
+                    >
+                      Next &raquo;
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

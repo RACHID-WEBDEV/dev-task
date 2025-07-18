@@ -506,6 +506,23 @@ input:-webkit-autofill:active {
   } */
 }
 
+@keyframes pulseScale {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.logo-pulse {
+  animation: pulseScale 1.5s ease-in-out infinite;
+  display: inline-block;
+}
+
 /* PRE LOADER CSS START */
 
 .loadbody {
@@ -739,4 +756,111 @@ input:-webkit-autofill:active {
   height: 100%;
   object-fit: cover;
   z-index: 0;
+}
+
+/* CHAT ME CSS IN PAGES */
+
+.main-btn {
+  /*   background: #6985c4; */
+  @apply bg-primary border-2 border-primary;
+
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  position: fixed;
+  box-sizing: border-box;
+  bottom: 20px;
+  right: 10px;
+  text-align: center;
+  z-index: 10;
+  transition: 0.7s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.fa {
+  font-size: 36px;
+  color: black;
+  text-shadow: 0 0 10px white;
+}
+
+.sub-btns {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9;
+}
+
+.sub-btns > div {
+  /* @apply bg-white border border-primary text-primary; */
+  box-sizing: border-box;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  position: relative;
+  box-sizing: border-box;
+  transition: 0.7s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn1 {
+  bottom: 5px;
+}
+.btn2 {
+  bottom: 60px;
+  left: 5px;
+}
+.btn3 {
+  bottom: 115px;
+  left: 5px;
+}
+.btn4 {
+  bottom: 170px;
+  left: 5px;
+}
+.touch {
+  height: 50px !important;
+  width: 50px !important;
+}
+.btn5 {
+  bottom: 225px;
+  left: 6px;
+}
+.btn6 {
+  bottom: 275px;
+  left: 5px;
+}
+.btn7 {
+  bottom: 325px;
+  left: 5px;
+}
+.btn8 {
+  bottom: 375px;
+  left: 5px;
+}
+.btn9 {
+  bottom: 420px;
+  left: 5px;
+}
+
+/* CHAT ME CSS IN PAGES END HERE*/
+
+.notifier {
+  opacity: 0; /* Initially hide the dot */
+  animation: blink-animation 2.5s infinite; /* Apply the animation */
+}
+
+@keyframes blink-animation {
+  0%,
+  100% {
+    opacity: 0; /* Hide the dot at the start and end of the animation */
+  }
+  50% {
+    opacity: 1; /* Show the dot in the middle of the animation */
+  }
 }

@@ -1,5 +1,11 @@
 // import { useGSAP } from "@gsap/react";
 // import gsap from "gsap";
+import LinkedIcon, {
+  FacebookIcon,
+  InstagramIcon,
+  WhatsAppIcon,
+  XIcon,
+} from "@/public/SvgsIcon";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -242,102 +248,40 @@ const Contactsection = () => {
           <div className=" flex items-center  justify-center lg:justify-between flex-wrap w-full gap-4 px-4  lg:px-20">
             <div className=" flex items-center gap-4">
               <a
-                href="https://www.facebook.com/revveme"
+                href="https://linkedin.com/company/revve/about/?viewAsMember=true"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clipPath="url(#clip0_267_889)">
-                    <path
-                      d="M2.40383 0.0175781C1.07544 0.0175781 0.000214915 1.09473 0 2.42011C0 3.74679 1.07522 4.82373 2.40404 4.82373C3.72921 4.82373 4.80593 3.74679 4.80593 2.42011C4.80593 1.09452 3.72899 0.0175781 2.40383 0.0175781Z"
-                      fill="white"
-                    />
-                    <path
-                      d="M0.330536 6.64648H4.4756V19.9828H0.330536V6.64648Z"
-                      fill="white"
-                    />
-                    <path
-                      d="M15.0279 6.31543C13.0116 6.31543 11.6596 7.42095 11.1062 8.46931H11.0507V6.64704H7.07523H7.07501V19.9832H11.2164V13.3857C11.2164 11.6464 11.5476 9.96168 13.7041 9.96168C15.8296 9.96168 15.8579 11.9509 15.8579 13.4972V19.983H20V12.6681C20 9.07752 19.2252 6.31543 15.0279 6.31543Z"
-                      fill="white"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_267_889">
-                      <rect width="20" height="20" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
+                <LinkedIcon />
               </a>
               <a
-                href="https://www.facebook.com/revveme"
+                href="https://facebook.com/profile.php?id=61572466705088&sk=about"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clipPath="url(#clip0_267_911)">
-                    <path
-                      d="M17.0703 0H2.92969C1.31439 0 0 1.31439 0 2.92969V17.0703C0 18.6856 1.31439 20 2.92969 20H8.82812V12.9297H6.48438V9.41406H8.82812V7.03125C8.82812 5.09262 10.4051 3.51562 12.3438 3.51562H15.8984V7.03125H12.3438V9.41406H15.8984L15.3125 12.9297H12.3438V20H17.0703C18.6856 20 20 18.6856 20 17.0703V2.92969C20 1.31439 18.6856 0 17.0703 0Z"
-                      fill="white"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_267_911">
-                      <rect width="20" height="20" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
+                <FacebookIcon />
               </a>
               <a
-                href="https://www.facebook.com/revveme"
+                href="https://x.com/InfoRevve"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M20 3.79875C19.2563 4.125 18.4637 4.34125 17.6375 4.44625C18.4875 3.93875 19.1363 3.14125 19.4412 2.18C18.6488 2.6525 17.7738 2.98625 16.8412 3.1725C16.0887 2.37125 15.0162 1.875 13.8462 1.875C11.5763 1.875 9.74875 3.7175 9.74875 5.97625C9.74875 6.30125 9.77625 6.61375 9.84375 6.91125C6.435 6.745 3.41875 5.11125 1.3925 2.6225C1.03875 3.23625 0.83125 3.93875 0.83125 4.695C0.83125 6.115 1.5625 7.37375 2.6525 8.1025C1.99375 8.09 1.3475 7.89875 0.8 7.5975C0.8 7.61 0.8 7.62625 0.8 7.6425C0.8 9.635 2.22125 11.29 4.085 11.6712C3.75125 11.7625 3.3875 11.8062 3.01 11.8062C2.7475 11.8062 2.4825 11.7913 2.23375 11.7362C2.765 13.36 4.2725 14.5538 6.065 14.5925C4.67 15.6838 2.89875 16.3412 0.98125 16.3412C0.645 16.3412 0.3225 16.3263 0 16.285C1.81625 17.4563 3.96875 18.125 6.29 18.125C13.835 18.125 17.96 11.875 17.96 6.4575C17.96 6.27625 17.9538 6.10125 17.945 5.9275C18.7588 5.35 19.4425 4.62875 20 3.79875Z"
-                    fill="white"
-                  />
-                </svg>
+                <XIcon />
               </a>
               <a
-                href="https://www.instagram.com/revveme/"
+                href="https://instagram.com/revve_me/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M15 0H5C2.24 0 0 2.24 0 5V15C0 17.76 2.24 20 5 20H15C17.76 20 20 17.76 20 15V5C20 2.24 17.76 0 15 0ZM10 15C7.24 15 5 12.76 5 10C5 7.24 7.24 5 10 5C12.76 5 15 7.24 15 10C15 12.76 12.76 15 10 15ZM15.35 5.62C14.8 5.62 14.35 5.17 14.35 4.62C14.35 4.07 14.8 3.62 15.35 3.62C15.9 3.62 16.35 4.07 16.35 4.62C16.35 5.17 15.9 5.62 15.35 5.62Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M9.99997 13C11.6568 13 13 11.6569 13 10C13 8.34315 11.6568 7 9.99997 7C8.34312 7 6.99997 8.34315 6.99997 10C6.99997 11.6569 8.34312 13 9.99997 13Z"
-                    fill="white"
-                  />
-                </svg>
+                <InstagramIcon />
+              </a>
+              <a
+                href="https://wa.me/message/U5ERLJRIPL7UB1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fill-white"
+              >
+                <WhatsAppIcon />
               </a>
             </div>
 
@@ -350,6 +294,9 @@ const Contactsection = () => {
               </li>
               <li className="">
                 <Link href="/terms-of-use">Terms of use</Link>
+              </li>
+              <li className="">
+                <Link href="/contact">Contact</Link>
               </li>
               <li className="">
                 ©{new Date().getFullYear()} Revve. All rights reserved

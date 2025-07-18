@@ -1,8 +1,11 @@
 import axios from "axios";
 // import Cookies from "js-cookie";
+// export const API_BASE_URL ="https://5gcnosnm2xwqefvxh37w4bbcba0pjupu.lambda-url.ca-central-1.on.aws/v1/"; //PRODUCTION
+export const API_BASE_URL =
+  "https://b7cqszydbky7q4udik72uadtvy0norjp.lambda-url.us-east-2.on.aws/v1/"; ///LOCAL
+
 const axiosInstance = axios.create({
-  baseURL:
-    "https://5gcnosnm2xwqefvxh37w4bbcba0pjupu.lambda-url.ca-central-1.on.aws/v1/",
+  baseURL: API_BASE_URL,
   headers: {
     "Content-Type": "application/json",
   },

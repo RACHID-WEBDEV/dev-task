@@ -205,11 +205,11 @@ const FaqAccordion = ({ data, titleColor = "text-[#CA92E3]" }: any) => {
             onPointerLeaveCapture={undefined}
           >
             <h4 className={classNames(" text-base lg:text-4xl", titleColor)}>
-              {item.title}
+              {item?.question || item?.title}
             </h4>
           </AccordionHeader>
           <AccordionBody className="rounded-xl bg-[#460065] p-4 text-white">
-            {item.descriptions}
+            {item?.answer || item?.descriptions}
           </AccordionBody>
         </Accordion>
       ))}

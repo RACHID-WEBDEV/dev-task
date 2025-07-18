@@ -2,8 +2,10 @@ import React from "react";
 import FaqAccordion from "./Faq";
 import Link from "next/link";
 import { faqContent } from "@/data/faqData";
-const FAQSection = ({ setOpenModal }: any) => {
+
+const FAQSection = () => {
   const data = faqContent?.slice(0, 7);
+
   return (
     <>
       <section className="relative bg-cover bg-center w-full h-full  bg-no-repeat bg-[#4F0072]  pt-[100px]">
@@ -33,7 +35,7 @@ const FAQSection = ({ setOpenModal }: any) => {
                       </button>
                     </Link>
                   </div>
-                  <p className="pt-6">Get Revve on your phone</p>
+                  {/* <p className="pt-6">Get Revve on your phone</p>
                   <div>
                     <button
                       onClick={() => setOpenModal(true)}
@@ -45,7 +47,7 @@ const FAQSection = ({ setOpenModal }: any) => {
                         Click to Download
                       </span>
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
