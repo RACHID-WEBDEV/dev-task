@@ -19,7 +19,7 @@ const ChatRevveMe = () => {
   };
   return (
     <div className={""}>
-      <div className="main-btn " id="main-btn" onClick={showChatsIcons}>
+      <div className="main-btn z-50" id="main-btn" onClick={showChatsIcons}>
         <div className="flex items-center justify-center relative">
           {/* <MessageIcons /> */}
 
