@@ -219,7 +219,7 @@ const CurrencyConverterModal = ({ setOpenModal, setOpenDownload }: any) => {
                           {errorExchange}
                         </p>
                       )}
-                      <div className="flex items-center gap-2.5 justify-center my-6">
+                      <div className="flex items-center gap-2.5 justify-center flex-wrap my-6">
                         <button
                           onClick={() => {
                             setOpenDownload(true);
