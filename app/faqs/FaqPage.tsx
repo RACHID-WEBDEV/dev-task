@@ -91,7 +91,7 @@ const FaqPage = () => {
             <div className="mx-auto w-full h-full max-w-5xl ">
               <div className="m-auto py-12 mx-2">
                 <div className=" flex flex-col items-center justify-center pb-6 lg:pb-10">
-                  <h3 className="text-2xl lg:text-3xl 1xl:text-5xl font-semibold text-white pb-2">
+                  <h3 className="text-2xl lg:text-3xl 1xl:text-5xl text-center font-semibold text-white pb-2">
                     Frequently Asked Questions
                   </h3>
                   <p className="text-base pt-1 text-gray-400 pb-6 max-w-lg text-center ">
@@ -200,8 +200,8 @@ const FaqPage = () => {
                       </button>
                       <div className="flex text-sm whitespace-nowrap text-muted-foreground">
                         <div className="text-gray-200">
-                          Showing Page {pageData?.page} out of{" "}
-                          {pageData?.total_pages}{" "}
+                          <span className=" hidden lg:flex">Showing Page</span>{" "}
+                          {pageData?.page} out of {pageData?.total_pages}{" "}
                           {pageData?.page <= 1 ? "Page" : "Pages"}
                         </div>
                       </div>
