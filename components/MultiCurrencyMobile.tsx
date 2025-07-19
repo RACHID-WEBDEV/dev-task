@@ -1,4 +1,4 @@
-import { useGSAP } from "@gsap/react";
+// import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
@@ -12,15 +12,15 @@ gsap.registerPlugin(ScrollTrigger);
 //   "/images/Wallet/usd-wallet.svg",
 // ];
 const MultiCurrencyMobile = ({ setOpenModal }: any) => {
-  const scrollRef = useRef(null);
+  const mobilescrollRef = useRef(null);
 
-  // const walletCards = useRef([]);
+  // const mobilewalletCards = useRef([]);
 
   // useEffect(() => {
-  //   const cards = walletCards.current;
+  //   const cards = mobilewalletCards.current;
   //   const tl = gsap.timeline({
   //     scrollTrigger: {
-  //       trigger: "#wallet-card-section",
+  //       trigger: "#wallet-card-section-mobile",
   //       start: "top center",
   //       markers: true, // set to true for debugging
 
@@ -33,14 +33,14 @@ const MultiCurrencyMobile = ({ setOpenModal }: any) => {
   //     .to(cards[3], { y: -546, duration: 0.5 }, "-=0.5");
   // }, []);
 
-  const walletCards = useRef<(HTMLDivElement | null)[]>([]);
+  const mobilewalletCards = useRef<(HTMLDivElement | null)[]>([]);
   const tl = useRef<gsap.core.Timeline | null>(null);
 
   useEffect(() => {
-    const cards = walletCards.current;
+    const mobilecards = mobilewalletCards.current;
     tl.current = gsap.timeline({
       scrollTrigger: {
-        trigger: "#wallet-card-section",
+        trigger: "#wallet-card-section-mobile",
         start: "top center",
         end: "bottom center",
         toggleActions: "play none none reverse",
@@ -49,21 +49,33 @@ const MultiCurrencyMobile = ({ setOpenModal }: any) => {
       },
     });
 
-    if (cards[1]) {
-      tl.current.to(cards[1], { y: -182, duration: 0.5, ease: "power2.inOut" });
+    // if (mobilecards[0]) {
+    //   tl.current.to(mobilecards[0], {
+    //     y: 182,
+    //     duration: 1.5,
+    //     ease: "power2.inOut",
+    //   });
+    // }
+
+    if (mobilecards[1]) {
+      tl.current.to(mobilecards[1], {
+        y: -182,
+        duration: 1.5,
+        ease: "power2.inOut",
+      });
     }
-    if (cards[2]) {
+    if (mobilecards[2]) {
       tl.current.to(
-        cards[2],
-        { y: -364, duration: 0.5, ease: "power2.inOut" },
-        "-=0.5"
+        mobilecards[2],
+        { y: -364, duration: 1.5, ease: "power2.inOut" },
+        "-=1.5"
       );
     }
-    if (cards[3]) {
+    if (mobilecards[3]) {
       tl.current.to(
-        cards[3],
-        { y: -546, duration: 0.5, ease: "power2.inOut" },
-        "-=0.5"
+        mobilecards[3],
+        { y: -546, duration: 1.5, ease: "power2.inOut" },
+        "-=1.5"
       );
     }
 
@@ -74,43 +86,62 @@ const MultiCurrencyMobile = ({ setOpenModal }: any) => {
     };
   }, []);
 
-  useGSAP(() => {
-    gsap.to("#phone-frame", {
-      y: -500,
-      // rotation: 360,
-      // borderRadius: "100%",
-      duration: 7,
-      delay: 3,
-      ease: "power2.inOut",
-      scrollTrigger: {
-        trigger: "#card-currency-section",
-        start: "top 50%",
-        end: "bottom 10%",
-        scrub: 1,
-        markers: false, // set to true for debugging
-      },
-    });
-  });
+  // useGSAP(() => {
+  //   gsap.set("#phone-frame-mobile", { y: 0 }); // optional: ensure clean start
+
+  //   gsap.to("#phone-frame-mobile", {
+  //     y: -150,
+  //     duration: 8,
+  //     delay: 4,
+  //     ease: "power2.inOut",
+  //     scrollTrigger: {
+  //       trigger: "#mobile-card-currency-section",
+  //       start: "top 80%",
+  //       end: "bottom 20%",
+  //       scrub: 1,
+  //       markers: true,
+  //     },
+  //   });
+  // }, []);
+  // useGSAP(() => {
+  //   gsap.to("#phone-frame-mobile", {
+  //     y: -500,
+  //     // rotation: 360,
+  //     // borderRadius: "100%",
+  //     duration: 1,
+  //     // delay: 3,
+  //     ease: "power2.inOut",
+  //     scrollTrigger: {
+  //       trigger: "#mobile-card-currency-section",
+  //       start: "top center",
+  //       end: "bottom center",
+  //       // start: "top 50%",
+  //       // end: "bottom 10%",
+  //       scrub: 1,
+  //       markers: true, // set to true for debugging
+  //     },
+  //   });
+  // });
 
   return (
     <>
       <section
-        id="card-currency-section"
-        ref={scrollRef}
-        className="relative bg-cover bg-center w-full h-screen lg:h-screen bg-no-repeat bg-gray-100 overflow-hidden"
+        id="mobile-card-currency-section"
+        ref={mobilescrollRef}
+        className="relative bg-cover bg-center w-full h-[650px] lg:h-screen bg-no-repeat bg-gray-100 overflow-hidden"
       >
         <div
-          id="phone-frame"
-          className="absolute bg-cover bg-center w-[330px] h-[660px] lg:h-[608px] xl:w-[365px] 1xl:w-[432px] 1xl:h-[750px] top-[62%] lg:top-[72%] 1xl:top-[60%] 2xl:top-[55%] left-1/2 transform -translate-x-1/2 bg-no-repeat bg-[url('/images/iPhone-frame.png')]"
+          id="phone-frame-mobile"
+          className="absolute bg-cover bg-center w-[330px] h-[655px] lg:h-[608px]  -top-[20px] left-1/2 transform -translate-x-1/2 bg-no-repeat bg-[url('/images/iPhone-frame.png')]"
         ></div>
 
         <div
-          id="wallet-card-section"
-          className="absolute top-[20%] xl:top-[30%] 1xl:top-[30%] left-1/2 transform -translate-x-1/2  space-y-5  overflow-hidden"
+          id="wallet-card-section-mobile"
+          className="absolute bottom-[-200px] left-1/2 transform -translate-x-1/2  space-y-5 "
         >
           <div
             ref={(el) => {
-              walletCards.current[0] = el;
+              mobilewalletCards.current[0] = el;
             }}
             className="wallet-card-1 "
           >
@@ -124,7 +155,7 @@ const MultiCurrencyMobile = ({ setOpenModal }: any) => {
           </div>
           <div
             ref={(el) => {
-              walletCards.current[1] = el;
+              mobilewalletCards.current[1] = el;
             }}
             className="wallet-card-2 "
           >
@@ -138,7 +169,7 @@ const MultiCurrencyMobile = ({ setOpenModal }: any) => {
           </div>
           <div
             ref={(el) => {
-              walletCards.current[2] = el;
+              mobilewalletCards.current[2] = el;
             }}
             className="wallet-card-3 "
           >
@@ -152,7 +183,7 @@ const MultiCurrencyMobile = ({ setOpenModal }: any) => {
           </div>
           <div
             ref={(el) => {
-              walletCards.current[3] = el;
+              mobilewalletCards.current[3] = el;
             }}
             className="wallet-card-4"
           >
@@ -165,8 +196,22 @@ const MultiCurrencyMobile = ({ setOpenModal }: any) => {
             />
           </div>
         </div>
-
         <div
+          ref={(el) => {
+            mobilewalletCards.current[4] = el;
+          }}
+          className="wallet-card-5 bg-white p-5 absolute w-full h-[182px] -bottom-28"
+        >
+          {/* <Image
+            src="/images/Wallet/usd-wallet.svg"
+            alt="send icon"
+            width={320}
+            height={182}
+            className="wallet-usd-icon  min-w-[260px] lg:w-[290px] 1xl:w-[320px]"
+          /> */}
+        </div>
+
+        {/* <div
           id="section-woman"
           className="absolute top-[28%] right-24 1xl:right-32 hidden lg:block"
         >
@@ -177,8 +222,8 @@ const MultiCurrencyMobile = ({ setOpenModal }: any) => {
             height={636}
             className="wallet-usd-icon w-auto h-auto"
           />
-        </div>
-        <div
+        </div> */}
+        {/* <div
           id="section-texts"
           className="  absolute top-[30%] left-10 max-w-[400px] 1xl:max-w-lg"
         >
@@ -209,11 +254,11 @@ const MultiCurrencyMobile = ({ setOpenModal }: any) => {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* <div className="h-screen w-full bg-amber-600 opacity-10 absolute"></div> */}
       </section>
-      {/* <div>
-        <div className=" px-4 py-10 lg:hidden ">
+      <div>
+        <div className=" px-4 py-10 lg:hidden bg-white z-10 ">
           <h2 className="font-semibold text-4xl lg:text-5xl text-black max-w-lg tracking-wide">
             Multi-currency Wallets
           </h2>
@@ -240,7 +285,7 @@ const MultiCurrencyMobile = ({ setOpenModal }: any) => {
             </button>
           </div>
         </div>
-      </div> */}
+      </div>
     </>
   );
 };
