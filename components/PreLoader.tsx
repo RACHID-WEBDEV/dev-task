@@ -29,10 +29,10 @@ const PreLoader = () => {
               alt="Revve Logo"
               width={130}
               height={60}
-              className="w-[320px]"
+              className="w-40 lg:w-[300px]"
             />
           </div>
-          <div className="  size-80 bg-primary top-0 absolute left-10 z-50"></div>
+          <div className="size-20  lg:size-80 bg-primary top-0 absolute left-10 z-50"></div>
           {/* <div className="loading-container">
             <div className="loading-text">
               <span className=" !uppercase">R</span>
