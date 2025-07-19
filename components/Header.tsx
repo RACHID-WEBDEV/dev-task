@@ -46,7 +46,7 @@ const Header = ({ logoWhite = true }: any) => {
     // ["rgba(0, 0, 0, 0)", "rgb(79, 0, 114)", "rgba(0, 0, 0, 0.2)"]
   );
 
-  const headerHeight = useTransform(scrollY, [0, 200], ["100px", "50px"]);
+  const headerHeight = useTransform(scrollY, [0, 200], ["100px", "60px"]);
 
   const logoScale = useTransform(scrollY, [0, 200], [1.3, 1]);
   return (
@@ -57,13 +57,13 @@ const Header = ({ logoWhite = true }: any) => {
           backgroundColor: backgroundColor,
           height: headerHeight,
         }}
-        className="fixed top-0 w-full z-40 bg-transparent flex items-start md:items-center justify-between px-4 md:px-8 lg:px-20"
+        className="fixed top-0 w-full z-40 pt-1 bg-transparent flex items-start md:items-center justify-between px-4 md:px-8 lg:px-20"
 
         // className={classNames(
         //   " px-4 py-2 lg:px-20 pt-4 w-full fixed top-0 z-40"
         // )}
       >
-        <motion.div style={{ scale: logoScale }}>
+        <motion.div style={{ scale: logoScale }} className="pt-2 lg:pt-0">
           <Link href="/">
             {logoWhite ? (
               <Image
