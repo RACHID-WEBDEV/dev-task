@@ -1,11 +1,52 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FaqAccordion from "./Faq";
 import Link from "next/link";
-import { faqContent } from "@/data/faqData";
+// import { faqContent } from "@/data/faqData";
+import { getData } from "@/utils/axiosInstance";
+import SmallSpinner from "./SmallSpinner";
 
 const FAQSection = () => {
-  const data = faqContent?.slice(0, 7);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [faqsData, setFaqsData] = useState<any>(undefined);
+  // const [searchQuery, setSearchQuery] = useState("");
 
+  const handleFetchFaqs = async (
+    url: any,
+    search: any,
+    page: any,
+    search_fields: any
+  ) => {
+    const params = {
+      ...(search && { search: search }),
+      ...(page && { page: page }),
+      ...(search_fields && { search_fields: search_fields }),
+    };
+
+    // Construct the query string dynamically
+    const queryString = Object.entries(params)
+      .map(([key, value]) => `${key}=${encodeURIComponent(String(value))}`) // Encode each key-value pair
+      .join("&"); // Join the pairs with "&"
+
+    // Append the query string to the base URL
+    const fetchUrl = queryString ? `${url}?${queryString}` : url;
+
+    setLoading(true);
+    try {
+      const response = await getData(fetchUrl, "");
+      setFaqsData(response);
+      // console.log("city res", response);
+    } catch (error: any) {
+      setError(error.response.data.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    handleFetchFaqs("/faqs", "", "", "question,answer");
+  }, []);
+  const data = faqsData?.data?.faqs?.slice(0, 6);
   return (
     <>
       <section className="relative bg-cover bg-center w-full h-full  bg-no-repeat bg-[#4F0072]  pt-[100px]">
@@ -63,7 +104,29 @@ const FAQSection = () => {
             </h1> */}
           </div>
           <div className="col-span-2">
-            <FaqAccordion data={data} />{" "}
+            {/* <FaqAccordion data={data} />{" "} */}
+            {loading ? (
+              <div className=" flex items-center justify-center">
+                <SmallSpinner />
+              </div>
+            ) : (
+              <div className="">
+                {faqsData?.data?.faqs?.length === 0 ? (
+                  <p className="text-white  text-xl font-semibold flex items-center justify-center">
+                    No Faqs Found
+                  </p>
+                ) : (
+                  <>
+                    {error && (
+                      <p className="text-white  text-xl font-semibold flex items-center justify-center">
+                        Failed to fetch Faqs
+                      </p>
+                    )}
+                    <FaqAccordion data={data} />
+                  </>
+                )}
+              </div>
+            )}
           </div>
         </div>
         {/* <div className=" absolute  top-1/2 transform -translate-y-1/2 w-full">

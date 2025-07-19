@@ -79,6 +79,9 @@ const FaqPage = () => {
 
   // console.log("currentPage", currentPage);
 
+  const notEmpty =
+    faqsData?.data?.faqs !== undefined || faqsData?.data?.faqs?.length === 0;
+
   return (
     <>
       <div className="pt-10 lg:pt-20 bg-primary">
@@ -180,43 +183,45 @@ const FaqPage = () => {
                     </div>
                   )}
                 </div>
-                <div className="py-10 px-4">
-                  <div className="flex items-center gap-4 flex-wrap  justify-between w-full">
-                    <button
-                      className={classNames(
-                        " border-gray-400 p-0.5 px-2  bg-white border text-primary",
-                        {
-                          "cursor-not-allowed opacity-40": currentPage === 1,
-                        }
-                      )}
-                      disabled={currentPage === 1}
-                      onClick={() => setCurrentPage((prev: any) => prev - 1)}
-                    >
-                      &laquo; Prev
-                    </button>
-                    <div className="flex text-sm whitespace-nowrap text-muted-foreground">
-                      <div className="text-gray-200">
-                        Showing Page {pageData?.page} out of{" "}
-                        {pageData?.total_pages}{" "}
-                        {pageData?.page <= 1 ? "Page" : "Pages"}
+                {notEmpty && (
+                  <div className="py-10 px-4">
+                    <div className="flex items-center gap-4 flex-wrap  justify-between w-full">
+                      <button
+                        className={classNames(
+                          " border-gray-400 p-0.5 px-2  bg-white border text-primary",
+                          {
+                            "cursor-not-allowed opacity-40": currentPage === 1,
+                          }
+                        )}
+                        disabled={currentPage === 1}
+                        onClick={() => setCurrentPage((prev: any) => prev - 1)}
+                      >
+                        &laquo; Prev
+                      </button>
+                      <div className="flex text-sm whitespace-nowrap text-muted-foreground">
+                        <div className="text-gray-200">
+                          Showing Page {pageData?.page} out of{" "}
+                          {pageData?.total_pages}{" "}
+                          {pageData?.page <= 1 ? "Page" : "Pages"}
+                        </div>
                       </div>
-                    </div>
 
-                    <button
-                      className={classNames(
-                        " border-gray-400 p-0.5 px-2 bg-white border text-primary",
-                        {
-                          "cursor-not-allowed opacity-40":
-                            currentPage === pageData?.total_pages,
-                        }
-                      )}
-                      disabled={currentPage === pageData?.total_pages}
-                      onClick={() => setCurrentPage((prev: any) => prev + 1)}
-                    >
-                      Next &raquo;
-                    </button>
+                      <button
+                        className={classNames(
+                          " border-gray-400 p-0.5 px-2 bg-white border text-primary",
+                          {
+                            "cursor-not-allowed opacity-40":
+                              currentPage === pageData?.total_pages,
+                          }
+                        )}
+                        disabled={currentPage === pageData?.total_pages}
+                        onClick={() => setCurrentPage((prev: any) => prev + 1)}
+                      >
+                        Next &raquo;
+                      </button>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </div>
