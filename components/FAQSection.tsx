@@ -49,7 +49,7 @@ const FAQSection = () => {
   const data = faqsData?.data?.faqs?.slice(0, 6);
   return (
     <>
-      <section className="relative bg-cover bg-center w-full h-full  bg-no-repeat bg-[#4F0072]  pt-[100px]">
+      <section className="relative bg-cover bg-center w-full h-full  bg-no-repeat bg-[#4F0072] pt-10 lg:pt-[100px]">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 p-4  text-black lg:px-16 lg:py-10 relative">
           <div className="lg:sticky lg:top-10 h-fit">
             <div className=" pt-20">
