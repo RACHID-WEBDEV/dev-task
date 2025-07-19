@@ -58,9 +58,9 @@ const Contactsection = () => {
   return (
     <section
       id="contact-section"
-      className="relative p-4 lg:p-20 lg:py-24 bg-primary h-[800px] 1xl:h-screen overflow-hidden"
+      className="relative p-4 pt-14 lg:p-20 lg:py-24 bg-primary h-full 1xl:h-screen overflow-hidden z-10"
     >
-      <div className="backdrop-blur top-[10%] transition-colors bg-[#6D1F8F]/40 rounded-2xl p-2 lg:p-10 py-6 lg:py-16 z-20  max-w-xs lg:max-w-5xl xl:max-w-6xl 1xl:max-w-7xl left-1/2 transform  -translate-x-1/2  absolute w-full">
+      <div className="backdrop-blur top-[10%] transition-colors bg-[#6D1F8F]/40 rounded-2xl p-2 lg:p-10 py-6 lg:py-16  max-w-xs lg:max-w-5xl xl:max-w-6xl 1xl:max-w-7xl  w-full mx-auto">
         <div className="lg:flex items-center">
           <div className="lg:w-1/2 lg:pl-16 ">
             <div className="  ">
@@ -216,7 +216,10 @@ const Contactsection = () => {
         </div>
       </div>
 
-      <div className="absolute lg:bottom-12 bottom-40 left-0 " id="mail-1">
+      <div
+        className="absolute lg:bottom-12 bottom-40 left-0  -z-10"
+        id="mail-1"
+      >
         <Image
           src="/images/message-vector.svg"
           alt="send icon"
@@ -225,7 +228,7 @@ const Contactsection = () => {
           className="vector-icon w-[80px] lg:w-[197px]"
         />
       </div>
-      <div className="absolute top-20 -right-8 lg:right-0 z-30">
+      <div className="absolute top-20 -right-8 lg:right-0 ">
         <Image
           src="/images/inbox-vector.svg"
           alt="inbox icon"
@@ -234,7 +237,7 @@ const Contactsection = () => {
           className="vector-icon w-[100px] lg:w-[227px]"
         />
       </div>
-      <div className="absolute top-44 lg:top-80 right-0 ">
+      <div className="absolute top-44 lg:top-80 right-0 -z-10">
         <Image
           src="/images/call-vector.svg"
           alt="call icon"
@@ -243,7 +246,7 @@ const Contactsection = () => {
           className="vector-icon w-[120px] lg:w-[288px]"
         />
       </div>
-      <div className="absolute bottom-6 left-0 w-full ">
+      <div className=" w-full ">
         <div className=" pt-20 ">
           <div className=" flex items-center  justify-center lg:justify-between flex-wrap w-full gap-4 px-4  lg:px-20">
             <div className=" flex items-center gap-4">
