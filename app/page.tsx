@@ -19,6 +19,7 @@ import CurrencyConverterModal from "@/components/CurrencyConverterModal";
 import Header from "@/components/Header";
 import MultiCurrencyMobile from "@/components/MultiCurrencyMobile";
 import ShopOnlineMobile from "@/components/ShopOnlineMobile";
+import Parnters from "@/components/Partners";
 // Import Swiper styles
 
 gsap.registerPlugin(ScrollTrigger);
@@ -40,6 +41,7 @@ export default function Home() {
             setsaveActiveSlideImage={setsaveActiveSlideImage}
           />
           <Intro saveActiveSlideImage={saveActiveSlideImage} />
+          <Parnters />
           <div className="hidden lg:block">
             <ScrollAnimation
               setOpenModal={setOpenModal}
