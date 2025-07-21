@@ -176,9 +176,9 @@ const CurrencyConverterModal = ({ setOpenModal, setOpenDownload }: any) => {
                         Email Address
                       </label> */}
                         <input
-                          // type="text"
+                          // type="text ₦"
                           id="default-input"
-                          placeholder="Amount ₦"
+                          placeholder="Amount "
                           type="number"
                           value={searchAmount}
                           onChange={(e) => setSearchAmount(e.target.value)}
