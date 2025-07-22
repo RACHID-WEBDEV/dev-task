@@ -94,10 +94,10 @@ const FaqPage = () => {
                   <h3 className="text-2xl lg:text-3xl 1xl:text-5xl text-center font-semibold text-white pb-2">
                     Frequently Asked Questions
                   </h3>
-                  <p className="text-base pt-1 text-gray-400 pb-6 max-w-lg text-center ">
-                    Ut enim ad minim veniam quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat aute irure
-                    dolor
+                  <p className="text-base pt-1 text-gray-400 pb-6 max-w-xl text-center ">
+                    Have questions about how Revve works? You&apos;re in the
+                    right place. This section covers the most common inquiries
+                    about our services, features, payments, security, and more.
                   </p>
                 </div>
                 <form
@@ -198,12 +198,10 @@ const FaqPage = () => {
                       >
                         &laquo; Prev
                       </button>
-                      <div className="flex text-sm whitespace-nowrap text-muted-foreground">
-                        <div className="text-gray-200">
-                          <span className=" hidden lg:flex">Showing Page</span>{" "}
-                          {pageData?.page} out of {pageData?.total_pages}{" "}
-                          {pageData?.page <= 1 ? "Page" : "Pages"}
-                        </div>
+                      <div className="text-gray-200 flex text-sm gap-1 whitespace-nowrap text-muted-foreground">
+                        <span className=" hidden lg:flex">Showing Page</span>{" "}
+                        {pageData?.page} out of {pageData?.total_pages}{" "}
+                        {pageData?.page <= 1 ? "Page" : "Pages"}
                       </div>
 
                       <button
