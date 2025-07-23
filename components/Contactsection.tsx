@@ -6,9 +6,10 @@ import LinkedIcon, {
   WhatsAppIcon,
   XIcon,
 } from "@/public/SvgsIcon";
+import { postData } from "@/utils/axiosInstanceContact";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Contactsection = () => {
   // useGSAP(() => {
@@ -55,6 +56,115 @@ const Contactsection = () => {
   //   },
   // });
   // });
+  const [formData, setFormData] = useState({
+    full_name: "",
+    email: "",
+    message: "",
+  });
+
+  type Errors = {
+    full_name?: string;
+    email?: string;
+    message?: string;
+  };
+
+  const [errors, setErrors] = useState<Errors>({});
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(
+    null
+  ); // success or error
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const validate = (): Errors => {
+    const newErrors: Errors = {};
+
+    const fullNameParts = formData.full_name.trim().split(" ");
+    if (fullNameParts.length < 2) {
+      newErrors.full_name = "Please enter both first and last name";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email is invalid";
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    }
+
+    return newErrors;
+  };
+
+  useEffect(() => {
+    const newErrors: Errors = { ...errors };
+
+    const fullNameParts = formData.full_name.trim().split(" ");
+    if (fullNameParts.length >= 2) delete newErrors.full_name;
+
+    if (formData.email.trim() && /\S+@\S+\.\S+/.test(formData.email)) {
+      delete newErrors.email;
+    }
+
+    if (formData.message.trim()) delete newErrors.message;
+
+    if (JSON.stringify(newErrors) !== JSON.stringify(errors)) {
+      setErrors(newErrors);
+    }
+  }, [formData, errors]);
+
+  const [loading, setLoading] = useState(false);
+  const [getError, setGetError] = useState(null);
+  type SuccessResponse = { message?: string; [key: string]: any };
+  const [getSuccess, setGetSuccess] = useState<SuccessResponse | null>(null);
+  // console.log("getSuccess", getSuccess);
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    const validationErrors = validate();
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length === 0) {
+      const [first_name, ...last_name_parts] = formData.full_name
+        .trim()
+        .split(" ");
+      const last_name = last_name_parts.join(" ");
+
+      const submitData = {
+        first_name,
+        last_name,
+        email: formData.email,
+        message: formData.message,
+      };
+
+      setLoading(true);
+      try {
+        const response = await postData("util/feedback", submitData);
+        setGetSuccess(response);
+        setGetError(null);
+        setSubmitStatus("success");
+        setFormData({
+          full_name: "",
+          email: "",
+          message: "",
+        });
+      } catch (error: any) {
+        setGetError(error.response?.data?.message || "Something went wrong");
+      } finally {
+        setLoading(false);
+      }
+    } else {
+      setSubmitStatus("error");
+    }
+  };
+
   return (
     <section
       id="contact-section"
@@ -153,21 +263,29 @@ const Contactsection = () => {
           </div>
 
           <div className="mb-2 lg:mb-0 w-full max-w-md px-2 lg:px-12 pt-4 lg:pt-0">
-            <form id="contact-form" method="post">
+            <form onSubmit={handleSubmit}>
               <div className="flex flex-col">
                 <div className="mb-6 ">
                   <label
                     htmlFor="name"
                     className="mb-1 block font-semibold text-sm text-white dark:text-white"
                   >
-                    Firstname
+                    Fullname
                   </label>
+
                   <input
                     type="text"
-                    id="default-input"
+                    name="full_name"
+                    value={formData.full_name}
+                    onChange={handleChange}
                     placeholder="Firstname Lastname"
                     className="bg-transparent border text-gray-100 border-white/30 hover:border-white/50 text-sm rounded-lg block placeholder:text-[#CA92E3] font-medium w-full p-2.5 py-3 outline-none "
                   />
+                  {errors.full_name && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.full_name}
+                    </p>
+                  )}
                 </div>
                 <div className="mb-6 ">
                   <label
@@ -177,11 +295,17 @@ const Contactsection = () => {
                     Email Address
                   </label>
                   <input
-                    type="text"
                     id="default-input"
                     placeholder="johndoe@gmail.com"
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="bg-transparent border text-gray-100 border-white/30 hover:border-white/50  text-sm rounded-lg block placeholder:text-[#CA92E3] font-medium w-full p-2.5 py-3 outline-none "
                   />
+                  {errors.email && (
+                    <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                  )}
                 </div>
               </div>
               <div className="mb-4">
@@ -196,21 +320,49 @@ const Contactsection = () => {
                   className="contact-form-input w-full text-gray-100 outline-none rounded-lg border border-white/30 py-3 p-2.5 hover:border-white/50 ring-0 placeholder:text-[#CA92E3] font-medium"
                   placeholder="Type here.."
                   name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   rows={5}
                   defaultValue={""}
                 />
+                {errors.message && (
+                  <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+                )}
               </div>
-
-              <div>
+              {submitStatus === "success" && (
+                <p className="text-green-600 mt-2 col-span-full">
+                  {/* Awesome! Message sent. */}
+                  {getSuccess?.message}
+                </p>
+              )}
+              {submitStatus === "error" && (
+                <p className="text-red-500 mt-2 col-span-full">
+                  Oops! Please fix the errors above.
+                </p>
+              )}
+              {getError && (
+                <p className="text-red-500 mt-2 col-span-full">{getError}</p>
+              )}
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={loading}
+                className="button-alt w-full"
+                // className="button-primary w-full max-w-xs mt-6"
+              >
+                <span className="text">
+                  {loading ? "Sending..." : "Send Message"}
+                </span>
+                <span className="whitespace-nowrap">
+                  {loading ? "Sending..." : "Send Message"}
+                </span>
+              </button>
+              {/* <div>
                 <button className="button-alt w-full" role="button">
                   <span className="text">Send message</span>
                   <span className=" whitespace-nowrap">Send message</span>
                 </button>
-              </div>
-              <div
-                id="contact-form-notice"
-                className="relative mt-4 hidden rounded-lg border border-transparent p-4"
-              />
+              </div> */}
             </form>
           </div>
         </div>
