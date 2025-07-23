@@ -188,14 +188,19 @@ const MultiCurrency = ({ setOpenModal }: any) => {
             </h2>
             <div className="mt-8 max-w-[420px] text-gray-800 space-y-4">
               <p className=" ">
-                Facilitate effortless management of multiple wallets, each
+                One app, many wallets. Keep your currencies organised and your
+                global transactions smooth, with no confusion and hassle.
+                {/* Facilitate effortless management of multiple wallets, each
                 dedicated to a specific currency, streamlining transactions and
-                storage across various currencies.
+                storage across various currencies. */}
               </p>
               <p>
                 Enhance user experience with tailored wallets for different
                 currencies, empowering efficient financial management and
-                flexibility in global transactions
+                flexibility in global transactions.
+                {/* Enhance user experience with tailored wallets for different
+                currencies, empowering efficient financial management and
+                flexibility in global transactions */}
               </p>
             </div>
             <div className="pt-6">

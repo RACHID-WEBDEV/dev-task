@@ -13,6 +13,8 @@ import { SplitText } from "gsap/all";
 import gsap from "gsap";
 
 // gsap.registerPlugin(SplitText);
+const introText =
+  "Seamlessly bridge distances with our easy remittance service. Send support and financial care to your loved ones back home.";
 
 const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
   // Create a ref to access the Swiper instance
@@ -249,11 +251,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
               Send. Shop. Spend
             </h2>
             <div className=" px-4 pt-2  absolute bottom-60">
-              <p className="text-sm font-medium text-white ">
-                Seamlessly bridge distances with our effortless remittance
-                service. Send support, and financial care to your loved ones
-                back home.
-              </p>
+              <p className="text-sm font-medium text-white ">{introText}</p>
             </div>
           </div>
           <div className="w-full  left-1/2 transform -translate-x-1/2 absolute top-[320px] lg:top-[55%] -translate-y-1/2 px-4 lg:px-20">
@@ -289,12 +287,8 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
 
           <div className=" absolute bottom-6 lg:bottom-10  w-full px-4 lg:px-20">
             <div className=" flex items-center justify-between">
-              <div className="max-w-[250px] hidden lg:block">
-                <p className="text-sm font-medium text-white ">
-                  Seamlessly bridge distances with our effortless remittance
-                  service. Send support, and financial care to your loved ones
-                  back home.
-                </p>
+              <div className="max-w-[270px] hidden lg:block">
+                <p className="text-sm font-medium text-white ">{introText}</p>
               </div>
               <div>
                 <p className=" pb-3 lg:pb-6 text-sm text-white/50">
@@ -386,11 +380,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
               Send. Shop. Spend
             </h2>
             <div className=" px-4 pt-2  absolute bottom-60">
-              <p className="text-sm font-medium text-white ">
-                Seamlessly bridge distances with our effortless remittance
-                service. Send support, and financial care to your loved ones
-                back home.
-              </p>
+              <p className="text-sm font-medium text-white ">{introText}</p>
             </div>
           </div>
           <div className="w-full  left-1/2 transform -translate-x-1/2 absolute top-[320px] lg:top-[55%] -translate-y-1/2 px-4 lg:px-20">
@@ -426,12 +416,8 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
 
           <div className=" absolute bottom-6 lg:bottom-10  w-full px-4 lg:px-20">
             <div className=" flex items-center justify-between">
-              <div className="max-w-[250px] hidden lg:block">
-                <p className="text-sm font-medium text-white ">
-                  Seamlessly bridge distances with our effortless remittance
-                  service. Send support, and financial care to your loved ones
-                  back home.
-                </p>
+              <div className="max-w-[270px] hidden lg:block">
+                <p className="text-sm font-medium text-white ">{introText}</p>
               </div>
               <div>
                 <p className=" pb-3 lg:pb-6 text-sm text-white/50">
@@ -523,11 +509,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
               Send. Shop. Spend
             </h2>
             <div className=" px-4 pt-2  absolute bottom-60">
-              <p className="text-sm font-medium text-white ">
-                Seamlessly bridge distances with our effortless remittance
-                service. Send support, and financial care to your loved ones
-                back home.
-              </p>
+              <p className="text-sm font-medium text-white ">{introText}</p>
             </div>
           </div>
           <div className="w-full  left-1/2 transform -translate-x-1/2 absolute top-[320px] lg:top-[55%] -translate-y-1/2 px-4 lg:px-20">
@@ -563,12 +545,8 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
 
           <div className=" absolute bottom-6 lg:bottom-10  w-full px-4 lg:px-20">
             <div className=" flex items-center justify-between">
-              <div className="max-w-[250px] hidden lg:block">
-                <p className="text-sm font-medium text-white ">
-                  Seamlessly bridge distances with our effortless remittance
-                  service. Send support, and financial care to your loved ones
-                  back home.
-                </p>
+              <div className="max-w-[270px] hidden lg:block">
+                <p className="text-sm font-medium text-white ">{introText}</p>
               </div>
               <div>
                 <p className=" pb-3 lg:pb-6 text-sm text-white/50">
@@ -660,11 +638,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
               Send. Shop. Spend
             </h2>
             <div className=" px-4 pt-2  absolute bottom-60">
-              <p className="text-sm font-medium text-white ">
-                Seamlessly bridge distances with our effortless remittance
-                service. Send support, and financial care to your loved ones
-                back home.
-              </p>
+              <p className="text-sm font-medium text-white ">{introText}</p>
             </div>
           </div>
           <div className="w-full  left-1/2 transform -translate-x-1/2 absolute top-[320px] lg:top-[55%] -translate-y-1/2 px-4 lg:px-20">
@@ -700,12 +674,8 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
 
           <div className=" absolute bottom-6 lg:bottom-10  w-full px-4 lg:px-20">
             <div className=" flex items-center justify-between">
-              <div className="max-w-[250px] hidden lg:block">
-                <p className="text-sm font-medium text-white ">
-                  Seamlessly bridge distances with our effortless remittance
-                  service. Send support, and financial care to your loved ones
-                  back home.
-                </p>
+              <div className="max-w-[270px] hidden lg:block">
+                <p className="text-sm font-medium text-white ">{introText}</p>
               </div>
               <div>
                 <p className=" pb-3 lg:pb-6 text-sm text-white/50">
@@ -796,11 +766,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
               Send. Shop. Spend
             </h2>
             <div className=" px-4 pt-2  absolute bottom-60">
-              <p className="text-sm font-medium text-white ">
-                Seamlessly bridge distances with our effortless remittance
-                service. Send support, and financial care to your loved ones
-                back home.
-              </p>
+              <p className="text-sm font-medium text-white ">{introText}</p>
             </div>
           </div>
           <div className="w-full  left-1/2 transform -translate-x-1/2 absolute top-[320px] lg:top-[55%] -translate-y-1/2 px-4 lg:px-20">
@@ -836,12 +802,8 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
 
           <div className=" absolute bottom-6 lg:bottom-10  w-full px-4 lg:px-20">
             <div className=" flex items-center justify-between">
-              <div className="max-w-[250px] hidden lg:block">
-                <p className="text-sm font-medium text-white ">
-                  Seamlessly bridge distances with our effortless remittance
-                  service. Send support, and financial care to your loved ones
-                  back home.
-                </p>
+              <div className="max-w-[270px] hidden lg:block">
+                <p className="text-sm font-medium text-white ">{introText}</p>
               </div>
               <div>
                 <p className=" pb-3 lg:pb-6 text-sm text-white/50">
@@ -933,11 +895,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
               Send. Shop. Spend
             </h2>
             <div className=" px-4 pt-2  absolute bottom-60">
-              <p className="text-sm font-medium text-white ">
-                Seamlessly bridge distances with our effortless remittance
-                service. Send support, and financial care to your loved ones
-                back home.
-              </p>
+              <p className="text-sm font-medium text-white ">{introText}</p>
             </div>
           </div>
           <div className="w-full  left-1/2 transform -translate-x-1/2 absolute top-[320px] lg:top-[55%] -translate-y-1/2 px-4 lg:px-20">
@@ -973,12 +931,8 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
 
           <div className=" absolute bottom-6 lg:bottom-10  w-full px-4 lg:px-20">
             <div className=" flex items-center justify-between">
-              <div className="max-w-[250px] hidden lg:block">
-                <p className="text-sm font-medium text-white ">
-                  Seamlessly bridge distances with our effortless remittance
-                  service. Send support, and financial care to your loved ones
-                  back home.
-                </p>
+              <div className="max-w-[270px] hidden lg:block">
+                <p className="text-sm font-medium text-white ">{introText}</p>
               </div>
               <div>
                 <p className=" pb-3 lg:pb-6 text-sm text-white/50">

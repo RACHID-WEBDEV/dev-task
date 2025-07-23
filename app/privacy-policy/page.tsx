@@ -33,14 +33,14 @@ const Page = () => {
               <div>
                 <p className="text-lg font-bold uppercase ">Introduction</p>
                 <p className="font-normal ">
-                  This Privacy Policy applies to Linearsend Inc product
-                  (&ldquo;Revve) and sets out how Revve collects, uses, stores,
-                  shares and protects any information that you give Revve when
-                  you subscribe to its services.
-                  <br /> Revve is committed to ensuring that your privacy is
-                  protected. Should we ask you to provide certain information
-                  when subscribing to our services; you can be assured that it
-                  will only be used in accordance with this Privacy Policy.
+                  This Privacy Policy applies to Linearsend Inc product (Revve)
+                  and sets out how it collects, uses, stores, shares, and
+                  protects any information that you give Revve when you
+                  subscribe to its services. Revve is committed to ensuring that
+                  your privacy is protected. Should we ask you to provide
+                  certain information when subscribing to our services, you can
+                  be assured that it will only be used following this Privacy
+                  Policy.
                 </p>
               </div>
               <div>
@@ -54,13 +54,22 @@ const Page = () => {
                 <p className="text-lg font-bold uppercase ">LEGAL BASIS</p>
                 <p className="font-normal ">
                   You further accept that Revve may process your Information
-                  without explicit consent sought, given or accepted where (i)
-                  it is necessary for entering into or performance of a
-                  contract; (ii) it is authorized or required by law (which also
-                  provides safeguards for You); or (iii) there are circumstances
-                  that may engender direct or indirect propagation of criminal
-                  acts and anti-social conducts.
+                  without explicit consent sought, given or accepted where:
                 </p>
+                <ul className=" space-y-1">
+                  <li>
+                    - It is necessary for entering into or performing a
+                    contract,
+                  </li>
+                  <li>
+                    - It is authorised or required by law (which also provides
+                    safeguards for you), or{" "}
+                  </li>
+                  <li>
+                    - Some circumstances may engender direct or indirect
+                    propagation of criminal acts and anti-social conducts.
+                  </li>
+                </ul>
               </div>
               <div>
                 <p className="text-lg font-bold uppercase ">
@@ -69,28 +78,36 @@ const Page = () => {
                 <p className="font-bold pt-2 ">
                   Information We Collect Directly from You
                 </p>
-                <p className="font-normal ">
-                  Revve collects Information from you when you subscribe to our
-                  service. The type of Information that we collect from you
-                  depends on the service you require from Revve.
-                  <br /> We may also collect information you provide us
-                  including but not limited to information on web forms, account
-                  update information and correspondence with the Platform
-                  support services team. Information obtained through voluntary
-                  submissions (e.g., responses to surveys, requests for
-                  information on Revve&apos;s Platform or those of Revve&apos;s
-                  advertisers/marketing partners) and review of Platform usage
-                  patterns survey responses, customer enquiries and other means
-                  may also be collected and used by us. Revve will only collect
-                  information that is necessary for the provision of the product
-                  or service that you have subscribed to.
-                </p>
+                <div className=" space-y-1">
+                  <p className="font-normal ">
+                    When you subscribe to a Revve service, we collect personal
+                    information relevant to the specific product or service
+                    requested. This includes, but is not limited to, details
+                    entered on web forms, account modification data, and
+                    correspondence with our support team.
+                  </p>
+                  <p>
+                    Additional data may be gathered from voluntary submissions,
+                    such as survey responses, product feedback, or requests for
+                    more information about Revve or our partners. We may also
+                    analyse platform usage patterns to improve our services.
+                  </p>
+                  <p>
+                    Revve is committed to collecting only the information
+                    necessary to provide the product or service in question and
+                    to enhance user experience.
+                  </p>
+                </div>
 
                 <p className="font-bold pt-4 ">
                   Information We Collect Automatically
                 </p>
                 <p className="font-normal  ">
                   Revve may use cookies, web beacons, and other tracking
+                  technologies to collect information about you automatically as
+                  you use our Platform. This includes information sent to us by
+                  your computer, mobile phone, or other electronic access
+                  devices.Revve may use cookies, web beacons, and other tracking
                   technologies to collect information about you automatically as
                   you use our Platform. This includes information sent to us by
                   your computer, mobile phone, or other electronic access
@@ -106,114 +123,149 @@ const Page = () => {
                   web log data. We may combine this information with other
                   information that we collect from you. Revve may engage in
                   activities which involve the automated processing and/or
-                  profiling of information you provide us where (i) it is
-                  necessary for entering into or performance of a contract; (ii)
-                  it is authorized by law (which also provides safeguards for
-                  you); or (iii) it is the subject of explicit consent from you.
+                  profiling of information you provide us, where:
                 </p>
+                <ul className=" space-y-1 pt-2">
+                  <li>
+                    - It is necessary for entering into or performing a
+                    contract,
+                  </li>
+                  <li>
+                    - It is authorised by law (which also provides safeguards
+                    for you), or{" "}
+                  </li>
+                  <li>- It is the subject of explicit consent from you.</li>
+                </ul>
                 <p className=" pt-4 ">
-                  You hereby consent that in the circumstances not covered above
-                  Revve can engage in activities which involve the automated
-                  processing and/or profiling of your information in respect of
-                  the services for which you provided the Personal Data.
+                  In cases not covered by the above, you consent that Revve may
+                  carry out automated processing or profiling where it is
+                  required to provide the services you have signed up for. We
+                  ensure that all such processing is conducted in line with
+                  applicable data protection laws and with your privacy in mind.
                 </p>
               </div>
 
               <div>
-                <p className="font-bold pt-4 ">
-                  How Revve uses Information it Collects
-                </p>
+                <p className="font-bold pt-4 ">How We Use Your Information</p>
                 <p>
-                  We primarily use your Information to provide Services to you
-                  and to respond to your inquiries. We also may use your
-                  Information as follows:
+                  We primarily use the information we collect to deliver
+                  services to you and respond to your inquiries. In addition,
+                  your information may be used for the following purposes:
                 </p>
-                <ol className=" list-decimal pl-6 space-y-1.5">
+                <ol className=" list-disc pl-6 space-y-1.5">
                   <li>
-                    To communicate with you, including to respond to your
-                    comments or requests for information, to request feedback on
-                    our products and services, and to notify you about changes
-                    to the services you use.
+                    To communicate with you, including responding to your
+                    messages or requests, gathering feedback, and notifying you
+                    about changes to our services.
                   </li>
                   <li>
-                    To help Revve understand you, to tailor and enhance our
-                    product and service offerings, anticipate and resolve
-                    problems with any products or services supplied to you,
-                    create products or services that may meet your needs.
+                    To personalize and improve our services, by understanding
+                    your needs and preferences, enhancing your experience, and
+                    developing features that serve you better.
                   </li>
                   <li>
-                    To provide access to restricted pages or contents of the
-                    Platform.
+                    To provide access to secure areas of the Revve Platform or
+                    restricted content.
                   </li>
                   <li>
-                    To comply with legal and/or regulatory requirements and
-                    cooperate with regulators and law enforcement bodies.
+                    To meet legal and regulatory obligations, including
+                    cooperation with law enforcement and compliance with
+                    applicable laws and regulations.
                   </li>
                   <li>
-                    To send you marketing communications and advertising in line
-                    with your communications preferences and where permitted by
-                    applicable law about products, services and opportunities
-                    that we believe would be of interest to you, including
-                    products and services offered by third parties.
+                    For marketing purposes, where permitted by law and in
+                    accordance with your preferences, we may send you updates
+                    about Revve products, services, or third-party offers that
+                    may interest you.
                   </li>
                   <li>
-                    To protect our rights, your rights, and the rights of
-                    others, and to meet our own high standards of business
-                    practice.
+                    To protect rights and ensure safety, including our rights,
+                    your rights, and the rights of others, as well as to uphold
+                    high standards of business conduct.
+                  </li>
+                  <li>
+                    With third-party service providers, such as website hosting,
+                    marketing, and market research partners. These partners may
+                    access your information only to perform services on our
+                    behalf, and we remain responsible for their handling of your
+                    data.
                   </li>
                 </ol>
                 <p className="pt-4">
-                  The services of third party may be employed to help us in
-                  certain areas, such as website hosting, marketing and market
-                  researching. In some cases that third party may receive your
-                  information. However, at all times we will endeavor to keep
-                  control and be responsible for the use of your information.
+                  Each time we collect personal information, we aim to inform
+                  you how it will be used and request your consent where
+                  necessary.
+                </p>
+                <p className="text-lg font-bold uppercase pt-8">
+                  Data Transfers and Corporate Changes
                 </p>
                 <p className="pt-4">
-                  Each time you provide us with Information we aim to let you
-                  know how we intend to use it and ask you to give your consent
-                  to such use.
-                </p>
-                <p className="pt-4">
-                  Revve may assign its obligations and rights under this Policy
-                  to an Affiliate or a successor entity and your Information as
-                  well as the use and processing of such Information may be
-                  among the assets transferred by Revve. You acknowledge and
-                  consent that such transfers may occur and are permitted by
-                  this Privacy Policy.
+                  Revve may assign its rights and obligations under this Privacy
+                  Policy to an affiliate or a successor entity. If ownership of
+                  our business changes (through a merger, acquisition, or sale
+                  of assets), your information may be transferred as part of
+                  that transaction. By using our services, you acknowledge and
+                  consent to such transfers as permitted under this policy.
                 </p>
               </div>
             </div>
 
             <div>
               <p className="text-lg font-bold uppercase pt-8 ">
-                SECURITY AND PROTECTION
+                Security and Data Protection
               </p>
               <p className="font-normal ">
-                Information collected will be held securely and will only be
-                kept for as long as is reasonably necessary for as long as you
-                use the service or product that you are subscribed to, unless
-                you have provided us with your consent to use the data for any
-                additional purposes. We take the security of the information you
-                provide very seriously, and we will take all appropriate
-                technical, administrative and physical safeguards/measures using
-                recognized security procedures and tools in accordance with good
-                industry practice to protect your Information.
+                We are committed to protecting your personal information. All
+                information collected is stored securely and retained only for
+                as long as necessary to provide the services you subscribe to,
+                or longer where required by law or with your consent.
               </p>
               <p className="pt-4">
-                We have reasonable security measures in place to protect against
-                the loss, misuse and interception by third parties of the
-                information under our control, but, to the extent allowed by
-                law, Revve assumes no liability for any damage you may suffer as
-                a result of interception, alteration or misuse of information
-                transmitted over the Internet. Whilst we use all reasonable
-                endeavors to protect your security in the manner described
-                above, we consider that it is only appropriate to advise users
-                that data transmission over the Internet and the World Wide Web
-                cannot be guaranteed as 100% secure.
+                We use recognised industry standards and employ a combination of
+                technical, administrative, and physical safeguards to protect
+                your data. These include:
+              </p>
+              <ul className=" list-disc pl-6 pt-2 space-y-1.5">
+                <li> Encrypted data transmission</li>
+                <li> Secure servers and access controls</li>
+                <li>Ongoing monitoring and compliance procedures</li>
+              </ul>
+              <p className=" pt-2">
+                While we take every reasonable step to secure your information,
+                please note that no internet transmission is ever 100% secure.
+                Therefore, we cannot guarantee the absolute security of data
+                transmitted online. You acknowledge that the transmission of
+                information over the internet is at your own risk.
               </p>
             </div>
-
+            <div>
+              <p className="text-lg font-bold uppercase pt-8 ">
+                Security and Protection
+              </p>
+              <p className=" pt-4">
+                Information collected will be held securely and will only be
+                retained for as long as is reasonably necessary while you use
+                the service or product to which you are subscribed, unless you
+                have provided us with your consent to use the data for
+                additional purposes. We take the security of the information you
+                provide very seriously and will implement all appropriate
+                technical, administrative, and physical safeguards using
+                recognised security procedures and tools, under good industry
+                practice, to protect your information.
+              </p>
+              <p className=" pt-4">
+                We have reasonable security measures in place to protect against
+                the loss, misuse, and interception by third parties of the
+                information under our control. However, to the extent permitted
+                by law, Revve assumes no liability for any damage you may suffer
+                as a result of interception, alteration, or misuse of
+                information transmitted over the Internet. While we use all
+                reasonable efforts to protect your security in the manner
+                described above, we consider it appropriate to advise users that
+                data transmission over the Internet and the World Wide Web
+                cannot be guaranteed to be 100% secure.
+              </p>
+            </div>
             <div>
               <p className="font-bold pt-4 uppercase">
                 REVVE OBLIGATIONS TO RETAIN YOUR INFORMATION AND YOUR ACCESS TO
@@ -256,41 +308,50 @@ const Page = () => {
                 Access to and Control over Information
               </p>
               <p className="pt-2">
-                In respect of your Information with us you can do at any time
-                the following by contacting us:
+                With respect to your information held by us, you may, at any
+                time, do the following by contacting us:
               </p>
-              <ol className=" list-disc pl-6 space-y-1.5">
+              <ol className=" list-decimal  pl-6 space-y-1.5">
                 <li>
-                  If allowable, see what Information we have about you, if any.
+                  <b>Access</b> – If permissible, request to see the information
+                  we hold about you, if any.
                 </li>
                 <li>
-                  Change/correct any Information we have about you after
-                  providing the required documentation and if it is within your
-                  purview to change/correct.
+                  <b>Correction</b> – Request to change or correct any
+                  information we have about you, subject to the provision of
+                  required documentation and where it falls within your rights
+                  to do so.
                 </li>
                 <li>
-                  If allowable, and subject to points a – h above, have us
-                  delete any Information we have about you.
+                  <b>Deletion</b> – If allowable and subject to conditions
+                  outlined in points (a)–(h) above, request that we delete any
+                  information we have about you.
                 </li>
                 <li>
-                  If allowable, request for the purpose of the processing as
-                  well as the legal basis for processing.
+                  <b>Purpose and Legal Basis</b> – If permissible, request
+                  information on the purpose of processing your data and the
+                  legal basis for such processing.
                 </li>
                 <li>
-                  If allowable, request for the categories of personal data
-                  collected, stored and processed.
+                  <b> Data Categories</b> – If allowable, request details on the
+                  categories of personal data collected, stored, and processed.
                 </li>
                 <li>
-                  If allowable, request for recipient(s) or categories of
-                  recipients that the data is/will be disclosed to.
+                  <b>Data Recipients</b> – If allowable, request information
+                  about the recipient(s) or categories of recipients to whom the
+                  data has been or will be disclosed.
                 </li>
-                <li>Request for the duration of data retention.</li>
                 <li>
-                  Request for details and information of automated decision
-                  making, such as profiling, and any meaningful information
-                  about the logic involved, as well as the significance and
-                  expected consequences of such processing and express any
-                  concern about our use of your Information.
+                  <b> Retention Duration</b> – Request information on the
+                  duration for which your data will be retained.
+                </li>
+                <li>
+                  <b>Automated Decision-Making</b> – Request details about any
+                  automated decision-making processes, including profiling, and
+                  obtain meaningful information about the logic involved, as
+                  well as the significance and potential consequences of such
+                  processing. You may also express any concerns about how your
+                  information is being used.
                 </li>
               </ol>
             </div>
@@ -322,8 +383,8 @@ const Page = () => {
               CONTROLLING YOUR INFORMATION
             </p>
             <p className="">
-              We will not sell, distribute or lease your Information to third
-              parties unless we have your permission or are required by law to
+              We will not sell, distribute, or lease your information to third
+              parties unless we have your permission or are legally required to
               do so.
             </p>
             <p className="pt-6 font-bold uppercase">

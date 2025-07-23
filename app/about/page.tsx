@@ -19,15 +19,14 @@ const Page = () => {
           </div>
           <div className="col-span-2">
             <p className="text-lg">
-              <span className="font-semibold">Linearsend Inc</span> is a
-              financial technology company registered as a Money Service
-              Business (MSB) by Financial Transactions and Reports Analysis
-              Centre of Canada (FINTRAC) with the mission of facilitating
-              seamless cross-border transaction. Our unwavering dedication
-              ensures that cross-border transactions are as effortless as those
-              conducted locally. We pride ourselves on a journey fueled by
-              innovation, collaboration, and empowerment, paving the way for a
-              seamless financial future.
+              <span className="font-semibold">Linearsend Inc</span>
+              is a financial technology company, registered as a Money Service
+              Business (MSB) with the Financial Transactions and Reports
+              Analysis Centre of Canada (FINTRAC). We specialise in fast, secure
+              cross-border transactions, making it just as easy to send money
+              abroad as it is locally. Our goal is simple: to make global money
+              movement stress-free through innovation, transparency, and trust,
+              paving the way for a flawless financial future.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 ">
               <div className="relative ">
@@ -69,24 +68,46 @@ const Page = () => {
           </div>
           <div className="col-span-2">
             <p className="text-3xl lg:text-5xl font-medium mb-4">
-              We are building Revve to break down the limitations of financial
-              borders and redefine global transactions.
+              Revve is our answer to the everyday frustrations of cross-border
+              finance.
+              {/* We are building Revve to break down the limitations of financial
+              borders and redefine global transactions. */}
             </p>
+            {/* <div className=" text-gray-900 space-y-3">
+              <p>
+                Built for individuals and businesses navigating life between
+                Canada, Nigeria, and the wider African continent, Revve
+                simplifies remittance, bill payments, and global commerce with
+                one powerful platform.
+              </p>
+              <p>
+                Our mission is clear: to make international financial
+                transactions as easy as local ones, accessible to all, and built
+                for the future.
+              </p>
+            </div> */}
           </div>
         </div>
         <section className="relative bg-cover bg-center w-full h-[700px] lg:h-[700px] bg-no-repeat  bg-[url('/images/about-galaxy.png')]">
-          <div className=" max-w-5xl ml-auto p-5 pt-10 lg:pt-14">
+          <div className=" max-w-[960px] ml-auto p-5 pt-10 lg:pt-14">
             <p className="text-lg font-medium mb-4">
-              At Revve, our mission is to empower individuals and businesses by
+              Built for individuals and businesses navigating life between
+              Canada, Nigeria, and the wider African continent, Revve simplifies
+              remittance, bill payments, and global commerce with one powerful
+              platform.
+              {/* At Revve, our mission is to empower individuals and businesses by
               providing seamless financial solutions that transcend borders. We
               strive to simplify the complexities of remittance, bill payments,
               and online shopping, making financial transactions effortless and
-              accessible to everyone.
+              accessible to everyone. */}
             </p>
             <p className="text-lg font-medium mb-4">
-              Our flagship product, Revve, is a financial service platform
+              Our mission is clear: to make international financial transactions
+              as easy as local ones, accessible to all, and built for the
+              future.
+              {/* Our flagship product, Revve, is a financial service platform
               tailored to simplify money transfers and Bill Payments Between
-              Canada, Nigeria and rest of Africa.
+              Canada, Nigeria and rest of Africa. */}
             </p>
           </div>
         </section>
@@ -96,11 +117,13 @@ const Page = () => {
           </div>
           <div className="col-span-2">
             <p className="text-lg">
-              Our vision is a world unburdened by the frail barriers of
+              Our vision is to remove financial borders and make international
+              payments as simple, seamless, and trusted as local transactions.
+              {/* Our vision is a world unburdened by the frail barriers of
               geographical boundaries, where international distances do not stop
               the formation of transactional relationships. We envision a future
               where cross-border payments are as effortless and seamless as
-              local transactions.
+              local transactions. */}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 ">
               {vision_data?.map((item, key) => {
@@ -132,14 +155,19 @@ const Page = () => {
             <div className="grid grid-cols-1 lg:gap-8 md:grid-cols-2 gap-4 mt-6 ">
               <div>
                 <p className="text-lg">
-                  Established in 2024, Revve was born out of an idea that
+                  Launched in 2024, Revve was created to challenge the barriers
+                  of cross-border finance through innovation.
+                  {/* Established in 2024, Revve was born out of an idea that
                   prioritises innovation for cross-border financial
-                  transactions.
+                  transactions. */}
                 </p>
                 <p className="text-lg pt-2">
-                  Our top priorities are security, trust, and innovation to
+                  With security, trust, and simplicity at our core, we offer
+                  seamless financial solutions for individuals and businesses
+                  worldwide.
+                  {/* Our top priorities are security, trust, and innovation to
                   empower individuals and businesses with seamless financial
-                  solutions.
+                  solutions. */}
                 </p>
                 <div className=" py-4">
                   <button

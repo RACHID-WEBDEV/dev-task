@@ -11,14 +11,16 @@ const axiosInstance = axios.create({
   },
 });
 
+const WEBSITE_KEY =
+  "eyJhbGciOi637748583hdydb36bc93f.eyJpZCI6IjIyIiwidXNlcmlkIjoiMjIiLCJ2YWxpZCI6IjEiLCJuYW1lIjoibG9naW4iLCJpYXQiOjE3MDc0NjQwNDksImV4cCI6MTcwNzQ2NzY0OSwiYXVkIjoiaHR0cHM6Ly9vajdyY2hndHZtczVuN3A1NDVjM3RoejVsdTBranp5cC5sYW1iZGEtdXJsLnVzLWVhc3QtMi5vbi5hd3MiLCJpc3MiOiJodHRwczovL29qN3JjaGd0dm1zNW43cDU0NWMzdGh6NWx1MGtqenlwLmxhbWJkYS11cmwudXMtZWFzdC0yLm9uLmF3cyJ9.ncvhhUJEHSNUSS-sbjJDUISBNCV&93u72048";
 axiosInstance.interceptors.request.use(
   (config) => {
     if (typeof window !== "undefined") {
       const token = localStorage.getItem("revve_token");
 
       // const token = localStorage.getItem("token");
-      if (token) {
-        config.headers.Authorization = `Bearer ${token}`;
+      if (token || WEBSITE_KEY) {
+        config.headers.Authorization = `Bearer ${token || WEBSITE_KEY}`;
       }
     }
     return config;

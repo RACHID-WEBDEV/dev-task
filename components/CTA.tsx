@@ -13,9 +13,11 @@ const CTA = ({ setOpenModal }: any) => {
               </h2>
               <div className="mt-8 max-w-[330px] text-gray-100 font-medium space-y-4">
                 <p className=" leading-[1.3]">
-                  Say goodbye to long queues and endless processes—our platform
+                  No more queues. No more stress. Pay your bills instantly,
+                  anytime, with just a few taps on our platform.
+                  {/* Say goodbye to long queues and endless processes—our platform
                   offers a seamless solution for paying bills instantly without
-                  any hiccups.
+                  any hiccups. */}
                 </p>
 
                 <p className="pt-6">Get Revve on your phone</p>

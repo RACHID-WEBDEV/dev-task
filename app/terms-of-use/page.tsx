@@ -30,321 +30,434 @@ const Page = () => {
           </div>
           <div className="col-span-2">
             <div className=" space-y-6">
-              <div>
+              <h1 className=" text-3xl lg:text-4xl">
+                REVVE TERMS AND CONDITIONS
+              </h1>
+              <div className=" space-y-2">
                 <p className="text-lg font-bold uppercase ">Introduction</p>
                 <p className="font-normal ">
-                  This Privacy Policy applies to Linearsend Inc product
-                  (&ldquo;Revve) and sets out how Revve collects, uses, stores,
-                  shares and protects any information that you give Revve when
-                  you subscribe to its services.
-                  <br /> Revve is committed to ensuring that your privacy is
-                  protected. Should we ask you to provide certain information
-                  when subscribing to our services; you can be assured that it
-                  will only be used in accordance with this Privacy Policy.
+                  Welcome to Linearsend Inc product (&ldquo;Revve&ldquo;),
+                  hereinafter referred to as &ldquo;Platform&ldquo; (which
+                  expression shall where the context so admits, include its
+                  successors–in-title and assigns).
+                </p>
+                <p>
+                  By using this Platform, You are acknowledging and agreeing to
+                  comply with and be bound by the following terms and conditions
+                  of use governing Revve&apos;s relationship with You in
+                  relation to this Platform. These Terms and Conditions are for
+                  an indefinite term and legally binding, so please read them
+                  through carefully before accessing this Platform. The onus is
+                  on You to access these Terms and Conditions, as well as any
+                  amendments made thereto. If You are not agreeable to these
+                  Terms and Conditions, You may not access this Platform.
+                </p>
+                <p>
+                  These Terms and Conditions are specific and apply to Your use
+                  of this Platform. Any changes to these Terms and Conditions
+                  will be updated on this Platform and will be displayed when
+                  You access it.
                 </p>
               </div>
               <div>
-                <p className="text-lg font-bold uppercase ">CONSENT</p>
+                <p className="text-lg font-bold uppercase ">Definitions</p>
                 <p className="font-normal ">
-                  You accept this Privacy Policy when you sign up for access or
-                  use the products or services offered by Revve on any platform.
+                  Wherever the following words and phrases appear in these Terms
+                  and Conditions they will always have the following meanings:
                 </p>
-              </div>
-              <div>
-                <p className="text-lg font-bold uppercase ">LEGAL BASIS</p>
-                <p className="font-normal ">
-                  You further accept that Revve may process your Information
-                  without explicit consent sought, given or accepted where (i)
-                  it is necessary for entering into or performance of a
-                  contract; (ii) it is authorized or required by law (which also
-                  provides safeguards for You); or (iii) there are circumstances
-                  that may engender direct or indirect propagation of criminal
-                  acts and anti-social conducts.
+                <ol className=" list-decimal pl-6 pt-2">
+                  <li>
+                    <b>Data Subject</b> means an identifiable person. One who
+                    can be identified directly or indirectly by reference to an
+                    identification number or to specific information provided by
+                    him or her in accordance with the provisions of these Terms
+                    and Conditions.
+                  </li>
+                  <li>
+                    <b>Personal Information</b> means the data relating to a
+                    Data Subject which is collected to enable You to use the
+                    Platform, and includes Bank Verification Number (BVN) data
+                    collected for the purpose of effecting a transaction on the
+                    Platform;
+                  </li>
+                  <li>
+                    <b>Platform</b> means this electronic Portal or Revve App.
+                  </li>
+                  <li>
+                    <b>Terms and Conditions</b> mean the terms and conditions
+                    contained within this electronic document You are reading
+                    now;
+                  </li>
+                  <li>
+                    <b>You</b> means the person using this Platform in
+                    accordance with these Terms and Conditions and
+                    &apos;your&apos; shall be construed accordingly.
+                  </li>
+                  <li>
+                    <b>Eligibility</b> <br />
+                    To use this Platform, You must:
+                    <ol className=" list-decimal pl-6 space-y-1">
+                      <li>
+                        Be 18 years of age or above. In the event that You are
+                        below 18 years of age, You are visiting the Platform at
+                        your own risk and warrant that You have been advised
+                        accordingly and are acting with the direction of your
+                        parents or guardian;
+                      </li>
+                      <li>
+                        Have a valid email address and contact telephone number;
+                      </li>
+                      <li>
+                        Be a resident in a jurisdiction where this Platform or
+                        any part therein is not <b>restricted.</b>
+                      </li>
+                      <li>
+                        In the case of corporate entity, be a company registered
+                        under the laws of the jurisdiction where the Platform is
+                        being used.
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+                <p className=" pt-2">
+                  You hereby confirm that in consideration of Revve providing
+                  You access to the Platform, You have read, understood and
+                  agreed to be bound by these Terms and Conditions each time You
+                  access this Platform.
                 </p>
               </div>
               <div>
                 <p className="text-lg font-bold uppercase ">
-                  COLLECTION OF INFORMATION
-                </p>
-                <p className="font-bold pt-2 ">
-                  Information We Collect Directly from You
+                  Registrations and Confirmation
                 </p>
                 <p className="font-normal ">
-                  Revve collects Information from you when you subscribe to our
-                  service. The type of Information that we collect from you
-                  depends on the service you require from Revve.
-                  <br /> We may also collect information you provide us
-                  including but not limited to information on web forms, account
-                  update information and correspondence with the Platform
-                  support services team. Information obtained through voluntary
-                  submissions (e.g., responses to surveys, requests for
-                  information on Revve&apos;s Platform or those of Revve&apos;s
-                  advertisers/marketing partners) and review of Platform usage
-                  patterns survey responses, customer enquiries and other means
-                  may also be collected and used by us. Revve will only collect
-                  information that is necessary for the provision of the product
-                  or service that you have subscribed to.
+                  By registering on this Platform, You warrant to Revve that all
+                  the information provided by You are true, complete and
+                  accurate in all respects. Revve will take all information
+                  supplied via this Platform at face value and shall not be
+                  responsible for any inaccurate, untrue or false information or
+                  any information supplied under false pretences.
                 </p>
-
-                <p className="font-bold pt-4 ">
-                  Information We Collect Automatically
+              </div>
+              <div>
+                <p className="text-lg font-bold uppercase ">
+                  Application for and Use of the Platform
                 </p>
+                <p className=" pt-2 ">
+                  If your registration application is accepted, You agree to
+                  receive marketing and promotional materials via an email
+                  broadcast unless You have selected not to receive these
+                  materials; and consent that your registration details will be
+                  utilised by Revve in relation to the activities enumerated in
+                  this Platform.
+                </p>
+                <p className="font-normal pt-1 ">
+                  Your consent to receive marketing and promotional materials
+                  electronically will remain in effect until You revoke such
+                  consent. To unsubscribe or revoke your consent to receive
+                  these Electronic notifications, You will need to apply the
+                  unsubscribe option made available within this Platform. Please
+                  note that it may take some time for us to update our records
+                  to ensure your new choices are respected.
+                </p>
+                <p>
+                  You must ensure that You update your details (including any
+                  change in your email address) on the Platform immediately
+                  whenever any such change occurs.
+                </p>
+                <p className="font-bold pt-4 ">Revve&apos;s Obligations</p>
                 <p className="font-normal  ">
-                  Revve may use cookies, web beacons, and other tracking
-                  technologies to collect information about you automatically as
-                  you use our Platform. This includes information sent to us by
-                  your computer, mobile phone, or other electronic access
-                  devices.
+                  Revve keeps your Personal Information in line with set periods
+                  calculated using the following applicable criteria:
                 </p>
-                <p className="pt-4">
-                  The automatically collected information includes but is not
-                  limited to data about the pages you access, computer IP
-                  address, device ID or unique identifier, device type,
-                  geo-location information, computer and connection information,
-                  mobile network information, statistics on page views, ad data,
-                  the dates and times of your use of the Platformand standard
-                  web log data. We may combine this information with other
-                  information that we collect from you. Revve may engage in
-                  activities which involve the automated processing and/or
-                  profiling of information you provide us where (i) it is
-                  necessary for entering into or performance of a contract; (ii)
-                  it is authorized by law (which also provides safeguards for
-                  you); or (iii) it is the subject of explicit consent from you.
-                </p>
-                <p className=" pt-4 ">
-                  You hereby consent that in the circumstances not covered above
-                  Revve can engage in activities which involve the automated
-                  processing and/or profiling of your information in respect of
-                  the services for which you provided the Personal Data.
-                </p>
+                <ul className="space-y-2 list-decimal pl-10">
+                  <li>
+                    How long You have been using the Platform, the types
+                    products or services offering we provide You, and when You
+                    will stop being our customer.
+                  </li>
+                  <li>
+                    After You have stopped using the Platform, for how long it
+                    is reasonable for us to retain your records to show we have
+                    met the obligations we have to You and by law.
+                  </li>
+                  <li>Any time limits for making a claim</li>
+                  <li>
+                    Any period for keeping your personal information which are
+                    set by law or recommended by the relevant regulators,
+                    professional bodies or associations or is in line with best
+                    practice.
+                  </li>
+                  <li>The nature of any contract we have in place with You.</li>
+                  <li>The terms of any consent given by You.</li>
+                  <li>Any relevant proceedings that apply.</li>
+                  <li>Our legitimate interests as a business.</li>
+                </ul>
               </div>
 
               <div>
                 <p className="font-bold pt-4 ">
-                  How Revve uses Information it Collects
+                  Access to and Control over Information
                 </p>
                 <p>
-                  We primarily use your Information to provide Services to you
-                  and to respond to your inquiries. We also may use your
-                  Information as follows:
+                  In respect of your Personal Information with us, You can do at
+                  any time the following by contacting us:
                 </p>
                 <ol className=" list-decimal pl-6 space-y-1.5">
                   <li>
-                    To communicate with you, including to respond to your
-                    comments or requests for information, to request feedback on
-                    our products and services, and to notify you about changes
-                    to the services you use.
+                    If allowable, see what Personal Information we have about
+                    You, if any.
                   </li>
                   <li>
-                    To help Revve understand you, to tailor and enhance our
-                    product and service offerings, anticipate and resolve
-                    problems with any products or services supplied to you,
-                    create products or services that may meet your needs.
+                    Change/correct any Personal Information we have about You
+                    after providing the required documentation and if it is
+                    within your purview to change/correct.
                   </li>
                   <li>
-                    To provide access to restricted pages or contents of the
-                    Platform.
+                    If allowable, and subject to points a – h above, have us
+                    delete any Personal Information we have about You.
                   </li>
                   <li>
-                    To comply with legal and/or regulatory requirements and
-                    cooperate with regulators and law enforcement bodies.
+                    Request for contact details of the data protection officer,
+                    where applicable.
                   </li>
                   <li>
-                    To send you marketing communications and advertising in line
-                    with your communications preferences and where permitted by
-                    applicable law about products, services and opportunities
-                    that we believe would be of interest to you, including
-                    products and services offered by third parties.
+                    If allowable, request for the purpose of the processing as
+                    well as the legal basis for processing.
                   </li>
                   <li>
-                    To protect our rights, your rights, and the rights of
-                    others, and to meet our own high standards of business
-                    practice.
+                    If allowable, request for information about interests, if
+                    the processing is based on the legitimate interests of Revve
+                    or a third party.
                   </li>
                 </ol>
-                <p className="pt-4">
-                  The services of third party may be employed to help us in
-                  certain areas, such as website hosting, marketing and market
-                  researching. In some cases that third party may receive your
-                  information. However, at all times we will endeavor to keep
-                  control and be responsible for the use of your information.
+                <p className="pt-4 font-bold">
+                  You are responsible for the following…
                 </p>
-                <p className="pt-4">
-                  Each time you provide us with Information we aim to let you
-                  know how we intend to use it and ask you to give your consent
-                  to such use.
-                </p>
-                <p className="pt-4">
-                  Revve may assign its obligations and rights under this Policy
-                  to an Affiliate or a successor entity and your Information as
-                  well as the use and processing of such Information may be
-                  among the assets transferred by Revve. You acknowledge and
-                  consent that such transfers may occur and are permitted by
-                  this Privacy Policy.
-                </p>
+                <ul className=" list-disc pl-6 pt-4">
+                  <li>
+                    You confirm that You have read these Terms and Conditions
+                    and the Privacy Notice and agree to be bound by them every
+                    time You access this Platform;
+                  </li>
+                  <li>
+                    You shall not, and shall not attempt to decompile,
+                    reverse-engineer, translate, convert, adapt, alter, modify,
+                    enhance, add to, delete or in any way tamper with, or gain
+                    access to, any part of this Platform or any services in
+                    relation thereto, or any software comprised in them.
+                  </li>
+                  <li>
+                    You shall not, and shall not attempt to, copy, reproduce,
+                    republish, frame, upload to a third party, transmit or
+                    distribute the whole or any part of this Platform.
+                  </li>
+                  <li>
+                    You shall not send, submit, post or otherwise transmit,
+                    material or messages that contain software virus or any
+                    other files that are designed to interrupt, destroy, and
+                    negatively affect in any manner whatsoever, any electronic
+                    equipment in connection with the use of the Platform or
+                    other User&apos;s ability to use the Platform.
+                  </li>
+                  <li>
+                    You shall not conduct any systematic or automated data
+                    collection activities (including scraping, data mining, data
+                    extraction and data harvesting) on or in relation to the
+                    Platform without Revve&apos;s express written consent;
+                  </li>
+                  <li>
+                    <b>Liabilities</b>
+                  </li>
+                  <li>
+                    Revve shall not be liable to You for any loss or damage You
+                    may suffer or incur as a result of your use of the Platform
+                    unless such a loss or damage results directly from the fraud
+                    or wilful default of Revve.
+                  </li>
+                  <li>
+                    In the event that You do not comply with any provision of
+                    these Terms and Conditions and such non-compliance results
+                    in any loss or damage to Revve, You agree and undertake to
+                    compensate Revve for such loss and/or damage.
+                  </li>
+                  <li>
+                    Any limitation or exclusion of liability under these Terms
+                    and Conditions shall only be valid to the full extent
+                    permitted by law.
+                  </li>
+                  <li>
+                    <b>Security and Confidentiality</b> <br />
+                    You understand and agree that you are responsible for
+                    maintaining the confidentiality of your User ID and password
+                    at all times.
+                  </li>
+                </ul>
               </div>
             </div>
 
             <div>
               <p className="text-lg font-bold uppercase pt-8 ">
-                SECURITY AND PROTECTION
+                Changes and Operation of the Platform
               </p>
               <p className="font-normal ">
-                Information collected will be held securely and will only be
-                kept for as long as is reasonably necessary for as long as you
-                use the service or product that you are subscribed to, unless
-                you have provided us with your consent to use the data for any
-                additional purposes. We take the security of the information you
-                provide very seriously, and we will take all appropriate
-                technical, administrative and physical safeguards/measures using
-                recognized security procedures and tools in accordance with good
-                industry practice to protect your Information.
+                Revve reserves the right to make changes to any part of the
+                Platform, suspend or terminate the operation of the Platform at
+                any time for the purposes of support and maintenance or to
+                update the information contained on the Platform and the
+                Information or these Terms and Conditions in order to improve or
+                streamline the services which it offers. Should these Terms and
+                Conditions be amended, Revve will publish details of the
+                amendments on the Platform.
               </p>
               <p className="pt-4">
-                We have reasonable security measures in place to protect against
-                the loss, misuse and interception by third parties of the
-                information under our control, but, to the extent allowed by
-                law, Revve assumes no liability for any damage you may suffer as
-                a result of interception, alteration or misuse of information
-                transmitted over the Internet. Whilst we use all reasonable
-                endeavors to protect your security in the manner described
-                above, we consider that it is only appropriate to advise users
-                that data transmission over the Internet and the World Wide Web
-                cannot be guaranteed as 100% secure.
+                By using this Platform, You agree to be bound by and You agree
+                to periodically visit the Platform to determine the then current
+                terms of use to which You are bound.
               </p>
             </div>
 
             <div>
-              <p className="font-bold pt-4 uppercase">
-                REVVE OBLIGATIONS TO RETAIN YOUR INFORMATION AND YOUR ACCESS TO
-                AND CONTROL OF SUCH INFORMATION
-              </p>
-              <p>
-                Revve keeps your Information in line with set periods calculated
-                using the following applicable criteria:
-              </p>
-              <ol className=" list-decimal pl-6 space-y-1.5">
+              <p className="font-bold pt-4 uppercase">Validity</p>
+
+              <ol className="  pl-6 space-y-1.5">
                 <li>
-                  How long you have been a customer with us, the types products
-                  or services offering we provide you, and when you will stop
-                  being our customer.
+                  If one, or part of these Terms and Conditions proves to be
+                  legally unsound or unenforceable in any way, this will not
+                  affect the validity of the remaining terms in any way.
                 </li>
                 <li>
-                  After you have stopped being our customer, for how long it is
-                  reasonable for us to retain your records to show we have met
-                  the obligations we have to you and by law.
+                  If we relax any of these Terms and Conditions once, this may
+                  be on a temporary basis or as a special case; it will not
+                  affect our right to enforce that term strictly again at any
+                  time.
                 </li>
-                <li>Any time limits for making a claim</li>
-                <li>
-                  Any period for keeping your Information which are set by law
-                  or recommended by the relevant regulators, professional bodies
-                  or associations or is in line with best practice.
-                </li>
-                <li>The nature of any contract we have in place with you.</li>
-                <li>The terms of any consent given by you.</li>
-                <li>Any relevant proceedings that apply.</li>
-                <li>Our legitimate interests as a business.</li>
               </ol>
+              <p className="font-bold pt-4 uppercase">Indemnity</p>
               <p className="pt-4">
-                The retention period is to enable Revve use the data for the
-                necessary legitimate purposes identified in full compliance with
-                the legal requirements. When Revve no longer needs to use your
-                Information, we will delete it from our systems and records.
+                You agree to indemnify and hold harmless Revve and its officers,
+                agents, and employees from and against any and all claims,
+                demands, costs, damages and or penalties arising out of any
+                failure by You or any agent acting on your behalf to fully
+                observe these Terms and Conditions or by reason of any use by
+                You or such agent of any information or images provided on this
+                Platform.
               </p>
 
-              <p className="pt-8 font-bold">
-                Access to and Control over Information
-              </p>
-              <p className="pt-2">
-                In respect of your Information with us you can do at any time
-                the following by contacting us:
-              </p>
-              <ol className=" list-disc pl-6 space-y-1.5">
+              <p className="pt-8 font-bold">Intellectual Property Rights</p>
+
+              <ol className="pl-6 space-y-1.5">
                 <li>
-                  If allowable, see what Information we have about you, if any.
+                  The composition contained in this Platform (&ldquo;Revve
+                  Content&ldquo;), including but not limited to, text, data,
+                  audio, video, programming, functionality, software, source
+                  code, graphics, photographs, databases, illustrations,
+                  artwork, names, logos, designs, button icons, scripts,
+                  trademarks, trade dress, service marks, domain names, service
+                  names and the information contained in the Platform regarding
+                  or connected to Revve and in respect of the activities of
+                  Revve, whether registered or unregistered, are either owned by
+                  and are the intellectual property of Revve or registered to
+                  Revve, and are subject to copyright and other intellectual
+                  property rights under the Laws of Canada and applicable
+                  international conventions.
                 </li>
                 <li>
-                  Change/correct any Information we have about you after
-                  providing the required documentation and if it is within your
-                  purview to change/correct.
+                  Unauthorised use/exploitation of Revve Content on the Platform
+                  may violate copyright, trademark and other applicable
+                  intellectual property and proprietary laws in force in Canada
+                  and/or outside Canada and could result in criminal or civil
+                  penalties.
                 </li>
                 <li>
-                  If allowable, and subject to points a – h above, have us
-                  delete any Information we have about you.
-                </li>
-                <li>
-                  If allowable, request for the purpose of the processing as
-                  well as the legal basis for processing.
-                </li>
-                <li>
-                  If allowable, request for the categories of personal data
-                  collected, stored and processed.
-                </li>
-                <li>
-                  If allowable, request for recipient(s) or categories of
-                  recipients that the data is/will be disclosed to.
-                </li>
-                <li>Request for the duration of data retention.</li>
-                <li>
-                  Request for details and information of automated decision
-                  making, such as profiling, and any meaningful information
-                  about the logic involved, as well as the significance and
-                  expected consequences of such processing and express any
-                  concern about our use of your Information.
+                  All trademarks, service marks, logos and any other marks
+                  whatsoever are used for the benefit of their respective owners
+                  and are not intended to infringe the trademark of any such
+                  person.
                 </li>
               </ol>
             </div>
 
-            <p className="pt-8 font-bold uppercase">DO WE USE COOKIES?</p>
+            <p className="pt-8 font-bold uppercase">Third party advertising</p>
             <p className="pt-2">
-              Yes. A cookie is a small file which asks permission to be placed
-              on your computer&apos;s hard drive. Once you agree, the file is
-              added, and the cookie helps analyze web traffic or lets you know
-              when you visit a particular site. Cookies allow web applications
-              to respond to you as an individual. The web application can tailor
-              its operations to your needs, likes and dislikes by gathering and
-              remembering information about your preferences. Cookies are
-              features included in your browser and will store small amounts of
-              data on your computer about your visit to the Website, in
-              particular when you complete any form on the Website.
+              Revve may allow third parties to place advertisements on the
+              Platform. Third party advertisements are clearly labelled as such
+              and may be chargeable. Revve does not endorse and is not
+              responsible for the content of any third-party advertisement on
+              this Platform or otherwise.
             </p>
-            <p className="pt-4">
-              However, a cookie does not provide us with any Information.
-              Therefore, if you have not supplied us with any Information, you
-              can still browse our site anonymously. This information is used
-              only for administration of the site system and in the compilation
-              of statistics used by Revve. Cookies may be required to allow you
-              to access and participate in certain areas of our Website. The
-              majority of browsers will allow you to alter the settings used for
-              cookies and to disable and enable them as you require.
-            </p>
+
             <p className="pt-8 font-bold uppercase">
-              CONTROLLING YOUR INFORMATION
+              Restrictions of Access to this Platform
             </p>
-            <p className="">
-              We will not sell, distribute or lease your Information to third
-              parties unless we have your permission or are required by law to
-              do so.
+
+            <p className="pt-4 font-bold uppercase">
+              ACCESS TO THIS PLATFORM OR ANY PART OF IT MAY BE RESTRICTED UNDER
+              RELEVANT LAWS IN CERTAIN JURISDICTIONS. BY YOUR USE OF THIS
+              PLATFORM, YOU CONFIRM CERTAIN MATTERS (INCLUDING THAT YOU ARE NOT
+              RESIDENT IN SUCH A JURISDICTION), BEFORE YOU MAY OBTAIN ACCESS TO
+              THE INFORMATION ON THIS PLATFORM OR ANY AREA OF THE PLATFORM.
             </p>
-            <p className="pt-6 font-bold uppercase">
-              REMEDIES FOR VIOLATION OF THIS PRIVACY POLICY
+            <p className=" pt-4 font-bold">
+              Automated Processing of Personal Data
             </p>
-            <p className="">
-              Any person subject to this Privacy Policy who is found to be in
-              breach of this privacy policy by:
-            </p>
-            <ol className=" list-decimal pl-6 space-y-1.5">
-              <li>
-                failure to implement safeguards required by any data protection
-                laws or any of the security measures provided in this Policy;
-              </li>
-              <li>failure to mitigate the damage once it has occurred; or</li>
-              <li>failure to timely notify the affected individuals</li>
-            </ol>
             <p>
-              shall be liable, in addition to any other civil liabilities, to
-              any penalties provided in such data protection laws.
+              Revve may engage in activities which involve the automated
+              processing and/or profiling of information You provide us and{" "}
+              <b>
+                You hereby consent that in the circumstances not covered above
+                Revve can engage in activities which involve the automated
+                processing and/or profiling of your information in respect of
+                the services for which You provided the Personal Data.
+              </b>
             </p>
+            <p className=" pt-6 font-bold"> Referral Policy</p>
+            <ol className=" list-disc pl-6 space-y-2">
+              <li>
+                <b>Referral Program Overview</b> Our referral program allows
+                users to earn referral bonuses and transfer rewards by inviting
+                new customers to use our app. The referral costs and bonuses are
+                as outlined on the referral page of the Mobile App. These
+                bonuses and rewards are subject to the specific terms outlined
+                in this policy and any additional terms published on the
+                Platform. The value, method of distribution, and conditions for
+                earning these rewards are determined solely at our discretion
+                and may vary from time to time.
+              </li>
+              <li>
+                <b>Eligibility </b> Participation in the referral program is
+                subject to the eligibility criteria set out by us. We reserve
+                the right to verify participants and the validity of referred
+                customers before issuing referral bonuses and transfer rewards.
+              </li>
+              <li>
+                <b>Program Modifications</b> We reserve the right to modify,
+                suspend, or terminate the referral program at any time, with or
+                without prior notice. This includes the ability to change the
+                value of referral bonuses and transfer rewards, adjust
+                eligibility criteria, or cease offering rewards entirely.
+              </li>
+              <li>
+                <b>Fraud and Abuse</b> Any attempt to manipulate, exploit, or
+                abuse the referral program may result in disqualification from
+                the program, forfeiture of rewards, and potential suspension or
+                termination of your account.
+              </li>
+              <li>
+                <b>No Guarantee of Payment Referral </b> bonuses and transfer
+                rewards are not guaranteed and are subject to verification by
+                us. We may withhold or revoke rewards if we determine that they
+                were earned in violation of these terms or through fraudulent or
+                deceptive means.
+              </li>
+              <li>
+                <b>Acceptance of Terms</b> By participating in the referral
+                program, you agree to these terms and conditions, as well as any
+                modifications or updates we may make. Continued participation
+                after changes to the referral program constitutes acceptance of
+                those changes.
+              </li>
+            </ol>
 
             <p className="pt-8 font-bold uppercase">CONTACTING REVVE</p>
             <p className="">
@@ -358,22 +471,6 @@ const Page = () => {
               </a>{" "}
               We shall endeavour to respond to enquiries/issues sent to/made to
               these service contacts within 48 hours.
-            </p>
-            <p className="pt-8 font-bold uppercase">
-              GOVERNING LAW AND JURISDICTION
-            </p>
-            <p className="">
-              By accessing the services of Revve on any platform, you agree to
-              be governed by the laws of Canada. The laws of Canada will govern
-              all matters relating to this Privacy Policy and shall apply
-              without regard to the principles of conflict of laws. You agree to
-              submit to the exclusive jurisdiction and venue of the Courts in
-              Canada.
-            </p>
-
-            <p className="pt-6">
-              Copyright ©{new Date().getFullYear()} [Revve]. All Rights
-              Reserved.
             </p>
           </div>
         </div>

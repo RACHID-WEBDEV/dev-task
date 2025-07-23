@@ -1,12 +1,12 @@
 export const vision_data = [
   {
     title: "Innovation",
-    desc: "We thrive on pushing boundaries and embracing cutting-edge technologies to create solutions that redefine the cross-border transaction experience.",
+    desc: "We constantly challenge the status quo, using smart technologies to improve the way people send, receive, and manage money across borders.",
     icon: "/images/innovation.svg",
   },
   {
     title: "Transparency",
-    desc: "Trust is the foundation of our relationships. We are committed to transparency in all our operations, ensuring our users feel secure and informed.",
+    desc: "Openness isn’t optional; it’s how we build trust. We operate with honesty and clarity, ensuring our users always know what’s happening with their money.",
     icon: "/images/transparency.svg",
   },
   {

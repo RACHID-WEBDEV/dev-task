@@ -95,17 +95,22 @@ const ShopOnline = ({ setOpenModal }: any) => {
         >
           <div className=" px-4  hidden lg:block">
             <h2 className="font-semibold text-2xl lg:text-4xl 1xl:text-5xl text-black  tracking-wide">
-              Shop Online
+              {/* Shop Online */}
+              Service Marketplace
             </h2>
             <div className="mt-8 max-w-[420px] text-gray-800 space-y-4">
               <p className=" ">
-                Experience the world at your fingertips with our seamless online
-                shopping platform.
+                Explore trending styles and top tech from around the world, all
+                in one app, all from your couch.
+                {/* Experience the world at your fingertips with our seamless online
+                shopping platform. */}
               </p>
               <p>
-                From the latest fashion trends to must-have gadgets, shop the
+                From groceries, utility bills and healthcare, Revve’s
+                marketplace lets you support your loved ones in real-time
+                {/* From the latest fashion trends to must-have gadgets, shop the
                 world&apos;s best brands and products from the comfort of your
-                own home.
+                own home. */}
               </p>
               <p className="pt-6">Get Revve on your phone</p>
               <div>

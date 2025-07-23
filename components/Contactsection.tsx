@@ -66,12 +66,12 @@ const Contactsection = () => {
             <div className="  ">
               <div className=" px-4 ">
                 <h2 className="font-semibold text-2xl lg:text-5xl text-white max-w-lg tracking-wide">
-                  Get in touch
+                  Get in touch!
                 </h2>
                 <div className="mt-8 max-w-[330px] text-gray-100 font-medium space-y-4">
                   <p className=" leading-[1.3]">
-                    Do you have any questions or feedback We&apos;d love to hear
-                    from you.
+                    Do you have any questions or feedback? We&apos;d love to
+                    hear from you.
                   </p>
                 </div>
               </div>
