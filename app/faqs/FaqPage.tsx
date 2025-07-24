@@ -7,15 +7,38 @@ import { SearchIcon, XIconSmall } from "@/public/SvgsIcon";
 import { getData } from "@/utils/axiosInstance";
 import SmallSpinner from "@/components/SmallSpinner";
 import classNames from "classnames";
+import NewCustomDropdown from "@/components/NewCustomDropdown";
 
 const FaqPage = () => {
+  const [isOpenCategory, setIsOpenCategory] = useState(false);
+
+  type DropdownOption = { name: string; [key: string]: any };
+
+  const [selectedCategory, setSelectedCategory] =
+    useState<DropdownOption | null>(null);
+  const handleSetIsOpenCategory = (value: any) => {
+    setIsOpenCategory(value);
+    // if (value) setIsOpenUserType(false); // close To if opening this
+  };
+
+  console.log("selectedCategory", selectedCategory?.ref_code);
   // const pathname = usePathname();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [faqsData, setFaqsData] = useState<any>(undefined);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const handleFetchFaqs = async (
+  const [loadingCat, setLoadingCat] = useState(false);
+  const [errorCat, setErrorCat] = useState("");
+  const [faqsDataCat, setFaqsDataCat] = useState<any>(undefined);
+
+  const Category_data = faqsDataCat?.data?.map((item: any) => {
+    return {
+      name: item?.code_description,
+      ...item,
+    };
+  });
+  const handleFetchFaqsCategory = async (
     url: any,
     search: any,
     page: any,
@@ -25,6 +48,40 @@ const FaqPage = () => {
       ...(search && { search: search }),
       ...(page && { page: page }),
       ...(search_fields && { search_fields: search_fields }),
+    };
+
+    // Construct the query string dynamically
+    const queryString = Object.entries(params)
+      .map(([key, value]) => `${key}=${encodeURIComponent(String(value))}`) // Encode each key-value pair
+      .join("&"); // Join the pairs with "&"
+
+    // Append the query string to the base URL
+    const fetchUrl = queryString ? `${url}?${queryString}` : url;
+
+    setLoadingCat(true);
+    try {
+      const response = await getData(fetchUrl, "");
+      setFaqsDataCat(response);
+      // console.log("city res", response);
+    } catch (error: any) {
+      setErrorCat(error.response.data.message);
+    } finally {
+      setLoadingCat(false);
+    }
+  };
+
+  const handleFetchFaqs = async (
+    url: any,
+    search: any,
+    page: any,
+    search_fields: any,
+    faq_category_code: any
+  ) => {
+    const params = {
+      ...(search && { search: search }),
+      ...(page && { page: page }),
+      ...(search_fields && { search_fields: search_fields }),
+      ...(faq_category_code && { faq_category_code: faq_category_code }),
     };
 
     // Construct the query string dynamically
@@ -47,14 +104,14 @@ const FaqPage = () => {
     }
   };
 
-  // useEffect(() => {
-  //   handleFetchFaqs("/faqs", "", "", "question,answer");
-  // }, []);
+  useEffect(() => {
+    handleFetchFaqsCategory("/faq-categories-with-subcategories", "", "", "");
+  }, []);
 
   const fetchFaqSearchData = async (e: any) => {
     e.preventDefault();
     if (searchQuery.length >= 2) {
-      handleFetchFaqs("/faqs", searchQuery, "", "question,answer");
+      handleFetchFaqs("/faqs", searchQuery, "", "question,answer", "");
     }
   };
 
@@ -71,11 +128,26 @@ const FaqPage = () => {
   useEffect(() => {
     const fetchFaqSearchPagenate = async () => {
       if (currentPage >= 1) {
-        handleFetchFaqs("/faqs", "", currentPage, "question,answer");
+        handleFetchFaqs("/faqs", "", currentPage, "question,answer", "");
       }
     };
     fetchFaqSearchPagenate();
   }, [currentPage]);
+
+  useEffect(() => {
+    const fetchFaqCategory = async () => {
+      if (selectedCategory?.ref_code) {
+        handleFetchFaqs(
+          "/faqs",
+          "",
+          "",
+          "question,answer",
+          selectedCategory?.ref_code
+        );
+      }
+    };
+    fetchFaqCategory();
+  }, [selectedCategory?.ref_code]);
 
   // console.log("currentPage", currentPage);
 
@@ -102,19 +174,34 @@ const FaqPage = () => {
                 </div>
                 <form
                   onSubmit={fetchFaqSearchData}
-                  className="flex flex-col lg:flex-row gap-y-3 lg:gap-y-0 items-center max-w-lg mx-auto mb-6"
+                  className="flex flex-col lg:flex-row gap-y-3 lg:gap-y-0 items-center max-w-xl mx-auto mb-6 "
                 >
+                  <div className="min-w-48 relative">
+                    <div className="h-[54px] w-2 bg-white absolute z-10 -right-1"></div>
+                    <NewCustomDropdown
+                      isOpen={isOpenCategory}
+                      setIsOpen={handleSetIsOpenCategory}
+                      selectedProvider={selectedCategory}
+                      setSelectedProvider={setSelectedCategory}
+                      data={Category_data}
+                      label="Select Category"
+                      // subLabel={"Selected"}
+                      // selectColor = "border border-gray-300 bg-white  rounded-lg hover:bg-gray-100"
+                      rounded="rounded-none"
+                      selectColor="border-none border-gray-300 bg-white  rounded-l-lg hover:bg-white"
+                    />
+                  </div>
                   <label htmlFor="voice-search" className="sr-only">
                     Search
                   </label>
                   <div className="relative w-full">
-                    <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    {/* <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                       <SearchIcon />
-                    </div>
+                    </div> */}
                     <input
                       type="text"
                       id="voice-search"
-                      className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg outline-none focus:to-gray-800 focus:border-gray-800 block w-full ps-10 p-2.5 py-3  "
+                      className="bg-white border border-gray-300 text-gray-900 text-sm rounded-r-lg outline-none focus:border-none block w-full ps-4 p-2.5 py-4 h-[54px] focus:outline-none "
                       placeholder="Search..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
@@ -123,7 +210,13 @@ const FaqPage = () => {
                       <div
                         onClick={() => {
                           setSearchQuery("");
-                          handleFetchFaqs("/faqs", "", "", "question,answer");
+                          handleFetchFaqs(
+                            "/faqs",
+                            "",
+                            "",
+                            "question,answer",
+                            ""
+                          );
                         }}
                         className="absolute inset-y-0 end-2 flex items-center ps-3 cursor-pointer text-red-600"
                       >
@@ -160,6 +253,11 @@ const FaqPage = () => {
                   </button>
                 </form>
                 <div className=" bg-primary  px-4 lg:px-10 py-8 sm:py-10 rounded-xl shadow-md">
+                  {errorCat && (
+                    <p className="text-white  text-xl font-semibold flex items-center justify-center">
+                      Failed to fetch Faqs categories
+                    </p>
+                  )}
                   {loading ? (
                     <div className=" flex items-center justify-center">
                       <SmallSpinner />
