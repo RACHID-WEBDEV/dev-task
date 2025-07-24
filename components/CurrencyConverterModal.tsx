@@ -13,7 +13,6 @@ const CurrencyConverterModal = ({ setOpenModal, setOpenDownload }: any) => {
   const [selectedFrom, setSelectedFrom] = useState<CurrencyType | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedTo, setSelectedTo] = useState<CurrencyType | null>(null);
-  // console.log("selectedFrom", selectedFrom?.ref_code);
 
   const [isOpenTo, setIsOpenTo] = useState(false);
   // const [selectedTo, setSelectedTo] = useState(null);
