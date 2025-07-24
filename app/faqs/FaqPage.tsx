@@ -51,7 +51,6 @@ const FaqPage = () => {
       ...(search_fields && { search_fields: search_fields }),
     };
 
-    // Construct the query string dynamically
     const queryString = Object.entries(params)
       .map(([key, value]) => `${key}=${encodeURIComponent(String(value))}`) // Encode each key-value pair
       .join("&"); // Join the pairs with "&"
