@@ -170,8 +170,8 @@ const Contactsection = () => {
       id="contact-section"
       className="relative p-4 pt-14 lg:p-20 lg:py-24 bg-primary h-full 1xl:h-screen overflow-hidden z-10"
     >
-      <div className="backdrop-blur top-[10%] transition-colors bg-[#6D1F8F]/40 rounded-2xl p-2 lg:p-10 py-6 lg:py-16  max-w-xs lg:max-w-5xl xl:max-w-6xl 1xl:max-w-7xl  w-full mx-auto">
-        <div className="lg:flex items-center">
+      <div className="backdrop-blur top-[10%] transition-colors bg-[#6D1F8F]/40 rounded-2xl p-2 lg:p-10 py-6 lg:py-16  max-w-xs md:max-w-xl lg:max-w-5xl xl:max-w-6xl 1xl:max-w-7xl  w-full mx-auto">
+        <div className="flex flex-col lg:flex-row items-center  justify-center  ">
           <div className="lg:w-1/2 lg:pl-16 ">
             <div className="  ">
               <div className=" px-4 ">
@@ -400,7 +400,7 @@ const Contactsection = () => {
       </div>
       <div className=" w-full ">
         <div className=" pt-20 ">
-          <div className=" flex items-center  justify-center lg:justify-between flex-wrap w-full gap-4 px-4  lg:px-20">
+          <div className=" flex flex-col lg:flex-row items-center  justify-center lg:justify-between flex-wrap w-full gap-4 px-4  lg:px-20">
             <div className=" flex items-center gap-4">
               <a
                 href="https://linkedin.com/company/revve/about/?viewAsMember=true"

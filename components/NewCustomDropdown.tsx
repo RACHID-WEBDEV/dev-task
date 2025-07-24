@@ -16,7 +16,7 @@ const NewCustomDropdown = ({
   subLabel,
   enableSearch = false,
   rounded = "rounded-lg",
-  selectColor = "border border-gray-300 bg-white  rounded-lg hover:bg-gray-100",
+  selectColor = "border border-gray-300 bg-white rounded-lg hover:bg-gray-100",
   showSelectedAvater = false,
   leftRadio = false,
 }: any) => {
@@ -42,7 +42,7 @@ const NewCustomDropdown = ({
   return (
     <div className="flex relative  ">
       <button
-        className={`flex-shrink-0  inline-flex items-center px-3 justify-between h-[54px] text-sm font-medium text-center text-gray-600 w-full   cursor-pointer focus:outline-none    ${
+        className={`flex-shrink-0  inline-flex items-center px-3 justify-between h-[54px] text-sm font-medium text-center text-gray-600 w-full cursor-pointer focus:outline-none    ${
           isOpen ? "rounded-b-nonee" : ""
         } ${selectedProvider ? "py-1.5 pt-3 " : " py-3"} ${selectColor}`}
         type="button"

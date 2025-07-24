@@ -9,6 +9,7 @@ import { getData } from "@/utils/axiosInstance";
 import SmallSpinner from "@/components/SmallSpinner";
 import classNames from "classnames";
 import NewCustomDropdown from "@/components/NewCustomDropdown";
+import Contactsection from "@/components/Contactsection";
 
 const FaqPage = () => {
   const [isOpenCategory, setIsOpenCategory] = useState(false);
@@ -174,10 +175,10 @@ const FaqPage = () => {
                 </div>
                 <form
                   onSubmit={fetchFaqSearchData}
-                  className="flex flex-col lg:flex-row gap-y-3 lg:gap-y-0 items-center max-w-xl mx-auto mb-6 "
+                  className="flex flex-col lg:flex-row gap-y-3 lg:gap-y-0 items-center max-w-2xl mx-auto mb-6 "
                 >
-                  <div className="min-w-48 relative">
-                    <div className="h-[54px] w-2 bg-white absolute z-10 -right-1"></div>
+                  <div className="lg:min-w-48 lg:max-w-[250px] w-full relative ">
+                    <div className="h-[54px] w-2 bg-white absolute z-10 hidden lg:block -right-1"></div>
                     <NewCustomDropdown
                       isOpen={isOpenCategory}
                       setIsOpen={handleSetIsOpenCategory}
@@ -188,7 +189,7 @@ const FaqPage = () => {
                       // subLabel={"Selected"}
                       // selectColor = "border border-gray-300 bg-white  rounded-lg hover:bg-gray-100"
                       rounded="rounded-none"
-                      selectColor="border-none border-gray-300 bg-white  rounded-l-lg hover:bg-white"
+                      selectColor="border-none border-gray-300 bg-white rounded-l-lg rounded-r-lg lg:rounded-l-lg lg:rounded-r-none hover:bg-white"
                     />
                   </div>
                   <label htmlFor="voice-search" className="sr-only">
@@ -201,7 +202,7 @@ const FaqPage = () => {
                     <input
                       type="text"
                       id="voice-search"
-                      className="bg-white border border-gray-300 text-gray-900 text-sm rounded-r-lg outline-none focus:border-none block w-full ps-4 p-2.5 py-4 h-[54px] focus:outline-none "
+                      className="bg-white border border-gray-300 text-gray-900 text-sm  rounded-l-lg rounded-r-lg lg:rounded-l-none lg:rounded-r-lg outline-none focus:border-none block w-full ps-4 p-2.5 py-4 h-[54px] focus:outline-none "
                       placeholder="Search..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
@@ -323,6 +324,7 @@ const FaqPage = () => {
           </div>
         </section>
       </div>
+      <Contactsection />
     </>
   );
 };
