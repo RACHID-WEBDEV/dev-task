@@ -1,9 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Contactsection from "@/components/Contactsection";
 
 import Image from "next/image";
-import { postData } from "@/utils/axiosInstance";
+import { postData } from "@/utils/axiosInstanceContact";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -63,10 +63,27 @@ const ContactPage = () => {
     return newErrors;
   };
 
+  // ✅ Real-time error clearing useEffect
+  useEffect(() => {
+    const newErrors: Errors = { ...errors };
+
+    if (formData.first_name.trim()) delete newErrors.first_name;
+    if (formData.last_name.trim()) delete newErrors.last_name;
+    if (formData.email.trim() && /\S+@\S+\.\S+/.test(formData.email))
+      delete newErrors.email;
+    if (formData.phone_number.trim()) delete newErrors.phone_number;
+    if (formData.message.trim()) delete newErrors.message;
+
+    if (JSON.stringify(newErrors) !== JSON.stringify(errors)) {
+      setErrors(newErrors);
+    }
+  }, [formData, errors]);
+
   const [loading, setLoading] = useState(false);
   const [getError, setGetError] = useState(null);
-  const [getSuccess, setGetSuccess] = useState(null);
-  console.log("getSuccess", getSuccess);
+  type SuccessResponse = { message?: string; [key: string]: any };
+  const [getSuccess, setGetSuccess] = useState<SuccessResponse | null>(null);
+  // console.log("getSuccess", getSuccess);
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const validationErrors = validate();
@@ -78,7 +95,7 @@ const ContactPage = () => {
 
       setLoading(true);
       try {
-        const response = await postData("/util/feedback", formData);
+        const response = await postData("util/feedback", formData);
         setGetSuccess(response);
         setGetError(null);
         setSubmitStatus("success");
@@ -316,7 +333,8 @@ const ContactPage = () => {
                       {/* Submit Feedback */}
                       {submitStatus === "success" && (
                         <p className="text-green-600 mt-2 col-span-full">
-                          Awesome! Message sent.
+                          {/* Awesome! Message sent. */}
+                          {getSuccess?.message}
                         </p>
                       )}
                       {submitStatus === "error" && (
@@ -326,7 +344,7 @@ const ContactPage = () => {
                       )}
                       {getError && (
                         <p className="text-red-500 mt-2 col-span-full">
-                          Oops! {getError}
+                          {getError}
                         </p>
                       )}
                       {/* Submit Button */}
