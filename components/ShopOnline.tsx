@@ -6,7 +6,7 @@ import React from "react";
 const ShopOnline = ({ setOpenModal }: any) => {
   useGSAP(() => {
     gsap.to("#product-1", {
-      y: -380,
+      y: -10,
       // rotation: 360,
       // borderRadius: "100%",
       duration: 3,
@@ -21,7 +21,7 @@ const ShopOnline = ({ setOpenModal }: any) => {
     });
 
     gsap.to("#product-2", {
-      y: -300,
+      y: -10,
       // rotation: 360,
       // borderRadius: "100%",
       duration: 3,
@@ -58,33 +58,34 @@ const ShopOnline = ({ setOpenModal }: any) => {
       <div className=" bg-cover bg-center w-full h-screen relative bg-no-repeat hidden lg:block">
         <div className="absolute bg-cover bg-center  w-[332px] 1xl:w-[412px] 2xl:w-[432px] -top-8 1xl:-top-10 2xl:top-2  h-[708px] 1xl:h-[800px] left-1/2 transform -translate-x-1/2 bg-no-repeat bg-[url('/images/iPhone-frame-2.png')]"></div>
 
-        <div className="absolute -bottom-72 1xl:-bottom-60 right-8 hidden lg:block">
-          <div className="flex items-center  gap-2">
-            <div className="pt-80" id="product-1">
+        <div className="absolute top-32 right-20 hidden lg:block">
+          <div className="flex items-center   gap-4">
+            <div className="" id="product-1">
               <Image
-                src="/images/prod-1.png"
+                src="/images/prod-4.png"
                 alt="prod icon - 1"
-                width={120}
-                height={792}
-                className="prod-icon w-[100px] 1xl:w-[110px] 2xl:w-[120px] "
+                width={150}
+                height={592}
+                className="prod-icon  "
+                // className="prod-icon w-[100px] 1xl:w-[110px] 2xl:w-[120px] "
               />
             </div>
-            <div className="pb-56 ">
+            {/* <div className="pb-56 ">
               <Image
-                src="/images/prod-2.png"
+                src="/images/prod-4.png"
                 alt="prod icon - 2"
                 width={120}
                 height={792}
                 className="prod-icon w-[100px] 1xl:w-[110px] 2xl:w-[120px] "
               />
-            </div>
-            <div className="pt-12" id="product-2">
+            </div> */}
+            <div className=" pt-0" id="product-2">
               <Image
-                src="/images/prod-3.png"
+                src="/images/prod-5.png"
                 alt="prod icon - 1"
-                width={200}
+                width={150}
                 height={792}
-                className="prod-icon  w-[150px] 2xl:w-[200px]"
+                // className="prod-icon  w-[150px] 2xl:w-[200px]"
               />
             </div>
           </div>
