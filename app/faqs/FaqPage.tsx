@@ -23,7 +23,7 @@ const FaqPage = () => {
     // if (value) setIsOpenUserType(false); // close To if opening this
   };
 
-  console.log("selectedCategory", selectedCategory?.ref_code);
+  console.log("selectedCategory", selectedCategory);
   // const pathname = usePathname();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -33,13 +33,29 @@ const FaqPage = () => {
   const [loadingCat, setLoadingCat] = useState(false);
   const [errorCat, setErrorCat] = useState("");
   const [faqsDataCat, setFaqsDataCat] = useState<any>(undefined);
+  const sample_category = [
+    {
+      additional_code: "all_revve_category",
+      base_code: "all_category",
+      code_description: "All Revve Category",
+      country: "GLOBAL",
+      deleted_flag: false,
+      id: 428 * 433,
+      name: "All Categories",
+      ref_code: "",
+      subcategories: [],
+    },
+  ];
 
-  const Category_data = faqsDataCat?.data?.map((item: any) => {
-    return {
+  const Category_data =
+    faqsDataCat?.data?.map((item: any) => ({
       name: item?.code_description,
       ...item,
-    };
-  });
+    })) || [];
+
+  const all_cat = [...sample_category, ...Category_data];
+
+  // console.log("all_cat", all_cat);
   const handleFetchFaqsCategory = async (
     url: any,
     search: any,
@@ -145,6 +161,8 @@ const FaqPage = () => {
           "question,answer",
           selectedCategory?.ref_code
         );
+      } else if (selectedCategory?.ref_code === "") {
+        handleFetchFaqs("/faqs", "", "", "question,answer", "");
       }
     };
     fetchFaqCategory();
@@ -184,7 +202,7 @@ const FaqPage = () => {
                       setIsOpen={handleSetIsOpenCategory}
                       selectedProvider={selectedCategory}
                       setSelectedProvider={setSelectedCategory}
-                      data={Category_data}
+                      data={all_cat}
                       label="Select Category"
                       // subLabel={"Selected"}
                       // selectColor = "border border-gray-300 bg-white  rounded-lg hover:bg-gray-100"
