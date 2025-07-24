@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import React, { useEffect, useState } from "react";
 import FaqAccordion from "@/components/Faq";
 
 // import { faqContent } from "@/data/faqData";
-import { SearchIcon, XIconSmall } from "@/public/SvgsIcon";
+import { XIconSmall } from "@/public/SvgsIcon";
 import { getData } from "@/utils/axiosInstance";
 import SmallSpinner from "@/components/SmallSpinner";
 import classNames from "classnames";
