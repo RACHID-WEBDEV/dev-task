@@ -6,35 +6,36 @@ import Image from "next/image";
 
 const Parnters = () => {
   return (
-    <section className=" bg-white lg:py-5">
-      <div className="py-2  ">
-        <div className="lg:space-y-8 ">
-          <Marquee
-            gradient={false}
-            gradientWidth={28}
-            pauseOnHover={false}
-            //   gradientColor={[17, 24, 38]}
-          >
-            <div className="flex ">
-              {partnersData.map(({ logo }, index) => (
-                <div
-                  key={index}
-                  className="p-4 lg:p-6 lg:pt-12 lg:pb-10 my-4 lg:my-2 rounded-lg lg:rounded-2xl mx-2 lg:mx-4 border border-[#ECECEC] "
-                >
-                  <Image
-                    src={logo}
-                    width={128}
-                    height={128}
-                    className="w-16 lg:w-32"
-                    alt=" partner logos"
-                  />
-                </div>
-              ))}
-            </div>
-          </Marquee>
-        </div>
+    <section className=" bg-white pb-10">
+      <div className=" lg:py-5">
+        <div className="py-2  ">
+          <div className="lg:space-y-8 ">
+            <Marquee
+              gradient={false}
+              gradientWidth={28}
+              pauseOnHover={false}
+              //   gradientColor={[17, 24, 38]}
+            >
+              <div className="flex ">
+                {partnersData.map(({ logo }, index) => (
+                  <div
+                    key={index}
+                    className="p-4 lg:p-6 lg:pt-12 lg:pb-10 my-4 lg:my-2 rounded-lg lg:rounded-2xl mx-2 lg:mx-4 border border-[#ECECEC] "
+                  >
+                    <Image
+                      src={logo}
+                      width={128}
+                      height={128}
+                      className="w-16 lg:w-32"
+                      alt=" partner logos"
+                    />
+                  </div>
+                ))}
+              </div>
+            </Marquee>
+          </div>
 
-        {/* <div className="space-y-8  pt-10">
+          {/* <div className="space-y-8  pt-10">
             <Marquee
               gradient={true}
               gradientWidth={28}
@@ -58,6 +59,7 @@ const Parnters = () => {
               </div>
             </Marquee>
           </div> */}
+        </div>
       </div>
     </section>
   );
