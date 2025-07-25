@@ -6,6 +6,7 @@ import { vision_data } from "../../data/vision";
 import DownloadModal from "@/components/DownloadModal";
 import Contactsection from "@/components/Contactsection";
 import Header from "@/components/Header";
+import { countries_data } from "@/data/countries";
 
 const Page = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -67,7 +68,10 @@ const Page = () => {
             <h1 className="text-4xl font-bold">Our Mission</h1>
           </div>
           <div className="col-span-2">
-            <p className="text-3xl lg:text-5xl font-medium mb-4">
+            <p
+              className="text-lg mb-4"
+              // className="text-3xl lg:text-5xl font-medium mb-4"
+            >
               To democratize cross-border payments by building accessible
               financial solutions that connect African diasporas to their home
               countries with dignity, speed, and transparency.
@@ -213,69 +217,24 @@ const Page = () => {
                   </button>
                 </div>
                 <p className="text-xl font-semibold pt-8 lg:pt-4">
-                  We currently operate in 5 countries
+                  We currently operate in {countries_data?.length} countries
                 </p>
                 <div className=" flex items-center gap-4 flex-wrap pt-2 pb-5">
-                  <div className="flex items-center gap-1">
-                    <div className=" border-white border-4 rounded-full">
-                      <Image
-                        className="rounded-full w-[36px] lg:w-[40px]"
-                        width={52}
-                        height={52}
-                        src="/images/Phone/nigeria.svg"
-                        alt=""
-                      />
+                  {countries_data?.map((item, index) => (
+                    <div key={index} className="flex items-center gap-1">
+                      <div className=" border-white border-4 rounded-full">
+                        <Image
+                          className="rounded-full w-[36px] lg:w-[40px]"
+                          width={52}
+                          height={52}
+                          src={item?.country_flag}
+                          alt=""
+                        />
+                      </div>
+                      <p className="font-medium  text-black">{item?.name}</p>
                     </div>
-                    <p className="font-medium  text-black">Nigeria</p>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <div className=" border-white border-4 rounded-full">
-                      <Image
-                        className="rounded-full w-[36px] lg:w-[40px]"
-                        width={52}
-                        height={52}
-                        src="/images/Phone/Ghana.svg"
-                        alt=""
-                      />
-                    </div>
-                    <p className="font-medium  text-black">Ghana</p>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <div className=" border-white border-4 rounded-full">
-                      <Image
-                        className="rounded-full w-[36px] lg:w-[40px]"
-                        width={52}
-                        height={52}
-                        src="/images/Phone/canada.svg"
-                        alt=""
-                      />
-                    </div>
-                    <p className="font-medium  text-black">Canada</p>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <div className=" border-white border-4 rounded-full">
-                      <Image
-                        className="rounded-full w-[36px] lg:w-[40px]"
-                        width={52}
-                        height={52}
-                        src="/images/Phone/cameroon.svg"
-                        alt=""
-                      />
-                    </div>
-                    <p className="font-medium  text-black">Cameroon</p>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <div className=" border-white border-4 rounded-full">
-                      <Image
-                        className="rounded-full w-[36px] lg:w-[40px]"
-                        width={52}
-                        height={52}
-                        src="/images/Phone/kenya.svg"
-                        alt=""
-                      />
-                    </div>
-                    <p className="font-medium  text-black">Kenya</p>
-                  </div>
+                  ))}
+
                   {/* <div className="flex items-center gap-1">
                     <div className=" border-white border-4 rounded-full">
                       <Image
