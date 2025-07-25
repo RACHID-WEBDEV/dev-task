@@ -128,7 +128,13 @@ const FaqPage = () => {
   const fetchFaqSearchData = async (e: any) => {
     e.preventDefault();
     if (searchQuery.length >= 2) {
-      handleFetchFaqs("/faqs", searchQuery, "", "question,answer", "");
+      handleFetchFaqs(
+        "/faqs",
+        searchQuery,
+        "",
+        "question,answer,faq_category_code,faq_sub_category_code",
+        ""
+      );
     }
   };
 
@@ -145,7 +151,13 @@ const FaqPage = () => {
   useEffect(() => {
     const fetchFaqSearchPagenate = async () => {
       if (currentPage >= 1) {
-        handleFetchFaqs("/faqs", "", currentPage, "question,answer", "");
+        handleFetchFaqs(
+          "/faqs",
+          "",
+          currentPage,
+          "question,answer,faq_category_code,faq_sub_category_code",
+          ""
+        );
       }
     };
     fetchFaqSearchPagenate();
@@ -158,11 +170,17 @@ const FaqPage = () => {
           "/faqs",
           "",
           "",
-          "question,answer",
+          "question,answer,faq_category_code,faq_sub_category_code",
           selectedCategory?.ref_code
         );
       } else if (selectedCategory?.ref_code === "") {
-        handleFetchFaqs("/faqs", "", "", "question,answer", "");
+        handleFetchFaqs(
+          "/faqs",
+          "",
+          "",
+          "question,answer,faq_category_code,faq_sub_category_code",
+          ""
+        );
       }
     };
     fetchFaqCategory();
@@ -233,7 +251,7 @@ const FaqPage = () => {
                             "/faqs",
                             "",
                             "",
-                            "question,answer",
+                            "question,answer,faq_category_code,faq_sub_category_code",
                             ""
                           );
                         }}

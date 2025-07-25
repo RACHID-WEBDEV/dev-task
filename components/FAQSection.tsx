@@ -44,7 +44,12 @@ const FAQSection = () => {
   };
 
   useEffect(() => {
-    handleFetchFaqs("/faqs", "", "", "question,answer");
+    handleFetchFaqs(
+      "/faqs",
+      "",
+      "",
+      "question,answer,faq_category_code, faq_sub_category_code"
+    );
   }, []);
   const data = faqsData?.data?.faqs?.slice(0, 6);
   return (

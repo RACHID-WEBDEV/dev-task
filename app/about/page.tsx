@@ -68,8 +68,11 @@ const Page = () => {
           </div>
           <div className="col-span-2">
             <p className="text-3xl lg:text-5xl font-medium mb-4">
-              Revve is our answer to the everyday frustrations of cross-border
-              finance.
+              To democratize cross-border payments by building accessible
+              financial solutions that connect African diasporas to their home
+              countries with dignity, speed, and transparency.
+              {/* Revve is our answer to the everyday frustrations of cross-border
+              finance. */}
               {/* We are building Revve to break down the limitations of financial
               borders and redefine global transactions. */}
             </p>
@@ -117,15 +120,17 @@ const Page = () => {
           </div>
           <div className="col-span-2">
             <p className="text-lg">
-              Our vision is to remove financial borders and make international
-              payments as simple, seamless, and trusted as local transactions.
+              A world where financial barriers no longer limit the economic
+              potential of immigrants and their communities.
+              {/* Our vision is to remove financial borders and make international
+              payments as simple, seamless, and trusted as local transactions. */}
               {/* Our vision is a world unburdened by the frail barriers of
               geographical boundaries, where international distances do not stop
               the formation of transactional relationships. We envision a future
               where cross-border payments are as effortless and seamless as
               local transactions. */}
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 ">
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 ">
               {vision_data?.map((item, key) => {
                 return (
                   <div
@@ -144,6 +149,32 @@ const Page = () => {
                   </div>
                 );
               })}
+            </div> */}
+          </div>
+          <div className="flex items-center justify-start h-full">
+            <h1 className="text-4xl font-bold text-center lg:text-left">
+              Our Core Values
+            </h1>
+          </div>
+
+          {/* Right Section (Cards) */}
+          <div className="col-span-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+              {vision_data?.map((item, key) => (
+                <div
+                  key={key}
+                  className="relative bg-white shadow-md space-y-4 p-4 lg:p-8 rounded-2xl"
+                >
+                  <Image
+                    src={item?.icon}
+                    alt="about image 1"
+                    width={52}
+                    height={52}
+                  />
+                  <p className="text-2xl font-semibold">{item?.title}</p>
+                  <p className="text-lg">{item?.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
