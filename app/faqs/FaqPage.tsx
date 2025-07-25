@@ -130,7 +130,7 @@ const FaqPage = () => {
     if (searchQuery.length >= 2) {
       handleFetchFaqs(
         "/faqs",
-        searchQuery,
+        searchQuery.toLowerCase(),
         "",
         "question,answer,faq_category_code,faq_sub_category_code",
         ""
