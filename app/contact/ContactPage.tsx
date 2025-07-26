@@ -83,7 +83,7 @@ const ContactPage = () => {
   const [getError, setGetError] = useState(null);
   type SuccessResponse = { message?: string; [key: string]: any };
   const [getSuccess, setGetSuccess] = useState<SuccessResponse | null>(null);
-  // console.log("getSuccess", getSuccess);
+  console.log("getSuccess", getSuccess);
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const validationErrors = validate();
@@ -334,7 +334,9 @@ const ContactPage = () => {
                       {submitStatus === "success" && (
                         <p className="text-green-600 mt-2 col-span-full">
                           {/* Awesome! Message sent. */}
-                          {getSuccess?.message}
+                          {/* {getSuccess?.message} */}
+                          Message sent succesfully, Our support team will
+                          contact you shortly
                         </p>
                       )}
                       {submitStatus === "error" && (

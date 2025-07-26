@@ -19,16 +19,25 @@ const Page = () => {
             <h1 className="text-4xl font-bold">About us</h1>
           </div>
           <div className="col-span-2">
-            <p className="text-lg">
-              <span className="font-semibold">Linearsend Inc</span>
-              is a financial technology company, registered as a Money Service
-              Business (MSB) with the Financial Transactions and Reports
-              Analysis Centre of Canada (FINTRAC). We specialise in fast, secure
-              cross-border transactions, making it just as easy to send money
-              abroad as it is locally. Our goal is simple: to make global money
-              movement stress-free through innovation, transparency, and trust,
-              paving the way for a flawless financial future.
-            </p>
+            <div className=" space-y-3">
+              <p className="text-lg">
+                <span className="font-semibold">Linearsend Inc.</span> is a
+                forward-thinking financial technology company, registered as a
+                Money Services Business (MSB) with the Financial Transactions
+                and Reports Analysis Centre of Canada (FINTRAC).
+              </p>
+              <p className="text-lg">
+                We specialize in fast, secure cross-border transactions, making
+                it just as seamless to send money internationally as it is
+                locally. Our flagship product, Revve, offers an intuitive,
+                user-friendly interface that simplifies how people move money
+                across borders—reliably, efficiently, and affordably.
+              </p>
+              <p className="text-lg">
+                At Linearsend, we’re redefining the remittance experience for
+                global communities.
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 ">
               <div className="relative ">
                 <div className="reveal image-anime">
@@ -96,7 +105,7 @@ const Page = () => {
           </div>
         </div>
         <section className="relative bg-cover bg-center w-full h-[700px] lg:h-[700px] bg-no-repeat  bg-[url('/images/about-galaxy.png')]">
-          <div className=" max-w-[960px] ml-auto p-5 pt-10 lg:pt-14">
+          <div className=" max-w-[960px] ml-auto p-5 pt-10 lg:pt-14 text-white">
             <p className="text-lg font-medium mb-4">
               Built for individuals and businesses navigating life between
               Canada, Nigeria, and the wider African continent, Revve simplifies
