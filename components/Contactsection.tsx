@@ -259,6 +259,44 @@ const Contactsection = () => {
                   </address>
                 </div>
               </div>
+              <div className=" flex items-center gap-4 mt-6 ml-2">
+                <a
+                  href="https://linkedin.com/company/revve/about/?viewAsMember=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkedIcon className="text-white" />
+                </a>
+                <a
+                  href="https://facebook.com/profile.php?id=61572466705088&sk=about"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FacebookIcon className="text-white" />
+                </a>
+                <a
+                  href="https://x.com/InfoRevve"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <XIcon className="text-white" />
+                </a>
+                <a
+                  href="https://instagram.com/revve_me/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <InstagramIcon className="text-white" />
+                </a>
+                <a
+                  href="https://wa.me/message/U5ERLJRIPL7UB1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="fill-white"
+                >
+                  <WhatsAppIcon className="text-white" />
+                </a>
+              </div>
             </div>
           </div>
 
