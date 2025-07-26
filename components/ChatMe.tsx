@@ -101,7 +101,7 @@ const ChatRevveMe = () => {
         >
           <center>
             <a href="https://wa.me/message/U5ERLJRIPL7UB1" target="blank">
-              <WhatsAppIcon />
+              <WhatsAppIcon className="text-white" />
             </a>
           </center>
         </div>
@@ -115,7 +115,7 @@ const ChatRevveMe = () => {
         >
           <center>
             <a href="https://x.com/InfoRevve" target="blank">
-              <XIcon />
+              <XIcon className="text-white" />
             </a>
           </center>
         </div>
@@ -132,7 +132,7 @@ const ChatRevveMe = () => {
               href="https://facebook.com/profile.php?id=61572466705088&sk=about"
               target="blank"
             >
-              <FacebookIcon />
+              <FacebookIcon className="text-white" />
             </a>
           </center>
         </div>

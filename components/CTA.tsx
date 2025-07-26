@@ -27,8 +27,10 @@ const CTA = ({ setOpenModal }: any) => {
                     className="button-alt"
                     role="button"
                   >
-                    <span className="text">Coming soon</span>
-                    <span className=" whitespace-nowrap">Join Waitlist</span>
+                    <span className="text">Download the App</span>
+                    <span className=" whitespace-nowrap">
+                      Click to Download
+                    </span>
                   </button>
                 </div>
               </div>

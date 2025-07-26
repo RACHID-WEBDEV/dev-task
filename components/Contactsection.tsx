@@ -407,28 +407,28 @@ const Contactsection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <LinkedIcon />
+                <LinkedIcon className="text-white" />
               </a>
               <a
                 href="https://facebook.com/profile.php?id=61572466705088&sk=about"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FacebookIcon />
+                <FacebookIcon className="text-white" />
               </a>
               <a
                 href="https://x.com/InfoRevve"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <XIcon />
+                <XIcon className="text-white" />
               </a>
               <a
                 href="https://instagram.com/revve_me/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <InstagramIcon />
+                <InstagramIcon className="text-white" />
               </a>
               <a
                 href="https://wa.me/message/U5ERLJRIPL7UB1"
@@ -436,7 +436,7 @@ const Contactsection = () => {
                 rel="noopener noreferrer"
                 className="fill-white"
               >
-                <WhatsAppIcon />
+                <WhatsAppIcon className="text-white" />
               </a>
             </div>
 
