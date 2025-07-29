@@ -1,7 +1,7 @@
 import axios from "axios";
 // import Cookies from "js-cookie";
-// export const API_BASE_URL ="https://prod.revveme.com/v1/"; //PRODUCTION
-export const API_BASE_URL = "https://dev.revveme.com/v1"; ///LOCAL
+export const API_BASE_URL = "https://prod.revveme.com/v1/"; //PRODUCTION
+// export const API_BASE_URL = "https://dev.revveme.com/v1"; ///LOCAL
 
 const axiosInstance = axios.create({
   baseURL: API_BASE_URL,
