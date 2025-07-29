@@ -308,7 +308,7 @@ const Contactsection = () => {
                     htmlFor="name"
                     className="mb-1 block font-semibold text-sm text-white dark:text-white"
                   >
-                    Fullname
+                    Full Name
                   </label>
 
                   <input
