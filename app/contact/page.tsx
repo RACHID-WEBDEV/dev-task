@@ -13,3 +13,9 @@ const Page = () => {
 };
 
 export default Page;
+
+export const metadata = {
+  title: "Contact Us",
+  description:
+    "Send, Spend, Shop Perform cross-border transaction with ease on Revve",
+};

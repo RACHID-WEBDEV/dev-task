@@ -22,9 +22,42 @@ const dm_Sans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Revve ",
-  description: " Revve",
+  /* — site-wide defaults — */
+  title: {
+    template: "%s | Reeve - Best way to send money to Africa",
+    default: "Reeve - Best way to send money to Africa",
+  },
+  description:
+    "Send, Spend, Shop Perform cross-border transaction with ease on Revve.",
+  icons: { icon: "/images/favicon.png" },
+  keywords: [
+    "cross-border payments",
+    "international money transfer",
+    "send money to Africa",
+    "digital wallet",
+    "online remittance",
+    "secure payments",
+    "multi-currency support",
+    "mobile payments",
+    "bill payments",
+    "merchant payments",
+    "payment gateway",
+    "seamless transactions",
+    "financial technology",
+    "money remittance app",
+    "fast money transfer",
+    "peer-to-peer payments",
+    "borderless payments",
+    "fintech Africa",
+    "cashless transactions",
+  ],
+  metadataBase: new URL("https://www.revveme.com"),
 };
+
+// export const metadata: Metadata = {
+//   title: "Revve ",
+//   description: " Revve",
+// };
 
 export default function RootLayout({
   children,

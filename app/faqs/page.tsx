@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import FaqPage from "./FaqPage";
 
 export const metadata = {
-  title: "Revve || FAQ - Frequently Asked Questions",
+  title: "FAQ - Frequently Asked Questions",
   description: "Revve Frequently Asked Questions",
 };
 const Page = () => {

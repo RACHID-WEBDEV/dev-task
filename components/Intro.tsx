@@ -205,7 +205,7 @@ const Intro = ({ saveActiveSlideImage }: any) => {
       {/* <div className="mask-clip-path about-image"> */}
       <div
         // ref={imageRef} bg-[url('/images/slide-4.png')]
-        className="relative bg-cover bg-center w-[350px] h-[410px] lg:w-[424px] top-48 lg:top-40 xl:top-12 1xl:top-28 2xl:top-48 lg:h-[493px] left-1/2 transform -translate-x-1/2 bg-no-repeat "
+        className="relative bg-cover bg-center w-[300px] h-[380px] md:w-[350px] md:h-[410px] lg:w-[424px] top-48 lg:top-40 xl:top-12 1xl:top-28 2xl:top-48 lg:h-[493px] left-1/2 transform -translate-x-1/2 bg-no-repeat "
       >
         <Image
           ref={imageRef}
@@ -213,10 +213,11 @@ const Intro = ({ saveActiveSlideImage }: any) => {
           alt="Intro Image"
           width={424}
           height={493}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover rounded-3xl"
         />
         <div className=" flex items-center justify-center">
-          <p className=" text-white max-w-[360px] font-medium  absolute bottom-6 leading-[1.3] px-4 lg:px-0 subtitle2">
+          {/* subtitle2. remove from the P below */}
+          <p className=" text-white max-w-[360px] font-medium  absolute bottom-6 leading-[1.3] px-4 lg:px-0 ">
             Seamlessly bridge distances with our effortless remittance service.
             Send support, and financial care to your loved ones back home.
           </p>
