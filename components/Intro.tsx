@@ -209,7 +209,7 @@ const Intro = ({ saveActiveSlideImage }: any) => {
       >
         <Image
           ref={imageRef}
-          src={imageSrc || "/images/slide-4.png"}
+          src={imageSrc || "/images/slide-4.webp"}
           alt="Intro Image"
           width={424}
           height={493}

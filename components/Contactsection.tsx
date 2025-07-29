@@ -440,8 +440,8 @@ const Contactsection = () => {
       </div>
       <div className=" w-full ">
         <div className=" pt-20 ">
-          <div className=" flex flex-col lg:flex-row items-center  justify-center lg:justify-between flex-wrap w-full gap-4 px-4  lg:px-20">
-            <div className=" flex items-center gap-4">
+          <div className=" flex flex-col lg:flex-row items-center  justify-center lgd:justify-between flex-wrap w-full gap-4 px-4  lg:px-20">
+            {/* <div className=" flex items-center gap-4">
               <a
                 href="https://linkedin.com/company/revve/about/?viewAsMember=true"
                 target="_blank"
@@ -478,7 +478,7 @@ const Contactsection = () => {
               >
                 <WhatsAppIcon className="text-white" />
               </a>
-            </div>
+            </div> */}
 
             <ul className="flex flex-col lg:flex-row items-center gap-4 lg:gap-8 text-white text-base font-medium">
               <li className="">

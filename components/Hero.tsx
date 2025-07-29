@@ -225,7 +225,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
   return (
     <Swiper ref={swiperRef} {...swiperOptions}>
       <SwiperSlide>
-        <section className="relative bg-cover bg-center w-full h-[700px] lg:h-screen bg-no-repeat  bg-[url('/images/slider-1.png')]">
+        <section className="relative bg-cover bg-center w-full h-[700px] lg:h-screen bg-no-repeat  bg-[url('/images/slider-1.webp')]">
           <div className="flex items-center justify-between px-4 lg:px-20 pt-4">
             <Image
               src="/images/logo-white.svg"
@@ -354,7 +354,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
         </section>
       </SwiperSlide>
       <SwiperSlide>
-        <section className="relative bg-cover bg-center w-full h-[700px] lg:h-screen bg-no-repeat  bg-[url('/images/slider-2.png')]">
+        <section className="relative bg-cover bg-center w-full h-[700px] lg:h-screen bg-no-repeat  bg-[url('/images/slider-2.webp')]">
           <div className="flex items-center justify-between px-4 lg:px-20 pt-4">
             <Image
               src="/images/logo-white.svg"
@@ -483,7 +483,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
       </SwiperSlide>
 
       <SwiperSlide>
-        <section className="relative bg-cover bg-center w-full h-[700px] lg:h-screen bg-no-repeat  bg-[url('/images/slider-3.png')]">
+        <section className="relative bg-cover bg-center w-full h-[700px] lg:h-screen bg-no-repeat  bg-[url('/images/slider-3.webp')]">
           <div className="flex items-center justify-between px-4 lg:px-20 pt-4">
             <Image
               src="/images/logo-white.svg"
@@ -612,7 +612,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
         </section>
       </SwiperSlide>
       <SwiperSlide>
-        <section className="relative bg-cover bg-center w-full h-[700px] lg:h-screen bg-no-repeat  bg-[url('/images/slider-4.png')]">
+        <section className="relative bg-cover bg-center w-full h-[700px] lg:h-screen bg-no-repeat  bg-[url('/images/slider-4.webp')]">
           <div className="flex items-center justify-between px-4 lg:px-20 pt-4">
             <Image
               src="/images/logo-white.svg"
@@ -740,7 +740,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
         </section>
       </SwiperSlide>
       <SwiperSlide>
-        <section className="relative bg-cover bg-center w-full h-[700px] lg:h-screen bg-no-repeat  bg-[url('/images/slider-6.png')]">
+        <section className="relative bg-cover bg-center w-full h-[700px] lg:h-screen bg-no-repeat  bg-[url('/images/slider-6.webp')]">
           <div className="flex items-center justify-between px-4 lg:px-20 pt-4">
             <Image
               src="/images/logo-white.svg"
@@ -869,7 +869,7 @@ const Hero = ({ setOpenModal, setsaveActiveSlideImage }: any) => {
         </section>
       </SwiperSlide>
       <SwiperSlide>
-        <section className="relative bg-cover bg-center w-full h-[700px] lg:h-screen bg-no-repeat  bg-[url('/images/slider-5.png')]">
+        <section className="relative bg-cover bg-center w-full h-[700px] lg:h-screen bg-no-repeat  bg-[url('/images/slider-5.webp')]">
           <div className="flex items-center justify-between px-4 lg:px-20 pt-4">
             <Image
               src="/images/logo-white.svg"
